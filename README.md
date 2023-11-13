@@ -8,4 +8,4 @@ Can I use __ ? [https://caniuse.com/]
 
 Lorem Ipsum per riempire i paragrafi [https://it.lipsum.com/]
 
-Molto utile forse meglio di W3School [https://developer.mozilla.org/en-US/]
+Molto utile forse meglio di W3School [https://developer.mozilla.org/en-US/]  section -> References
