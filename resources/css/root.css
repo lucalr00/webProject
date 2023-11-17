@@ -3,6 +3,8 @@
     padding: 0;
 }
 
+/* colori da cambiare ovviamente, sono ancora quelli dei pinguini */
+
 :root{
     --headerBgColor: rgb(0,0,0);
     --headerTxtColor: rgb(255,255,255);
