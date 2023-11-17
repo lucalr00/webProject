@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --headerBgColor: rgb(0,0,0);
+    --headerTxtColor: rgb(255,255,255);
+    --bgColor: rgb(255,255,255);
+    --txtColor: rgb(0,0,0);
+    --footerBgColor: rgb(0,0,0);
+    --footerTxtColor: rgb(255,255,255);
+    --visitedLinkColor: rgb(230,12,83);
+    --flagColor: rgb(218,103,66);
+    --linkColor: rgb(255,255,255);
+    --font-body-family: "Roboto Condensed", sans-serif;
+}
+
+html{
+    font-size: 100%;
+    font-family: var(--font-body-family);
+    line-height: 1.5em;
+    margin: auto;
+}
+
+main{
+    background-color: var(--bgColor);
+    color: var(--txtColor);
+    margin: auto;
+    width: 80%;
+}
