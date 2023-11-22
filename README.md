@@ -9,3 +9,7 @@ Can I use __ ? [https://caniuse.com/]
 Lorem Ipsum per riempire i paragrafi [https://it.lipsum.com/]
 
 Molto utile forse meglio di W3School [https://developer.mozilla.org/en-US/]  section -> References
+
+W3CS [https://www.w3schools.com/]        HOW TO! [https://www.w3schools.com/howto/default.asp]ù
+
+Ecosia: https://www.ecosia.org/
