@@ -1,0 +1,94 @@
+* {
+	box-sizing: border-box
+}
+
+#howStarted h2,
+#founders h3 {
+	text-align: center;
+	padding-bottom: 1em;
+}
+
+#howStarted,
+#founders {
+	margin-top: 3em;
+}
+
+#howStarted p {
+	text-align: justify;
+	white-space: pre-line;
+}
+
+.cardsContainer {
+	max-width: 600px;
+	margin: auto;
+	position: relative;
+}
+
+.card {
+	display: none;
+	margin: auto;
+	width: 35%;
+	margin-bottom: 10px;
+}
+
+.card img {
+	margin: auto;
+	width: 100%;
+	box-shadow: 0 0 30px 2px rgb(20, 0, 0);
+	border-radius: 10px 10px;
+	border: solid whitesmoke 2px;
+}
+
+.info {
+	display: block;
+	margin: auto;
+	max-width: fit-content;
+	color: darkblue;
+	font-weight: bold;
+	border: solid red 1px;
+	padding: 0.2em 0.5em 0.2em 0.5em;
+	text-align: center;
+}
+
+.prev,
+.next {
+	position: absolute;
+	bottom: 0;
+	cursor: pointer;
+	padding: 0.5em;
+	color: black;
+	transition: 0.5s ease;
+	user-select: none;
+}
+
+.prev {
+	border-radius: 10px 0 0 10px;
+	left: 25%;
+}
+
+.next {
+	border-radius: 0 10px 10px 0;
+	right: 25%;
+}
+
+.prev:hover,
+.next:hover {
+	background-color: darkslategray;
+	color: white;
+}
+
+
+.fade {
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@keyframes fade {
+	from {
+		opacity: .4
+	}
+
+	to {
+		opacity: 1
+	}
+}

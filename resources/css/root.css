@@ -1,31 +1,130 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+	margin: 0;
+	padding: 0;
 }
 
-:root{
-    --headerBgColor: rgb(0,0,0);
-    --headerTxtColor: rgb(255,255,255);
-    --bgColor: rgb(255,255,255);
-    --txtColor: rgb(0,0,0);
-    --footerBgColor: rgb(0,0,0);
-    --footerTxtColor: rgb(255,255,255);
-    --visitedLinkColor: rgb(230,12,83);
-    --flagColor: rgb(218,103,66);
-    --linkColor: rgb(255,255,255);
-    --font-body-family: "Roboto Condensed", sans-serif;
+:root {
+	--headerBgColor: rgb(0, 0, 0);
+	--headerTxtColor: rgb(255, 255, 255);
+	--bgColor: rgb(255, 255, 255);
+	--txtColor: rgb(0, 0, 0);
+	--footerBgColor: rgb(0, 0, 0);
+	--footerTxtColor: rgb(255, 255, 255);
+	--visitedLinkColor: yellow;
+	--flagColor: rgb(218, 103, 66);
+	--linkColor: rgb(255, 255, 255);
+	--font-body-family: "Roboto Condensed", sans-serif;
 }
 
-html{
-    font-size: 100%;
-    font-family: var(--font-body-family);
-    line-height: 1.5em;
-    margin: auto;
+html {
+	font-size: 100%;
+	font-family: var(--font-body-family);
+	line-height: 1.5em;
+	margin: auto;
 }
 
-main{
-    background-color: var(--bgColor);
-    color: var(--txtColor);
-    margin: auto;
-    width: 80%;
+main {
+	background-color: var(--bgColor);
+	color: var(--txtColor);
+	margin: auto;
+	width: 80%;
+}
+
+header {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	background-color: darkslategray;
+	color: var(--headerTxtColor);
+	height: fit-content;
+	padding: 2em 1em;
+}
+
+header h1 {
+	align-self: normal;
+	text-indent: -200%;
+	background-image: url(../images/LogoMakr.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+
+/*
+
+===== NAV BAR - START =====
+*/
+
+nav ul li {
+	display: inline;
+	list-style: none;
+	padding: .3em;
+	border: solid red 1px;
+}
+
+nav ul li a,
+aside a {
+	color: var(--linkColor);
+	border: solid 1px white;
+	padding: .5em;
+}
+
+nav ul li a{
+	border: solid 1px white;
+	padding: .5em;
+}
+
+nav ul li a:visited,
+aside a:visited {
+	color: var(--visitedLinkColor);
+}
+
+.material-symbols-outlined{
+	vertical-align: middle;
+}
+
+aside {
+	display: flex;
+	flex-direction: column;
+	align-items: end;
+}
+
+aside a{
+	width: fit-content;
+}
+
+#search {
+	border: solid darkslategray;
+	border-radius: 15px;
+	margin-top: 5px;
+	padding: 5px;
+}
+
+#breadcrumb {
+	display: none;
+}
+
+@media only screen and (max-width: 700px) {
+	#breadcrumb {
+		display: block;
+	}
+}
+
+/*===== NAV BAR - END =====
+
+*/
+
+footer {
+	min-height: 2vh;
+	position: relative;
+	bottom: 0vh;
+	width: 100%;
+	margin-top: 5em;
+	background-color: darkslategray;
+	color: white;
+}
+
+footer p {
+	text-align: center;
+	padding: 1em 0;
 }
