@@ -34,9 +34,8 @@
 .card img {
 	margin: auto;
 	width: 100%;
-	box-shadow: 0 0 30px 2px rgb(20, 0, 0);
+	box-shadow: 0 0 20px 3px rgb(241, 229, 229);
 	border-radius: 10px 10px;
-	border: solid whitesmoke 2px;
 }
 
 .info {
