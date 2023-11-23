@@ -1,0 +1,152 @@
+* {
+	box-sizing: border-box
+}
+
+#howStarted h2,
+#founders h3 {
+	text-align: center;
+	padding-bottom: 1em;
+}
+
+#howStarted,
+#founders {
+	margin-top: 3em;
+}
+
+#howStarted p {
+	text-align: justify;
+	white-space: pre-line;
+}
+
+.cardsContainer {
+	max-width: 600px;
+	margin: auto;
+	position: relative;
+}
+
+.card {
+	display: none;
+	margin: auto;
+	text-align: center;
+	width: 35%;
+	margin-bottom: 10px;
+}
+
+.card img {
+	width: 100%;
+	box-shadow: 0 0 20px 3px rgb(241, 229, 229);
+	border-radius: 10px;
+	user-select: none;
+}
+
+.info {
+	color: black;
+	background-color: transparent;
+	font-weight: bold;
+	border: none;
+	/*padding: 0.2em 0.5em 0.2em 0.5em;*/
+	padding: .5em 1em;
+	text-decoration: underline;
+	cursor: pointer;
+	transition: 0.5s ease;
+}
+
+.info:hover {
+	border-radius: 0 0 10px 10px;
+	background-color: lightsteelblue;
+}
+
+.prev,
+.next {
+	position: absolute;
+	bottom: 0;
+	cursor: pointer;
+	padding: 0.8em;
+	color: black;
+	transition: 0.5s ease;
+	background-color: transparent;
+	border: none;
+	user-select: none;
+}
+
+.prev {
+	border-radius: 10px 0 0 10px;
+	left: 27%;
+}
+
+.next {
+	border-radius: 0 10px 10px 0;
+	right: 27%;
+}
+
+.prev:hover,
+.next:hover {
+	background-color: darkslategray;
+	color: white;
+}
+
+.cardsDetails {
+	display: none;
+	margin: auto;
+	background-color: lightsteelblue;
+	color: black;
+	padding: 1em;
+	width: 75%;
+	border: none;
+	border-radius: 10px;
+}
+
+.cardsDetails dt {
+	display: inline-block;
+	font-weight: bold;
+}
+
+.cardsDetails dd {
+	display: inline;
+	white-space: pre-line;
+}
+
+.cardsDetails dd::after {
+	content: '\a';
+	white-space: pre;
+}
+
+#closeDetails {
+	margin-top: 1.5em;
+	background-color: white;
+	color: black;
+	font-weight: bold;
+	padding: .7em 1em;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	user-select: none;
+}
+
+#closeDetails:hover {
+	background-color: whitesmoke;
+	text-decoration: underline;
+}
+
+/*
+.cardsDetails dt,
+.cardsDetails dd {
+	display: inline-block;
+}
+*/
+
+
+.fade {
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@keyframes fade {
+	from {
+		opacity: .4
+	}
+
+	to {
+		opacity: 1
+	}
+}
