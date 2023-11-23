@@ -59,21 +59,21 @@ nav ul li {
 	display: inline;
 	list-style: none;
 	padding: .3em;
-	border: solid red 1px;
+	/*border: solid red 1px;
 	/*debug*/
 }
 
 nav ul li a,
 aside a {
 	color: var(--linkColor);
-	border: solid 1px white;
+	/*border: solid 1px white;
 	/*debug*/
 	padding: .5em;
 }
 
 nav ul li a {
 	display: inline-block;
-	border: solid 1px white;
+	/*border: solid 1px white;
 	/*debug*/
 	padding: .5em;
 	transition: transform 400ms ease;

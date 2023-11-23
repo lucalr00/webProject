@@ -27,28 +27,33 @@
 .card {
 	display: none;
 	margin: auto;
+	text-align: center;
 	width: 35%;
 	margin-bottom: 10px;
 }
 
 .card img {
-	margin: auto;
 	width: 100%;
 	box-shadow: 0 0 20px 3px rgb(241, 229, 229);
 	border-radius: 10px;
+	user-select: none;
 }
 
 .info {
-	display: block;
-	margin: auto;
-	max-width: fit-content;
-	color: darkblue;
+	color: black;
+	background-color: transparent;
 	font-weight: bold;
-	border: solid red 1px;
-	padding: 0.2em 0.5em 0.2em 0.5em;
-	text-align: center;
+	border: none;
+	/*padding: 0.2em 0.5em 0.2em 0.5em;*/
+	padding: .5em 1em;
 	text-decoration: underline;
 	cursor: pointer;
+	transition: 0.5s ease;
+}
+
+.info:hover {
+	border-radius: 0 0 10px 10px;
+	background-color: lightsteelblue;
 }
 
 .prev,
@@ -56,20 +61,28 @@
 	position: absolute;
 	bottom: 0;
 	cursor: pointer;
-	padding: 0.5em;
+	padding: 0.8em;
 	color: black;
 	transition: 0.5s ease;
+	background-color: transparent;
+	border: none;
 	user-select: none;
 }
 
 .prev {
 	border-radius: 10px 0 0 10px;
-	left: 25%;
+	left: 27%;
 }
 
 .next {
 	border-radius: 0 10px 10px 0;
-	right: 25%;
+	right: 27%;
+}
+
+.prev:hover,
+.next:hover {
+	background-color: darkslategray;
+	color: white;
 }
 
 .cardsDetails {
@@ -80,25 +93,25 @@
 	padding: 1em;
 	width: 75%;
 	border: none;
-	text-align: left;
 	border-radius: 10px;
 }
 
-.cardsDetails dt{
+.cardsDetails dt {
 	display: inline-block;
 	font-weight: bold;
 }
 
-.cardsDetails dd{
+.cardsDetails dd {
 	display: inline;
+	white-space: pre-line;
 }
 
-.cardsDetails dd::after{
+.cardsDetails dd::after {
 	content: '\a';
 	white-space: pre;
 }
 
-#closeDetails{
+#closeDetails {
 	margin-top: 1.5em;
 	background-color: white;
 	color: black;
@@ -107,9 +120,10 @@
 	border: none;
 	border-radius: 10px;
 	cursor: pointer;
+	user-select: none;
 }
 
-#closeDetails:hover{
+#closeDetails:hover {
 	background-color: whitesmoke;
 	text-decoration: underline;
 }
@@ -120,11 +134,6 @@
 	display: inline-block;
 }
 */
-.prev:hover,
-.next:hover {
-	background-color: darkslategray;
-	color: white;
-}
 
 
 .fade {
