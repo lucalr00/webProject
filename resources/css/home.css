@@ -1,0 +1,155 @@
+
+.welcome-text {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.highlights {
+    width: 50%;
+    height: 100%;
+    background-color: white;
+}
+
+
+.progress-container {
+    border: 1px solid black;
+    padding: 7px 10px;
+    padding-top: 30px;
+    position: relative;
+}
+
+.progress-container progress {
+    width: 100%;
+    height: 20px;
+}
+
+.progress-container h2 {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background-color: white;
+    padding: 0 5px;
+}
+
+.progress-container label {
+    display: block;
+}
+
+
+.caption {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+}
+
+
+.image {
+    position: relative;
+    margin: 20px 0;
+}
+
+
+.image img {
+    display: block;
+    margin: auto;
+    width: 80%;
+    height: auto;
+    background-color: white;
+}
+
+
+.social-room {
+    display: flex;
+    flex-direction: column;
+    height: 220px; 
+    width: 85%;
+    margin: 0 auto;
+    border: 1px solid black;
+    padding: 30px 10px;
+    position: relative;
+    z-index: 0;
+}
+
+.social-room h2 {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background-color: white;
+    padding: 0 5px;
+}
+
+.scrollable-content {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    height: 100%;
+    position:relative;
+}
+  
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0 0 auto;
+    width: 200px;
+    height: 200px;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    position: relative;
+    box-sizing: border-box;
+    padding: 50px;
+    overflow: visible;
+    background-color: white;
+    z-index: 0;
+}
+
+.box:last-child {
+    border-right: 1px solid black;
+}
+    
+.logo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+}
+  
+h2.title {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    background-color: white;
+    padding: 0 5px;
+    z-index: 3;
+}
+
+.centered-text {
+    position: absolute;
+    width: calc(100% - 20px);
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    padding: 0 10px;
+}
+
+.subtext {
+    width: calc(100% - 20px);
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+    padding: 0 10px; 
+}
+
