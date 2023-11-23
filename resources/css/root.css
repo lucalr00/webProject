@@ -94,6 +94,10 @@ nav ul li a:hover:not(.active) {
 	transform: scale(1.15);
 }
 
+nav .active:hover{
+	text-decoration: underline !important;
+}
+
 .material-symbols-outlined {
 	vertical-align: middle;
 }
