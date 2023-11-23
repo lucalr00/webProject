@@ -10,7 +10,7 @@
 	--txtColor: rgb(0, 0, 0);
 	--footerBgColor: rgb(0, 0, 0);
 	--footerTxtColor: rgb(255, 255, 255);
-	--visitedLinkColor: yellow;
+	--visitedLinkColor: rgb(236, 106, 151);
 	--flagColor: rgb(218, 103, 66);
 	--linkColor: rgb(255, 255, 255);
 	--font-body-family: "Roboto Condensed", sans-serif;
@@ -60,18 +60,29 @@ nav ul li {
 	list-style: none;
 	padding: .3em;
 	border: solid red 1px;
+	/*debug*/
 }
 
 nav ul li a,
 aside a {
 	color: var(--linkColor);
 	border: solid 1px white;
+	/*debug*/
 	padding: .5em;
 }
 
-nav ul li a{
+nav ul li a {
+	display: inline-block;
 	border: solid 1px white;
+	/*debug*/
 	padding: .5em;
+	transition: transform 400ms ease;
+
+}
+
+nav ul li .active {
+	color: white !important;
+	text-decoration: none !important;
 }
 
 nav ul li a:visited,
@@ -79,7 +90,11 @@ aside a:visited {
 	color: var(--visitedLinkColor);
 }
 
-.material-symbols-outlined{
+nav ul li a:hover:not(.active) {
+	transform: scale(1.15);
+}
+
+.material-symbols-outlined {
 	vertical-align: middle;
 }
 
@@ -89,13 +104,13 @@ aside {
 	align-items: end;
 }
 
-aside a{
+aside a {
 	width: fit-content;
 }
 
 #search {
 	border: solid darkslategray;
-	border-radius: 15px;
+	border-radius: 13px;
 	margin-top: 5px;
 	padding: 5px;
 }
@@ -116,7 +131,7 @@ aside a{
 
 footer {
 	min-height: 2vh;
-	position: relative;
+	position: static;
 	bottom: 0vh;
 	width: 100%;
 	margin-top: 5em;

@@ -35,7 +35,7 @@
 	margin: auto;
 	width: 100%;
 	box-shadow: 0 0 20px 3px rgb(241, 229, 229);
-	border-radius: 10px 10px;
+	border-radius: 10px;
 }
 
 .info {
@@ -47,6 +47,8 @@
 	border: solid red 1px;
 	padding: 0.2em 0.5em 0.2em 0.5em;
 	text-align: center;
+	text-decoration: underline;
+	cursor: pointer;
 }
 
 .prev,
@@ -70,6 +72,54 @@
 	right: 25%;
 }
 
+.cardsDetails {
+	display: none;
+	margin: auto;
+	background-color: lightsteelblue;
+	color: black;
+	padding: 1em;
+	width: 75%;
+	border: none;
+	text-align: left;
+	border-radius: 10px;
+}
+
+.cardsDetails dt{
+	display: inline-block;
+	font-weight: bold;
+}
+
+.cardsDetails dd{
+	display: inline;
+}
+
+.cardsDetails dd::after{
+	content: '\a';
+	white-space: pre;
+}
+
+#closeDetails{
+	margin-top: 1.5em;
+	background-color: white;
+	color: black;
+	font-weight: bold;
+	padding: .7em 1em;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+#closeDetails:hover{
+	background-color: whitesmoke;
+	text-decoration: underline;
+}
+
+/*
+.cardsDetails dt,
+.cardsDetails dd {
+	display: inline-block;
+}
+*/
 .prev:hover,
 .next:hover {
 	background-color: darkslategray;

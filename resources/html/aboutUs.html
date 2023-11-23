@@ -9,8 +9,9 @@
 	<meta name="keywords" content="iserire">
 	<meta name="description" content="inserire">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="aboutUs.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="aboutUs.js"></script>
+	<script src="root.js"></script>
 	<link rel="stylesheet" href="../css/aboutUs.css">
 	<link rel="stylesheet" href="../css/root.css">
 	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
@@ -27,7 +28,7 @@
 				<li lang="en"><a href="#">Home</a></li>
 				<li><a href="#">Projects</a></li>
 				<li><a href="#">Investments</a></li>
-				<li><a href="#">About Us</a></li>
+				<li><a href="aboutUs.html">About Us</a></li>
 				<li><a href="#">Contacts</a></li>
 			</ul>
 		</nav>
@@ -45,8 +46,7 @@
 			<h2>
 				How it started
 			</h2>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id sapien vitae nibh suscipit luctus eget aliquet eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec facilisis, justo non gravida egestas, nunc ex iaculis mauris, vitae facilisis odio massa id metus. Praesent non leo ut erat mollis condimentum a at elit. Phasellus aliquam vel nibh vel rhoncus. Etiam scelerisque at sem ac egestas. Morbi sed quam iaculis, dignissim magna in, pellentesque nisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec cursus ipsum felis, sed placerat tortor fringilla at.
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id sapien vitae nibh suscipit luctus eget aliquet eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec facilisis, justo non gravida egestas, nunc ex iaculis mauris, vitae facilisis odio massa id metus. Praesent non leo ut erat mollis condimentum a at elit. Phasellus aliquam vel nibh vel rhoncus. Etiam scelerisque at sem ac egestas. Morbi sed quam iaculis, dignissim magna in, pellentesque nisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec cursus ipsum felis, sed placerat tortor fringilla at.
 
 Curabitur non nisi aliquet, eleifend metus eu, commodo nisl. Suspendisse aliquam viverra diam, ut elementum velit scelerisque eu. Phasellus faucibus ac erat id convallis. Curabitur accumsan turpis id massa sagittis finibus. Nulla eu lacus posuere, aliquam sapien et, tempor mi. Curabitur in arcu massa. Sed gravida vehicula bibendum. Nulla et ipsum arcu. Sed non velit quis mi tristique porta. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam vestibulum eget risus non eleifend. Cras ornare nulla in dolor tincidunt dignissim. Duis sollicitudin massa vel lectus convallis, non porttitor justo commodo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
 
@@ -65,28 +65,88 @@ Integer vitae enim et tellus dignissim tempus. Nunc vel eleifend ipsum. Praesent
 				<!-- Full-width images with number and caption text -->
 				<div class="card">
 					<img src="../images/NicFarbank1.jpg">
-					<a href="#" class="info">Bill Gates falso Bill</a>
+					<a class="info" onclick="showDetails()">Bill Gates falso Bill</a>
 				</div>
 
 				<div class="card">
 					<img src="../images/download.jpeg">
-					<a href="#" class="info">Ceo 2</a>
+					<a class="info" onclick="showDetails()">Ceo 2</a>
 				</div>
 
 				<div class="card">
 					<img src="../images/ceo.jpeg">
-					<a href="#" class="info">Luca La Prova</a>
+					<a class="info" onclick="showDetails()">Luca La Prova</a>
 				</div>
 
 				<div class="card">
 					<img src="../images/ceow.png">
-					<a href="#" class="info">Testing nome doppio nome e cognome lungo</a>
+					<a class="info" onclick="showDetails()">Testing nome doppio nome e cognome lungo</a>
 				</div>
 
 				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 				<a class="next" onclick="plusSlides(1)">&#10095;</a>
 
 			</div>
+			
+				<dl class="cardsDetails">
+					<dt>Role:</dt>
+					<dd>Chairman</dd>
+					<dt><abbr title="Date of Birthday">DOB</abbr>:</dt>
+					<dd><time datetime="11-22-1978">22-11-1978</time></dd>
+					<dt><abbr title="Place of Birth">POB</abbr>:</dt>
+					<dd>Atlanta, Georgia, <abbr title="United States">U.S.</abbr></dd>
+					<dt>Gender:</dt>
+					<dd>male</dd>
+					<dt>Biography:</dt>
+					<dd>Raised in the close-knit community of Macon, Georgia, Jace exhibited an early fascination with technology. His parents, both educators, encouraged his inquisitive mind, fostering a love for learning that would shape his future. After earning a scholarship to Georgia Tech, Jace immersed himself in the world of computer science, graduating with top honors and a determination to make a difference.
+					</dd>
+					<button type="button" id="closeDetails" onclick="closeDetails()">CLOSE</button>
+				</dl>
+				
+				<dl class="cardsDetails">
+					<dt>Role:</dt>
+					<dd><abbr title="Chief Executive Officer">CEO</abbr></dd>
+					<dt><abbr title="Date of Birthday">DOB</abbr>:</dt>
+					<dd><time datetime="11-22-1978">22-11-1978</time></dd>
+					<dt><abbr title="Place of Birth">POB</abbr>:</dt>
+					<dd>Atlanta, Georgia, <abbr title="United States">U.S.</abbr></dd>
+					<dt>Gender:</dt>
+					<dd>male</dd>
+					<dt>Biography:</dt>
+					<dd>Raised in the close-knit community of Macon, Georgia, Jace exhibited an early fascination with technology. His parents, both educators, encouraged his inquisitive mind, fostering a love for learning that would shape his future. After earning a scholarship to Georgia Tech, Jace immersed himself in the world of computer science, graduating with top honors and a determination to make a difference.
+					</dd>
+					<button type="button" id="closeDetails" onclick="closeDetails()">CLOSE</button>
+				</dl>
+				
+				<dl class="cardsDetails">
+					<dt>Role:</dt>
+					<dd><abbr title="Chief Operations Officer">COO</abbr></dd>
+					<dt><abbr title="Date of Birthday">DOB</abbr>:</dt>
+					<dd><time datetime="11-22-1978">22-11-1978</time></dd>
+					<dt><abbr title="Place of Birth">POB</abbr>:</dt>
+					<dd>Atlanta, Georgia, <abbr title="United States">U.S.</abbr></dd>
+					<dt>Gender:</dt>
+					<dd>male</dd>
+					<dt>Biography:</dt>
+					<dd>Raised in the close-knit community of Macon, Georgia, Jace exhibited an early fascination with technology. His parents, both educators, encouraged his inquisitive mind, fostering a love for learning that would shape his future. After earning a scholarship to Georgia Tech, Jace immersed himself in the world of computer science, graduating with top honors and a determination to make a difference.
+					</dd>
+					<button type="button" id="closeDetails" onclick="closeDetails()">CLOSE</button>
+				</dl>
+				
+				<dl class="cardsDetails">
+					<dt>Role:</dt>
+					<dd>Investment Manager</dd>
+					<dt><abbr title="Date of Birthday">DOB</abbr>:</dt>
+					<dd><time datetime="11-22-1978">22-11-1978</time></dd>
+					<dt><abbr title="Place of Birth">POB</abbr>:</dt>
+					<dd>Atlanta, Georgia, <abbr title="United States">U.S.</abbr></dd>
+					<dt>Gender:</dt>
+					<dd>female</dd>
+					<dt>Biography:</dt>
+					<dd>Raised in the close-knit community of Macon, Georgia, Jace exhibited an early fascination with technology. His parents, both educators, encouraged his inquisitive mind, fostering a love for learning that would shape his future. After earning a scholarship to Georgia Tech, Jace immersed himself in the world of computer science, graduating with top honors and a determination to make a difference.
+					</dd>
+					<button type="button" id="closeDetails" onclick="closeDetails()">CLOSE</button>
+				</dl>
 
 		</section>
 	</main>
