@@ -1,0 +1,23 @@
+/* This is the CSS code that puts the two divs in the same row */
+
+/* Select the div that contains the two divs */
+.container {
+    display: flex;
+}
+
+.box1 {
+    width: 50%;
+    height: 100%;
+    background-color: white;
+}
+
+.box2 {
+    width: 50%;
+    height: 100%;
+    background-color: white;
+}
+
+  
+
+  
+
