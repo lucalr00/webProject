@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Projects">
     <meta name="descriprion" content="Page dedicated to the exploration of Zero Carbon's projects">
+    <script src="../javascript/root.js"></script>
     <link rel="stylesheet" href="../css/root.css">
     <link rel="stylesheet" href="../css/projects.css">
     <!--Altri link per css della pagina e css dei vari formati-->
@@ -17,36 +18,47 @@
 
 <body>
     <header>
-        <img id="logo" src="../images/LogoMakr.png" alt="Logo di Zero Carbon">
-        <!--Menù a tendina?-->
-        <nav id="page_nav">
+        <h1>
+            Zero Carbon
+        </h1>
+        <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="">Investments</a></li>
-                <li><a href="">About us</a></li>
-                <li><a href="">Contacts</a></li>
+                <li lang="en"><a href="#">Home</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Investments</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contacts</a></li>
             </ul>
         </nav>
-        <a href="">Admin Area</a>
-        <!-- <input type="search"> -->
-        <nav id="breadcrumb">
-            <p>You are in: Projects</p>
+        <nav id="breadcrumb"> <!-- NASCOSTO IN DESKTOP -->
+            <p>Ti trovi in: <span lang="en">edit me</span></p>
         </nav>
+        <aside>
+            <a id="adminArea" href="aboutUs.html"><span class="material-symbols-outlined">Login</span>Admin Area</a>
+            <input type="search" id="search" placeholder="search...">
+        </aside>
     </header>
+
     <main>
-        <h1>Explore our Projects</h1>
+        <h1 id="explore">Explore our Projects</h1>
         <div class="slideshow">
             <div class="slide_content">
-                <img src="../images/ocean-3.jpg" alt="">
+                <img id="blue_horizon" src="../images/ocean-3.jpg" alt="">
                 <h2>Blue Horizon</h2>
                 <!--Tendina per mostrare i dettagli?-->
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum praesentium minima consectetur
-                    dolore eaque saepe molestias velit fugit doloremque repudiandae veritatis doloribus, inventore
-                    incidunt ipsa! Animi odio dolorum id amet.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, sint atque eveniet rerum alias qui in enim recusandae blanditiis veniam voluptatem ea voluptatum nihil? Recusandae impedit ea facere repudiandae accusamus suscipit optio commodi enim ut tempora velit, aut incidunt. 
+                    Deserunt, dolorem consequuntur sapiente dicta architecto laborum commodi maxime atque labore iusto accusantium nam eum soluta suscipit ullam eveniet repellendus possimus doloremque saepe consequatur temporibus aspernatur eos maiores?
+                    Deserunt reprehenderit aliquam vel consectetur ab qui explicabo incidunt voluptate, mollitia dolore expedita veniam. Quibusdam iste nam, molestiae totam cupiditate sed, perferendis magnam eius quis quasi facilis earum! Distinctio ratione laboriosam nemo id?
+                </p>
+                <a href="#">See more >></a>
             </div>
         </div>
     </main>
+
+    <footer>
+        <p>Zero Carbon &minus; <span lang="en">All rights reserved</span></p>
+    </footer>
+
 </body>
 
 </html>

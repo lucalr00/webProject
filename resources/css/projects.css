@@ -1,0 +1,43 @@
+#explore {
+    text-align: center;
+    display: block;
+    padding-top: 1em;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.slideshow h2 {
+    display: block;
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+.slideshow p {
+    text-align: justify;
+    white-space: pre-line;
+    display: block;
+}
+
+#blue_horizon {
+    width: 400px;
+}
+
+.slide_content img {
+    display: block;
+    padding-bottom: 1.5em;
+    padding-top: 1.5em;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slide_content a {
+    display: block;
+    text-align: center;
+    padding-top: 1.5em;
+    color: var(--linkColor);
+}
