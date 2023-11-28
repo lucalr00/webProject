@@ -1,0 +1,57 @@
+main h2 {
+	text-align: center;
+	margin-bottom: 2em;
+}
+
+.componenti {
+	border: solid black 1px;
+	margin: 1em auto 1em;
+	max-width: 65%;
+}
+
+.componente {
+	background-color: var(--flagColor);
+	border-bottom: solid black 1px;
+	padding: 1em;
+}
+
+dl {
+	padding: 1em;
+	background-color: white;
+	overflow: hidden;
+}
+
+
+dd {
+	text-align: justify;
+}
+
+.componenti dt {
+	font-weight: bold;
+}
+
+dl img {
+	margin: auto;
+	float: left;
+	padding: 0em 1em 0 0em;
+	max-width: 40%;
+}
+
+@media only screen and (max-width: 700px) {
+
+	main h2 {
+		text-align: center;
+		margin-bottom: 1em;
+	}
+
+	.componenti {
+		max-width: var(--maxWidth);
+	}
+
+	dl img {
+		float: none;
+		display: block;
+		max-width: 100%;
+	}
+
+}

@@ -1,0 +1,43 @@
+#albums ul{
+	column-count: 3;
+	padding-top: 2em;
+}
+
+#albums ul li{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	padding: 2em;
+	list-style: none;
+}
+
+#albums img{
+	max-width: 100%;
+}
+
+main{
+	text-align: center;
+}
+
+main p{
+	padding: 1em;
+}
+
+#albums ul a{
+	transition: scale 250ms ease-in-out;
+}
+
+ul a:not(:hover){
+	filter: grayscale(1);
+}
+
+ul a:hover{
+	scale: 1.1;
+}
+
+@media only screen and (max-width: 700px) {
+
+	#albums ul{
+	column-count: 2;
+	}
+	
+}

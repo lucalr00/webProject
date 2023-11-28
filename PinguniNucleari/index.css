@@ -1,0 +1,82 @@
+main #mainContent {
+	margin: auto;
+	column-count: 3;
+	column-gap: 10px;
+	line-height: 1.8em;
+}
+
+main div img {
+	max-width: 70%;
+}
+
+main .citta {
+	color: var(--flagColor);
+	font-weight: bold;
+}
+
+
+main dl {
+	/*
+	display: grid;
+	grid-template-columns: 0.25fr 0.3fr 1fr;
+	grid-column-gap: 5px;
+	
+	
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	*/
+
+	display: flex;
+	flex-wrap: wrap;
+
+	text-transform: uppercase;
+
+}
+
+main dl dt {
+	min-width: 7em;
+}
+
+main dl dd {
+	min-width: 7em;
+}
+
+.soldout {
+	background-image: url(materialePerStudenti/images/soldout.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 68%;
+}
+
+#info {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 1em;
+	padding-top: 1em;
+	line-height: 1.5em;
+}
+
+#goTop {
+	display: none;
+}
+
+@media only screen and (max-width: 1019px) {
+
+	main #mainContent {
+		column-count: 2;
+		column-gap: 1.3em;
+	}
+
+}
+
+@media only screen and (max-width: 700px) {
+
+	main #mainContent {
+		column-count: 1;
+	}
+	
+	time::before{
+		content: '- ' ;
+	}
+
+}

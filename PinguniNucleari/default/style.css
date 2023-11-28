@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --headerBgColor: rgb(0,0,0);
+    --headerTxtColor: rgb(255,255,255);
+    --bgColor: rgb(255,255,255);
+    --txtColor: rgb(0,0,0);
+    --footerBgColor: rgb(0,0,0);
+    --footerTxtColor: rgb(255,255,255);
+    --visitedLinkColor: rgb(230,12,83);
+    --flagColor: rgb(218,103,66);
+    --linkColor: rgb(255,255,255);
+    --font-body-family: "Roboto Condensed", sans-serif;
+}
+
+html{
+    font-size: 100%;
+    font-family: var(--font-body-family);
+    line-height: 1.5em;
+    margin: auto;
+    background-image: url(materialePerStudenti/images/bg.png);
+}
+
+header{
+    background-color: var(--headerBgColor);
+    color: var(--headerTxtColor);
+    text-align: center;
+    padding: 1em;
+}
+
+main{
+    background-color: var(--bgColor);
+    color: var(--txtColor);
+    margin: auto;
+    width: 80%;
+}
+
+nav{
+    background-color: var(--headerBgColor);
+    color: var(--headerTxtColor);
+}
+
+#imgIndex{
+    width: 60%;
+}
+
+#menu ul li{
+    display: inline-block;
+    width: 22%;
+    padding: 0 0 0.5;
+}
+
+#menu ul{
+    margin: auto;
+    max-width: 1024px;
+    padding: 1em;
+    list-style: none;
+}
+
+#breadcrumb{
+    padding: 1em;
+}
+
+#breadcrumb p{
+    max-width: 1024px;
+    margin: auto;
+}
+
+nav a:link{
+    color: var(--linkColor);
+}
+
+nav a:visited{
+    color: var(--visitedLinkColor);
+}
+
+dl{
+    font-size: 90%;
+    margin: auto;
+}
+
+main dl div dt, main dl div dd{
+    display: inline;
+    text-transform: uppercase;
+}
+
+dd[data-title="citta"]{
+    color: var(--flagColor);
+}
+
+footer{
+    background-color: var(--footerBgColor);
+    color: var(--footerTxtColor);
+    text-align: center;
+}
+

@@ -1,0 +1,20 @@
+#bandStory{
+	width: 60%;
+	margin: auto;
+}
+
+#bandStory h1{
+	padding: 0 0 1em;
+	color: var(--txtColor);
+	text-align: center;
+}
+
+#bandStory p{
+	padding: 0 0 0.4em;
+	text-align: justify;
+}
+
+#bandMembers{
+	margin: auto;
+	width: 100%;
+}

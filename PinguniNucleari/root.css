@@ -1,0 +1,132 @@
+*{
+	margin:0;
+	padding: 0;
+}
+
+:root{
+    --headerBgColor: rgb(0,0,0);
+    --headerTxtColor: rgb(255,255,255);
+    --bgColor: rgb(255,255,255);
+    --txtColor: rgb(0,0,0);
+    --footerBgColor: rgb(0,0,0);
+    --footerTxtColor: rgb(255,255,255);
+    --visitedLinkColor: rgb(230,12,83);
+    --flagColor: rgb(218,103,66);
+    --linkColor: rgb(255,255,255);
+    --font-body-family: "Roboto Condensed", sans-serif;
+    --maxWidth: 82%;
+}
+
+
+html{
+	font-size: 100%;
+    font-family: var(--font-body-family);
+    margin: auto;
+    line-height: 1.5em;
+    background-image: url(materialePerStudenti/images/bg.png);
+}
+
+header{
+	background-color: var(--headerBgColor);
+	color: var(--headerTxtColor);
+	text-align: center;
+	padding: 3em 0 2em;
+}
+
+#breadcrumb{
+	text-align: start;
+	padding: 1em;
+}
+
+header nav ul{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-column-gap: 1em;
+	grid-row-gap: 1em;
+	margin: auto;
+    padding: 3em 0 1em;
+    list-style: none;
+   	max-width: var(--maxWidth);
+}
+
+header nav ul li a, #breadcrumb a{
+	color: var(--linkColor);
+	text-decoration: none;
+}
+
+header nav ul li a:hover, #breadcrumb a:hover{
+	text-decoration: underline;
+	color: white;
+}
+
+header nav ul li a:not(:hover), #breadcrumb a{
+	color: gainsboro;
+}
+
+header nav ul li a:visited, #breadcrumb a{
+	color: none;
+}
+
+/*
+header nav ul li .current{
+	color: var(--linkColor);
+}
+*/
+
+main {
+	margin: auto;
+	max-width: var(--maxWidth);
+	padding: 7em 0 3em;
+}
+
+#logo{
+	width: 10%;
+}
+
+#goTop {
+	display: none;
+}
+
+@media only screen and (max-width: 700px) {
+
+	:root{
+		--maxWidth: 90%;
+	}
+	
+	main {
+	padding: 2em 0 2em;
+	}
+
+	#logo{
+		width: 50%;
+	}
+
+	#goTop {
+		width: var(--maxWidth);
+		margin: auto;
+		justify-items: center;
+		display: block;
+		border: solid 2px var(--headerBgColor);
+		border-radius: 10px;
+		padding: 0.5em;
+		text-decoration: none;
+		text-align: center;
+		color: var(--txtColor);
+		background-color: var(--bgColor);
+	}
+	
+	#goTop:hover{
+		background-color: rgb(240, 240, 240);
+	}
+}
+
+footer{
+	position: absolute;
+	bottom: -999;
+	width: 100%;
+	margin: 2em 0 0;
+	padding: 1em 0 1em;
+	background-color: var(--footerBgColor);
+	color: var(--footerTxtColor);
+	text-align: center;
+}
