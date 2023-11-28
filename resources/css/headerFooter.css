@@ -1,0 +1,251 @@
+header {
+	background-color: var(--headerBgColor);
+	color: var(--headerTxtColor);
+	padding-bottom: 1em;
+}
+
+#topNavBar {
+	display: flex;
+	gap: 2em;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+#textLogo {
+	display: flex;
+	flex-wrap: wrap;
+	padding-left: .5em;
+	row-gap: 5px;
+	width: fit-content;
+	font-weight: normal;
+	text-transform: uppercase;
+	color: white;
+}
+
+#textLogo .logoFirstHalf {
+	text-transform: uppercase;
+	color: white;
+	font-weight: bold;
+}
+
+
+nav ul li {
+	display: inline;
+	list-style: none;
+	padding: .3em;
+	/*border: solid red 1px;
+	/*debug*/
+}
+
+nav ul li a {
+	color: var(--linkColor);
+	/*border: solid 1px white;
+	/*debug*/
+}
+
+nav ul li a {
+	display: inline-block;
+	/*border: solid 1px white;
+	/*debug*/
+	padding: .5em;
+	transition: transform 400ms ease;
+
+}
+
+#closeMenu {
+	display: none;
+}
+
+#menuLink {
+	margin-left: auto;
+	color: white;
+	font-weight: bold;
+	font-size: larger;
+	text-decoration: none;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: fit-content;
+	background: transparent;
+	border: none;
+	padding: .5em .6em;
+	cursor: pointer;
+	transition: transform 400ms ease;
+}
+
+
+#topNavBar .menuLinkOpened {
+	background-color: var(--responsiveLinkBgColor);
+}
+
+nav ul li .active {
+	color: white !important;
+	text-decoration: none !important;
+}
+
+nav ul li a:visited {
+	color: var(--visitedLinkColor);
+}
+
+nav ul li a:hover:not(.active) {
+	transform: scale(1.15);
+}
+
+nav .active:hover {
+	text-decoration: underline !important;
+}
+
+#loginIcon {
+	vertical-align: middle;
+	padding-right: 3px;
+}
+
+/*INIZIAVA QUI*/
+
+#breadcrumb {
+	display: block;
+	padding-left: .5em;
+	margin-top: 1em;
+}
+
+.headerNavResponsive ul {
+	background-color: var(--responsiveLinkBgColor);
+}
+
+
+.headerNav ul li {
+	display: none;
+}
+
+.headerNavResponsive li {
+	display: block;
+	text-align: center;
+	margin: auto;
+}
+
+.headerNavResponsive ul {
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	width: 100%;
+}
+
+.headerNavResponsive ul li a {
+	width: 100%;
+}
+
+.headerNavResponsive ul {
+	border: none;
+	border-bottom: solid black 1px;
+	border-top: solid 2px black;
+}
+
+.headerNavResponsive ul li:hover {
+	background-color: var(--responsiveLinkHoverBgColor);
+}
+
+.headerNavResponsive ul li:first-child {
+	margin-top: 1em;
+}
+
+.headerNavResponsive ul li:last-child {
+	margin-bottom: .5em;
+}
+
+footer {
+	min-height: 2vh;
+	position: static;
+	bottom: 0vh;
+	width: 100%;
+	margin-top: 5em;
+	padding: 1em;
+	background-color: darkslategray;
+	color: white;
+}
+
+footer #ZCLogo {
+	width: 6em;
+	margin-bottom: 2em;
+}
+
+footer dl dt {
+	font-weight: bold;
+}
+
+footer dl dd {
+	margin-bottom: 1.5em;
+}
+
+section h4 {
+	text-transform: uppercase;
+	margin-top: 3em;
+}
+
+section nav {
+	text-align: left;
+}
+
+section nav a {
+	color: white;
+}
+
+#socialIcons a img {
+	width: 5em;
+}
+
+#socialIcons a {
+	transition: 400ms ease;
+}
+
+#socialIcons a:hover {
+	transform: scale(1.1);
+	/*	transform: translateY(-7px);*/
+}
+
+footer #copyright {
+	margin-top: 2em;
+	text-align: center;
+}
+
+footer #copyright::before {
+	content: '';
+	display: block;
+	margin-bottom: .5em;
+	width: 100%;
+	border: dashed 2px white;
+}
+
+footer #socialIcons {
+	padding: 0 1em;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, 5em);
+	column-gap: 2em;
+	row-gap: 1em;
+}
+
+footer #linkList{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+footer #linkList > * {
+	flex: 1 1 0px;
+}
+
+@media only screen and (max-width: 250px) {
+	#topNavBar {
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	#menuLink {
+		width: 100%;
+	}
+	
+	footer #socialIcons, footer #linkList{
+		display: flex;
+		flex-direction: column;
+	}
+	
+}
+

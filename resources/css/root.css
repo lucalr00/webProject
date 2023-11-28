@@ -4,7 +4,9 @@
 }
 
 :root {
-	--headerBgColor: rgb(0, 0, 0);
+	--headerBgColor: rgb(40, 61, 110);
+	--responsiveLinkBgColor: rgb(40, 40, 90);
+	--responsiveLinkHoverBgColor: rgb(20, 20, 60);
 	--headerTxtColor: rgb(255, 255, 255);
 	--bgColor: rgb(255, 255, 255);
 	--txtColor: rgb(0, 0, 0);
@@ -12,8 +14,10 @@
 	--footerTxtColor: rgb(255, 255, 255);
 	--visitedLinkColor: rgb(236, 106, 151);
 	--flagColor: rgb(218, 103, 66);
+	--linkColor: rgb(255, 255, 255);
 	--linkColor: #182577; /*Per provare i colori dei link*/
 	--font-body-family: "Roboto Condensed", sans-serif;
+	--mobileLineDivider: rgba(60, 60, 60, .7);
 }
 
 html {
@@ -30,120 +34,37 @@ main {
 	width: 80%;
 }
 
-header {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: center;
-	background-color: darkslategray;
-	color: var(--headerTxtColor);
-	height: fit-content;
-	padding: 2em 1em;
-}
-
-header h1 {
-	align-self: normal;
-	text-indent: -200%;
-	background-image: url(../images/ZCLogo.png);
-	background-repeat: no-repeat;
-	background-size: contain;
-}
-
-
-/*
-
-===== NAV BAR - START =====
-*/
-
-nav ul li {
-	display: inline;
-	list-style: none;
-	padding: .3em;
-	/*border: solid red 1px;
-	/*debug*/
-}
-
-nav ul li a,
-aside a {
-	color: var(--linkColor);
-	/*border: solid 1px white;
-	/*debug*/
+.goUp{
+	position: fixed;
+	background-color: var(--headerBgColor);
+	color: white;
+	font-weight: bold;
+	text-transform: uppercase;
+	border: none;
+	bottom: 3em;
+	right: 1em;
+	height: 6em;
+	width: 6em;
 	padding: .5em;
-}
-
-nav ul li a {
-	display: inline-block;
-	/*border: solid 1px white;
-	/*debug*/
-	padding: .5em;
-	transition: transform 400ms ease;
-
-}
-
-nav ul li .active {
-	color: white !important;
-	text-decoration: none !important;
-}
-
-nav ul li a:visited,
-aside a:visited {
-	color: var(--visitedLinkColor);
-}
-
-nav ul li a:hover:not(.active) {
-	transform: scale(1.15);
-}
-
-nav .active:hover{
-	text-decoration: underline !important;
-}
-
-.material-symbols-outlined {
-	vertical-align: middle;
-}
-
-aside {
+	border-radius: 50%;
 	display: flex;
 	flex-direction: column;
-	align-items: end;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	box-shadow: 0 0 30px 1px rgb(30, 30, 30);
 }
 
-aside a {
-	width: fit-content;
-}
-
-#search {
-	border: solid darkslategray;
-	border-radius: 13px;
-	margin-top: 5px;
-	padding: 5px;
-}
-
-#breadcrumb {
+.hidden {
 	display: none;
 }
 
-@media only screen and (max-width: 700px) {
-	#breadcrumb {
-		display: block;
-	}
+.goUp span{
+	font-size: 2em;
 }
 
-/*===== NAV BAR - END =====
-
-*/
-
-footer {
-	min-height: 2vh;
-	position: static;
-	bottom: 0vh;
-	width: 100%;
-	margin-top: 5em;
-	background-color: darkslategray;
-	color: white;
+.goUp:hover{
+	background-color: var(--responsiveLinkBgColor);
 }
 
-footer p {
-	text-align: center;
-	padding: 1em 0;
-}

@@ -1,0 +1,44 @@
+* {
+	box-sizing: border-box;
+}
+
+#mainInfo {
+	margin: 4em 0;
+}
+
+#mainInfo h1 {
+	background-color: var(--headerBgColor);
+	color: white;
+	padding: 1em;
+	width: fit-content;
+	border-radius: 0 10px 40px 0;
+}
+
+#mainInfo h1,
+.sections h2 {
+	margin-bottom: .5em;
+}
+
+.sections {
+	margin-bottom: 4em;
+}
+
+#signature {
+	right: 0;
+	border: solid 1px var(--headerBgColor);
+	border-radius: 50%;
+	width: fit-content;
+	padding-top: 4em;
+	font-weight: bold;
+	background-image: url(../images/ZCLogo.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 250px) {
+
+	#mainInfo {
+		word-break: break-all;
+	}
+
+}

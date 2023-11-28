@@ -1,0 +1,29 @@
+
+ol li {
+	font-weight: bold;
+	list-style-position: inside;
+	margin-bottom: 1em;
+}
+
+ol li p {
+	font-weight: normal;
+}
+
+.sections figure {
+	border: solid var(--headerBgColor) 2px;
+	padding: .5em;
+}
+
+.sections figure img {
+	box-sizing: border-box;
+	border: solid gray 1px;
+	width: 100%;
+}
+
+.sections figure figcaption {
+	background-color: #222;
+	color: #fff;
+	padding: .5em;
+	text-align: center;
+}
+
