@@ -12,33 +12,40 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script src="../javascript/aboutUs.js"></script>
 	<script src="../javascript/root.js"></script>
-	<link rel="stylesheet" href="../css/aboutUs.css">
+	<script src="../javascript/goTop.js"></script>
+	<link rel="stylesheet"  href="../css/aboutUs.css">
 	<link rel="stylesheet" href="../css/root.css">
+	<link rel="stylesheet" href="../css/headerFooter.css">
+	<!--<link rel="stylesheet" media="screen and (min-width: 1024px)" href="../css/root.css"> -->
+	<link rel="stylesheet" media="screen and (min-width: 700px)" href="../css/devices/aboutUs.css">
+	<link rel="stylesheet" media="screen and (min-width: 700px)" href="#">
 	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
 
 	<header>
+		<div id="topNavBar">
 		<h1>
-			Zero Carbon
+			<a href="home.html" id="textLogo"><span class="logoFirstHalf">Zero</span>Carbon</a>
 		</h1>
-		<nav>
+		<button id="menuLink" class="menuLink" onclick="responsiveNav()"><span class="material-symbols-outlined" id="closeMenu">close</span><span class="material-symbols-outlined" id="openMenu">menu</span>MENU</button>
+		</div>
+		<nav id="navBar" class="headerNav">
 			<ul>
-				<li lang="en"><a href="#">Home</a></li>
+				<li lang="en"><a href="home.html">Home</a></li>
 				<li><a href="#">Projects</a></li>
 				<li><a href="#">Investments</a></li>
 				<li><a href="aboutUs.html">About Us</a></li>
 				<li><a href="#">Contacts</a></li>
 			</ul>
 		</nav>
+		
+		
 		<nav id="breadcrumb"> <!-- NASCOSTO IN DESKTOP -->
-			<p>Ti trovi in: <span lang="en">Home</span></p>
+			<p>You are here: <span class="breadPage">About Us</p>
 		</nav>
-		<aside>
-			<a id="adminArea" href="aboutUs.html"><span class="material-symbols-outlined">Login</span>Admin Area</a>
-			<input type="search" id="search" placeholder="search...">
-		</aside>
 	</header>
 
 	<main>
@@ -50,8 +57,7 @@
 
 Curabitur non nisi aliquet, eleifend metus eu, commodo nisl. Suspendisse aliquam viverra diam, ut elementum velit scelerisque eu. Phasellus faucibus ac erat id convallis. Curabitur accumsan turpis id massa sagittis finibus. Nulla eu lacus posuere, aliquam sapien et, tempor mi. Curabitur in arcu massa. Sed gravida vehicula bibendum. Nulla et ipsum arcu. Sed non velit quis mi tristique porta. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam vestibulum eget risus non eleifend. Cras ornare nulla in dolor tincidunt dignissim. Duis sollicitudin massa vel lectus convallis, non porttitor justo commodo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
 
-Integer vitae enim et tellus dignissim tempus. Nunc vel eleifend ipsum. Praesent imperdiet in leo non volutpat. Donec luctus lobortis lacus, ac luctus erat efficitur fringilla. Integer bibendum mi eget ante elementum, non elementum arcu suscipit. Maecenas iaculis est eget suscipit iaculis. Morbi aliquet felis eget suscipit semper. Suspendisse sodales magna eu sapien suscipit euismod. Ut condimentum enim ut augue semper, blandit sollicitudin tortor rhoncus. Integer ornare ex non ligula maximus, id scelerisque justo auctor. Fusce pulvinar, risus a venenatis vestibulum, ligula erat convallis libero, consequat rutrum tellus sapien et nisi. Phasellus iaculis egestas venenatis. Aenean ac nulla dolor.
-			</p>
+Integer vitae enim et tellus dignissim tempus. Nunc vel eleifend ipsum. Praesent imperdiet in leo non volutpat. Donec luctus lobortis lacus, ac luctus erat efficitur fringilla. Integer bibendum mi eget ante elementum, non elementum arcu suscipit. Maecenas iaculis est eget suscipit iaculis. Morbi aliquet felis eget suscipit semper. Suspendisse sodales magna eu sapien suscipit euismod. Ut condimentum enim ut augue semper, blandit sollicitudin tortor rhoncus. Integer ornare ex non ligula maximus, id scelerisque justo auctor. Fusce pulvinar, risus a venenatis vestibulum, ligula erat convallis libero, consequat rutrum tellus sapien et nisi. Phasellus iaculis egestas venenatis. Aenean ac nulla dolor.</p>
 
 		</section>
 
@@ -152,10 +158,82 @@ In her personal life, Ombretta is an avid supporter of the arts and philanthropy
 				</dl>
 
 		</section>
+		
+		<button class="goUp hidden" onclick="goTop()"><span>&UpArrow;</span>Back to top</button>
+		
 	</main>
 
 	<footer>
-		<p>Zero Carbon &minus; <span lang="en">All rights reserved</span></p>
+		
+		<img src="../images/ZCLogo.png" id="ZCLogo" alt="Logo Zero Carbon">
+		
+		<dl>
+			<dt>
+				Legal Head Office
+			</dt>
+			<dd>
+				100 Light <abbr title="Street">St</abbr>, Baltimore, <abb title="Maryland">MD</abb> 21202, <abbr title="United States">U.S.</abbr>
+			</dd>
+			<dt>
+				Company Branch
+			</dt>
+			<dd>
+				121 <abbr title="Southwest">SW</abbr> Salmon <abbr title="Street">St</abbr>, Portland, <abbr title="Oregon">OR</abbr> 97204, <abbr title="United States">U.S.</abbr>
+			</dd>
+			<dt>
+				Corporate Capital
+			</dt>
+			<dd>
+				&dollar; 350,876,073.00
+			</dd>
+			<dt>
+				<abbr title="Employer Identification Number">EIN</abbr>
+			</dt>
+			<dd>
+				<abbr title="number">n.</abbr> 000874293
+			</dd>
+		</dl>
+		
+		<section>
+		<h4>
+			Zero Carbon on social media
+		</h4>
+			<nav>
+				<ul id="socialIcons">
+					<li><a href="https://twitter.com/" title="X" target="_blank"><img src="../images/350x350 (1).png"></a></li>
+					<li><a href="https://instagram.com/" title="Instagram" target="_blank"><img src="../images/350x350 (2).png"></a></li>
+					<li><a href="https://facebook.com/" title="Facebook" target="_blank"><img src="../images/350x350.png"></a></li>
+				</ul>
+			</nav>
+		</section>
+		
+		<section>
+			<h4>
+				Policies
+			</h4>
+			<nav>
+				<ul>
+				<li><a href="privacyPolicy.html" title="Privacy policy" target="_blank">Privacy policy</a></li>
+				</ul>
+			</nav>
+		</section>
+		<section>
+			<h4>
+				Others links
+			</h4>
+			<nav>
+				<ul id="linkList">
+					<li><a href="pishing.html" title="Pishing" target="_blank">Pishing</a></li>
+					<li><a href="javascript:void(0);">Contacts</a></li>
+					<li><a id="adminArea" href="javascript:void(0);"><span class="material-symbols-outlined" id="loginIcon">Login</span>Admin Area</a></li>
+				</ul>
+			</nav>
+		</section>
+					
+		<p id="copyright">
+			Copyright &copy; 2023 Zero Carbon &minus; All rights reserved</span>
+		</p>
+		
 	</footer>
 </body>
 

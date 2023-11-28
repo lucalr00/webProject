@@ -41,6 +41,7 @@
 
 .info {
 	color: black;
+	margin: auto;
 	background-color: transparent;
 	font-weight: bold;
 	font-size: 1em;
@@ -134,6 +135,17 @@
 .cardsDetails dd {
 	display: inline-block;
 }
+*/
+
+/* RESPONSIVE
+
+#howStarted::after {
+	content: '';
+	display: block;
+	margin-top: 3em;
+	border: solid var(--mobileLineDivider) 1px;
+}
+
 */
 
 
