@@ -1,69 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8"> <!--va messo come primo, nei primi 512 byte-->
-    <title> Investments </title>
-    <meta name="keywords" content="Investments ">    
-    <link rel="stylesheet" href="../css/investments.css">
-    <link rel="stylesheet" href="../css/root.css">
 
+<head>
+	<meta charset="UTF-8"> <!--va messo come primo, nei primi 512 byte-->
+	<title> Investments </title>
+	<meta name="keywords" content="Investments ">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="../javascript/aboutUs.js"></script>
+	<script src="../javascript/root.js"></script>
+	<script src="../javascript/goTop.js"></script>
+	<link rel="stylesheet" href="../css/investments.css">
+	<link rel="stylesheet" href="../css/root.css">
+	<link rel="stylesheet" href="../css/headerFooter.css">
+	<!--<link rel="stylesheet" media="screen and (min-width: 1024px)" href="../css/root.css"> -->
+	<link rel="stylesheet" media="screen and (min-width: 700px)" href="../css/devices/aboutUs.css">
+	<link rel="stylesheet" media="screen and (min-width: 700px)" href="#">
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
-  <header>
-		<h1>
-			Zero Carbon
-		</h1>
-		<nav>
+	<header>
+		<div id="topNavBar">
+			<h1>
+				<a href="home.html" id="textLogo"><span class="logoFirstHalf">Zero</span>Carbon</a>
+			</h1>
+			<button id="menuLink" class="menuLink" onclick="responsiveNav()"><span class="material-symbols-outlined"
+					id="closeMenu">close</span><span class="material-symbols-outlined"
+					id="openMenu">menu</span>MENU</button>
+		</div>
+		<nav id="navBar" class="headerNav">
 			<ul>
-				<li lang="en"><a href="#">Home</a></li>
-				<li><a href="#">Projects</a></li>
-				<li><a href="#">Investments</a></li>
-				<li><a href="#">About Us</a></li>
+				<li><a href="home.html">Home</a></li>
+				<li><a href="projects.html">Projects</a></li>
+				<li><a href="investments.html">Investments</a></li>
+				<li><a href="aboutUs.html">About Us</a></li>
 				<li><a href="#">Contacts</a></li>
 			</ul>
 		</nav>
 		<nav id="breadcrumb"> <!-- NASCOSTO IN DESKTOP -->
-			<p>Ti trovi in: <span lang="en">Home</span></p>
+			<p>You are here: <span lang="en">Investments</span></p>
 		</nav>
 		<aside>
 			<a id="adminArea" href="aboutUs.html"><span class="material-symbols-outlined">Login</span>Admin Area</a>
 			<input type="search" id="search" placeholder="search...">
 		</aside>
 	</header>
-  <main>
-    <h1>Our annual investments</h1>
-    <div class="container">
-      <div class="box1">
-        <select>
-          <option value="2023">2023</option>
-          <option value="2022">2022</option>
-          <option value="2021">2021</option>
-          <option value="2020">2020</option>
-        </select>
-        <p>
-          In 2023 we have accomplished a new goal.
-          We have been able to collect from our donators and patreons $2.5bl to invest in our 
-          fleet, green assets and research team.
-          In the last year an important goal has been met.
-          The new green energy powerplant able to delivery 2.5MW is fully operative in the 
-          Texas's desert, contributing to 2027 goal of green energy production expected to be 
-          500MW.
-          In the next quarters four new ships will enjoy our fleet, spiking up the garbage collection
-          in our hearth's seas.
-          Netherless, +5300 volounteers have joined our help call, contributing to our mission in 
-          the poor places of our world, where a poor education and low financial capabilities 
-          incentivate the production of emmissions and garbage.
-        </p>
-      </div>
+	<main>
+		<h1>Our annual investments</h1>
+		<div class="container">
+			<div class="box1">
+				<select>
+					<option value="2023">2023</option>
+					<option value="2022">2022</option>
+					<option value="2021">2021</option>
+					<option value="2020">2020</option>
+				</select>
+				<p>
+					In 2023 we have accomplished a new goal.
+					We have been able to collect from our donators and patreons $2.5bl to invest in our
+					fleet, green assets and research team.
+					In the last year an important goal has been met.
+					The new green energy powerplant able to delivery 2.5MW is fully operative in the
+					Texas's desert, contributing to 2027 goal of green energy production expected to be
+					500MW.
+					In the next quarters four new ships will enjoy our fleet, spiking up the garbage collection
+					in our hearth's seas.
+					Netherless, +5300 volounteers have joined our help call, contributing to our mission in
+					the poor places of our world, where a poor education and low financial capabilities
+					incentivate the production of emmissions and garbage.
+				</p>
+			</div>
 
-      <div class="box2">
-        <h2>Investment progress</h2>
-        <p>Quà cis sarà un grafico AHAHAHAHHAHAHAH</p>
-      </div>
-    </div>
-  </main>
-  <footer>
-		<p>Zero Carbon &minus; <span lang="en">All rights reserved</span></p>
+			<div class="box2">
+				<h2>Investment progress</h2>
+				<p>Quà cis sarà un grafico AHAHAHAHHAHAHAH</p>
+			</div>
+		</div>
+		
+		<button class="goUp hidden" onclick="goTop()"><span>&UpArrow;</span>Back to top</button>
+		
+	</main>
+	<footer>
+
+		<img src="../images/ZCLogo.png" id="ZCLogo" alt="Logo Zero Carbon">
+
+		<dl>
+			<dt>
+				Legal Head Office
+			</dt>
+			<dd>
+				100 Light <abbr title="Street">St</abbr>, Baltimore, <abb title="Maryland">MD</abb> 21202, <abbr
+					title="United States">U.S.</abbr>
+			</dd>
+			<dt>
+				Company Branch
+			</dt>
+			<dd>
+				121 <abbr title="Southwest">SW</abbr> Salmon <abbr title="Street">St</abbr>, Portland, <abbr
+					title="Oregon">OR</abbr> 97204, <abbr title="United States">U.S.</abbr>
+			</dd>
+			<dt>
+				Corporate Capital
+			</dt>
+			<dd>
+				&dollar; 350,876,073.00
+			</dd>
+			<dt>
+				<abbr title="Employer Identification Number">EIN</abbr>
+			</dt>
+			<dd>
+				<abbr title="number">n.</abbr> 000874293
+			</dd>
+		</dl>
+
+		<section>
+			<h4>
+				Zero Carbon on social media
+			</h4>
+			<nav>
+				<ul id="socialIcons">
+					<li><a href="https://twitter.com/" title="X" target="_blank"><img
+								src="../images/350x350 (1).png"></a></li>
+					<li><a href="https://instagram.com/" title="Instagram" target="_blank"><img
+								src="../images/350x350 (2).png"></a></li>
+					<li><a href="https://facebook.com/" title="Facebook" target="_blank"><img
+								src="../images/350x350.png"></a></li>
+				</ul>
+			</nav>
+		</section>
+
+		<section>
+			<h4>
+				Policies
+			</h4>
+			<nav>
+				<ul>
+					<li><a href="privacyPolicy.html" title="Privacy policy" target="_blank">Privacy policy</a></li>
+				</ul>
+			</nav>
+		</section>
+		<section>
+			<h4>
+				Others links
+			</h4>
+			<nav>
+				<ul id="linkList">
+					<li><a href="pishing.html" title="Pishing" target="_blank">Pishing</a></li>
+					<li><a href="javascript:void(0);">Contacts</a></li>
+					<li><a id="adminArea" href="javascript:void(0);"><span class="material-symbols-outlined"
+								id="loginIcon">Login</span>Admin Area</a></li>
+				</ul>
+			</nav>
+		</section>
+
+		<p id="copyright">
+			Copyright &copy; 2023 Zero Carbon &minus; All rights reserved</span>
+		</p>
+
 	</footer>
 </body>
+
 </html>
