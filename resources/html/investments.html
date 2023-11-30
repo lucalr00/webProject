@@ -20,7 +20,7 @@
 </head>
 
 <body>
-	<header>
+	<header id="header">
 		<div id="topNavBar">
 			<h1>
 				<a href="home.html" id="textLogo"><span class="logoFirstHalf">Zero</span>Carbon</a>
@@ -43,15 +43,18 @@
 		</nav>
 	</header>
 	<main>
-		<h1>Our annual investments</h1>
+		<h2>Our annual investments</h2>
 		<div class="container">
 			<div class="box1">
-				<select>
+				<div class="container_years">
+				<p>Years Goals</p>
+				<select class="list_years">
 					<option value="2023">2023</option>
 					<option value="2022">2022</option>
 					<option value="2021">2021</option>
 					<option value="2020">2020</option>
 				</select>
+				</div>
 				<p>
 					In 2023 we have accomplished a new goal.
 					We have been able to collect from our donators and patreons $2.5bl to invest in our
@@ -69,7 +72,7 @@
 			</div>
 
 			<div class="box2">
-				<h2>Investment progress</h2>
+				<h3>Investment progress</h3>
 				<p>Quà cis sarà un grafico AHAHAHAHHAHAHAH</p>
 			</div>
 		</div>
@@ -77,7 +80,7 @@
 		<button class="goUp hidden" onclick="goTop()"><span>&UpArrow;</span>Back to top</button>
 		
 	</main>
-	<footer>
+	<footer id="footer">
 
 		<img src="../images/ZCLogo.png" id="ZCLogo" alt="Logo Zero Carbon">
 

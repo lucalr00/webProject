@@ -1,19 +1,36 @@
 /* This is the CSS code that puts the two divs in the same row */
 
 /* Select the div that contains the two divs */
+
+h2 {
+    text-align: center; 
+    margin: 1.75em;
+    font-size: 3em;
+}
+
 .container {
     display: flex;
+    flex-direction: column;
+    gap: 2em;
 }
 
 .box1 {
-    width: 50%;
+    width: 100%;
     height: 100%;
     background-color: white;
 }
 
+.list_years{
+    margin: 1em;
+    margin-left: 0em;
+}
+
+.container_years{
+}
+
 .box2 {
-    width: 50%;
-    height: 100%;
+    width: 100%;
+    height: 50em;
     background-color: white;
 }
 
