@@ -1,4 +1,4 @@
-header {
+#header {
 	background-color: var(--headerBgColor);
 	color: var(--headerTxtColor);
 	padding-bottom: 1em;
@@ -152,7 +152,7 @@ nav .active:hover {
 	margin-bottom: .5em;
 }
 
-footer {
+#footer {
 	min-height: 2vh;
 	position: static;
 	bottom: 0vh;
@@ -191,6 +191,7 @@ section nav a {
 
 #socialIcons a img {
 	width: 5em;
+	border-radius: 10px;
 }
 
 #socialIcons a {
@@ -203,8 +204,18 @@ section nav a {
 }
 
 footer #copyright {
-	margin-top: 2em;
+	margin: 2em 0;
 	text-align: center;
+}
+
+footer #copyright p:nth-child(2) {
+	margin-top: 1em;
+	background: linear-gradient(to right, darkslategray 20%, var(--headerBgColor) 40%, var(--responsiveLinkBgColor) 60%, var(--responsiveLinkBgColor) 80%, darkslategray);
+	padding: .5em 0;
+}
+
+footer #copyright p:nth-child(2) a {
+	color: white;
 }
 
 footer #copyright::before {
@@ -223,13 +234,13 @@ footer #socialIcons {
 	row-gap: 1em;
 }
 
-footer #linkList{
+footer #linkList {
 	display: flex;
 	flex-wrap: wrap;
 }
 
-footer #linkList > * {
-	flex: 1 1 0px;
+footer #linkList>* {
+	flex: 0 1 fit-content;
 }
 
 @media only screen and (max-width: 250px) {
@@ -241,11 +252,11 @@ footer #linkList > * {
 	#menuLink {
 		width: 100%;
 	}
-	
-	footer #socialIcons, footer #linkList{
+
+	footer #socialIcons,
+	footer #linkList {
 		display: flex;
 		flex-direction: column;
 	}
-	
-}
 
+}

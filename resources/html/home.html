@@ -8,21 +8,17 @@
 	<meta name="description" content="Homepage for Zero Carbon">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	<script src="../javascript/aboutUs.js"></script>
 	<script src="../javascript/root.js"></script>
 	<script src="../javascript/goTop.js"></script>
 	<link rel="stylesheet" href="../css/home.css">
 	<link rel="stylesheet" href="../css/root.css">
 	<link rel="stylesheet" href="../css/headerFooter.css">
-	<!--<link rel="stylesheet" media="screen and (min-width: 1024px)" href="../css/root.css"> -->
-	<link rel="stylesheet" media="screen and (min-width: 700px)" href="../css/devices/aboutUs.css">
-	<link rel="stylesheet" media="screen and (min-width: 700px)" href="#">
+	<link rel="icon" type="image/x-icon" href="../images/ZCLogoIcon.png">
 	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-	<header>
+	<header id="header">
 		<div id="topNavBar">
 			<h1>
 				<a href="home.html" id="textLogo"><span class="logoFirstHalf">Zero</span>Carbon</a>
@@ -44,93 +40,171 @@
 			<p>You are here: Home</p>
 		</nav>
 	</header>
+
 	<main>
-		<section class="welcome-text">
-			<h1>Welcome to Zero Carbon</h1>
-		</section>
-		<section class="container">
-			<article class="highlights">
-				<div class="progress-container">
-					<h2>Highlights</h2>
-					<label for="bar1">Garbage collected</label>
-					<progress id="bar1" value="50" max="100"></progress><br>
-					<label for="bar2">Recycled garbage</label>
-					<progress id="bar2" value="30" max="100"></progress><br>
-					<label for="bar3">Green energy produced</label>
-					<progress id="bar3" value="70" max="100"></progress><br>
-					<label for="bar4">CO2 Saved</label>
-					<progress id="bar4" value="90" max="100"></progress><br>
-				</div>
+
+		<div id="welcomeText">
+			<h2>Welcome to <span>Zero Carbon</span></h2>
+			<h3>Small actions, Big footprints for the world</h3>
+		</div>
+
+		<section id="highlights" class="hlBg">
+			<h2>Highlights</h2>
+			<article class="highlight">
+				<h3>Garbage collected</h3>
+				<p>8,700,000.00 <abbr title="Pounds">lb</abbr></p>
 			</article>
-			<figure class="image">
-				<figcaption class="caption">Small actions, Big footprints for the world</figcaption>
-				<img src="../images/KL_Ind_449_MEPC79_EU_Emissions_Trading_System_tcm71-238531.jpg" alt="Zero Carbon">
-			</figure>
+			<article class="highlight">
+				<h3>Recycled garbage</h3>
+				<p>6,356,755.00 <abbr title="Pounds">lb</abbr></p>
+			</article>
+			<article class="highlight">
+				<h3>Green energy produced</h3>
+				<p>192,394.300.00 <abbr title="Gigawatt">GW</abbr></p>
+			</article>
+			<article class="highlight">
+				<h3>CO2 Saved</h3>
+				<p>992,080.00 <abbr title="Pounds">lb</abbr></p>
+			</article>
+			<p id="lastUp">Last updated: <time datetime="2023-11-12">12-November-2023</time></p>
 		</section>
-		<section class="social-room">
+
+		<section id="socialRoom">
 			<h2>Social room</h2>
-			<div class="scrollable-content">
-				<div class="box">
-					<img src="../images/facebook-logo-498.jpg" alt="Facebook Logo" class="logo">
-					<h2 class="title">Facebook</h2>
-					<p class="centered-text">Join our community</p>
-					<p class="subtext">Share and learn about our green initiatives</p>
-				</div>
-				<div class="box">
-					<img src="../images/logo-twitter-png-5860.png" alt="Twitter Logo" class="logo">
-					<h2 class="title">Twitter</h2>
-					<p class="centered-text">Stay updated</p>
-					<p class="subtext">Latest news on our carbon footprint reduction efforts</p>
-				</div>
-				<div class="box">
-					<img src="../images/512x512-logo-27159.png" alt="Instagram Logo" class="logo">
-					<h2 class="title">Instagram</h2>
-					<p class="centered-text">Visualize our progress</p>
-					<p class="subtext">See our green projects in action</p>
-				</div>
-				<div class="box">
-					<img src="../images/linkedin-logo-png-1854.png" alt="LinkedIn Logo" class="logo">
-					<h2 class="title">LinkedIn</h2>
-					<p class="centered-text">Connect professionally</p>
-					<p class="subtext">Join us in making a greener future</p>
-				</div>
-				<div class="box">
-					<img src="../images/youtube-logo-png-2075.png" alt="YouTube Logo" class="logo">
-					<h2 class="title">YouTube</h2>
-					<p class="centered-text">Watch our journey</p>
-					<p class="subtext">Learn about our sustainable practices</p>
-				</div>
-				<div class="box">
-					<img src="../images/tik-tok-logo-33077.png" alt="TikTok Logo" class="logo">
-					<h2 class="title">TikTok</h2>
-					<p class="centered-text">Join the fun</p>
-					<p class="subtext">Engage with our eco-friendly challenges</p>
-				</div>
-				<div class="box">
-					<img src="../images/pinterest-logo-png-1998.png" alt="Pinterest Logo" class="logo">
-					<h2 class="title">Pinterest</h2>
-					<p class="centered-text">Get inspired</p>
-					<p class="subtext">Explore our green ideas and innovations</p>
-				</div>
-				<div class="box">
-					<img src="../images/snapchat-logo-png-1463.png" alt="Snapchat Logo" class="logo">
-					<h2 class="title">Snapchat</h2>
-					<p class="centered-text">Experience the moment</p>
-					<p class="subtext">Discover our sustainability efforts in real-time</p>
-				</div>
-				<div class="box">
-					<img src="../images/reddit-logo-2436.png" alt="Reddit Logo" class="logo">
-					<h2 class="title">Reddit</h2>
-					<p class="centered-text">Join the discussion</p>
-					<p class="subtext">Participate in threads about our eco-initiatives</p>
-				</div>
+			<p>The latest publications to keep up to date with the activities we carry out and our projects.</p>
+			<div id="scrollableContent">
+				<article class="content">
+					<header>
+						<div class="socialInfo">
+							<time datetime="2010-11-22" pubdate>Lunedì 22 Novembre</time>
+							<span id="icon"></span>
+						</div>
+						<h2>Dubai Expo</h2>
+					</header>
+					<p>
+						saremo all'expo di Dubai
+					</p>
+					<footer>
+						<a href="javascript:void(0);" class="contentLink">Explore more</a>
+					</footer>
+				</article>
+				<article class="content">
+					<header>
+						<div class="socialInfo">
+							<time datetime="2010-11-22" pubdate>Lunedì 22 Novembre</time>
+							<span id="icon"></span>
+						</div>
+						<h2>Dubai Expo</h2>
+					</header>
+					<p>
+						saremo all'expo di Dubai, padiglione 24
+					</p>
+					<footer>
+						<a href="javascript:void(0);" class="contentLink">Explore more</a>
+					</footer>
+				</article>
+				<article class="content">
+					<header>
+						<div class="socialInfo">
+							<time datetime="2010-11-22" pubdate>Lunedì 22 Novembre</time>
+							<span id="icon"></span>
+						</div>
+						<h2>Dubai Expo</h2>
+					</header>
+					<p>
+						saremo all'expo di Dubai, padiglione 24
+						prova prova prova prova
+					</p>
+					<footer>
+						<a href="javascript:void(0);" class="contentLink">Explore more</a>
+					</footer>
+				</article>
+				<article class="content">
+					<header>
+						<div class="socialInfo">
+							<time datetime="2010-11-22" pubdate>Lunedì 22 Novembre</time>
+							<span id="icon"></span>
+						</div>
+						<h2>Dubai Expo</h2>
+					</header>
+					<p>
+						saremo all'expo di Dubai, padiglione 24
+						prova prova prova prova
+					</p>
+					<footer>
+						<a href="javascript:void(0);" class="contentLink">Explore more</a>
+					</footer>
+				</article>
+				<article class="content">
+					<header>
+						<div class="socialInfo">
+							<time datetime="2010-11-22" pubdate>Lunedì 22 Novembre</time>
+							<span id="icon"></span>
+						</div>
+						<h2>Dubai Expo</h2>
+					</header>
+					<p>
+						saremo all'expo di Dubai, padiglione 24
+					</p>
+					<footer>
+						<a href="javascript:void(0);" class="contentLink">Explore more</a>
+					</footer>
+				</article>
+				<article class="content">
+					<header>
+						<div class="socialInfo">
+							<time datetime="2010-11-22" pubdate>Lunedì 22 Novembre</time>
+							<span id="icon"></span>
+						</div>
+						<h2>Dubai Expo</h2>
+					</header>
+					<p>
+						saremo all'expo di Dubai, padiglione 24
+						prova prova prova prova
+					</p>
+					<footer>
+						<a href="javascript:void(0);" class="contentLink">Explore more</a>
+					</footer>
+				</article>
+				<article class="content">
+					<header>
+						<div class="socialInfo">
+							<time datetime="2010-11-22" pubdate>Lunedì 22 Novembre</time>
+							<span id="icon"></span>
+						</div>
+						<h2>Dubai Expo</h2>
+					</header>
+					<p>
+						saremo all'expo di Dubai, padiglione 24
+						prova prova prova prova
+					</p>
+					<footer>
+						<a href="javascript:void(0);" class="contentLink">Explore more</a>
+					</footer>
+				</article>
+				<article class="content">
+					<header>
+						<div class="socialInfo">
+							<time datetime="2010-11-22" pubdate>Lunedì 22 Novembre</time>
+							<span id="icon"></span>
+						</div>
+						<h2>Dubai Expo</h2>
+					</header>
+					<p>
+						saremo all'expo di Dubai, padiglione 24
+						prova prova prova prova
+					</p>
+					<footer>
+						<a href="javascript:void(0);" class="contentLink">Explore more</a>
+					</footer>
+				</article>
 			</div>
 		</section>
-		
+
 		<button class="goUp hidden" onclick="goTop()"><span>&UpArrow;</span>Back to top</button>
-		
+
 	</main>
-	<footer>
+	<footer id="footer">
 
 		<img src="../images/ZCLogo.png" id="ZCLogo" alt="Logo Zero Carbon">
 
@@ -203,9 +277,10 @@
 			</nav>
 		</section>
 
-		<p id="copyright">
-			Copyright &copy; 2023 Zero Carbon &minus; All rights reserved</span>
-		</p>
+		<section id="copyright">
+			<p>Copyright &copy; 2023 Zero Carbon &minus; All rights reserved</p>
+			<p>Website developed by: <a href="developers.html">QuadraCoders</a></p>
+		</section>
 
 	</footer>
 </body>
