@@ -6,6 +6,7 @@
 
 #topNavBar {
 	display: flex;
+/*	flex-wrap: wrap; CHECK!! */
 	gap: 2em;
 	align-items: center;
 	justify-content: flex-end;
@@ -190,7 +191,7 @@ section nav a {
 }
 
 #socialIcons a img {
-	width: 5em;
+	width: 100%;
 	border-radius: 10px;
 }
 
@@ -248,7 +249,7 @@ footer #linkList>* {
 		flex-direction: column;
 		justify-content: center;
 	}
-
+	
 	#menuLink {
 		width: 100%;
 	}
@@ -257,6 +258,11 @@ footer #linkList>* {
 	footer #linkList {
 		display: flex;
 		flex-direction: column;
+	}
+
+	#socialIcons a img {
+		min-width: 2em;
+		max-width: 60%;
 	}
 
 }

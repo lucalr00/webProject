@@ -41,7 +41,7 @@ function showSlides(n) {
 function showDetails() {
 	details = 1;
 	let i;
-	var slides = document.getElementsByClassName("cardsDetails");
+	var slides = document.getElementsByClassName("cardDetails");
 	for (i = 0; i < slides.length; i++) {
 		slides[i].style.display = "none";
 	}
@@ -52,7 +52,7 @@ function showDetails() {
 
 function closeDetails() {
 	details = 0;
-	var slides = document.getElementsByClassName("cardsDetails");
+	var slides = document.getElementsByClassName("cardDetails");
 	slides[slideIndex - 1].style.display = "none";
 	console.log("details closed: aboutUs.js");
 }
