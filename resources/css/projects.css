@@ -14,17 +14,11 @@
     justify-content: center;
 }
 
-#blue_horizon {
-    width: 400px;
-}
-
 .info {
-	box-sizing: content-box;
 	color: black;
-	width: fit-content;
 	background-color: transparent;
 	font-weight: bold;
-	font-size: 1em;
+	font-size: inherit;
 	border: none;
 	padding: .5em 1em;
 	text-decoration: underline;
@@ -37,33 +31,36 @@
 	background-color: lightsteelblue;
 }
 
-.prev, .next {
-	position: absolute;
-	bottom: 0;
+.prev,
+.next {
 	cursor: pointer;
 	padding: 0.8em;
 	color: black;
-	transition: 0.5s ease;
-	background-color: darkslategray;
+	transition: 0.3s ease;
+	background-color: transparent;
 	border: none;
-	border-radius: 50%;
 	user-select: none;
 }
 
 .prev {
 	border-radius: 10px 0 0 10px;
-	left: calc(0%+15%);
 }
 
 .next {
 	border-radius: 0 10px 10px 0;
-	right: 0;
 }
 
 .prev:hover,
 .next:hover {
 	background-color: darkslategray;
 	color: white;
+}
+
+#slidenav {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	column-gap: 1em;
 }
 
 .slide_content img {
