@@ -1,0 +1,10 @@
+
+#Project h2:not(:first-child){
+	margin: 2em 0 1em 0;
+}
+
+
+#ProjectPresentation img{
+	width: 100%;
+}
+
