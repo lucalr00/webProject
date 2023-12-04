@@ -34,8 +34,6 @@ html {
 main {
 	background-color: var(--bgColor);
 	color: var(--txtColor);
-	margin: auto;
-	width: 90%;
 }
 
 .goUp{
