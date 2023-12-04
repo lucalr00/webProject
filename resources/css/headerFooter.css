@@ -6,7 +6,6 @@
 
 #topNavBar {
 	display: flex;
-/*	flex-wrap: wrap; CHECK!! */
 	gap: 2em;
 	align-items: center;
 	justify-content: flex-end;
@@ -111,6 +110,7 @@ nav .active:hover {
 
 .headerNavResponsive ul {
 	background-color: var(--responsiveLinkBgColor);
+	z-index: 1;
 }
 
 
@@ -191,7 +191,7 @@ section nav a {
 }
 
 #socialIcons a img {
-	width: 100%;
+	width: 5em;
 	border-radius: 10px;
 }
 
@@ -249,7 +249,7 @@ footer #linkList>* {
 		flex-direction: column;
 		justify-content: center;
 	}
-	
+
 	#menuLink {
 		width: 100%;
 	}
@@ -258,11 +258,6 @@ footer #linkList>* {
 	footer #linkList {
 		display: flex;
 		flex-direction: column;
-	}
-
-	#socialIcons a img {
-		min-width: 2em;
-		max-width: 60%;
 	}
 
 }

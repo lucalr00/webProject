@@ -9,20 +9,61 @@
     margin-inline-end: 0px;
 }
 
-.slideshow h2 {
-    display: block;
-    text-align: center;
-    padding-bottom: 1em;
-}
-
-.slideshow p {
-    text-align: justify;
-    white-space: pre-line;
-    display: block;
+#slideshow {
+    position: relative;
+    justify-content: center;
 }
 
 #blue_horizon {
     width: 400px;
+}
+
+.info {
+	box-sizing: content-box;
+	color: black;
+	width: fit-content;
+	background-color: transparent;
+	font-weight: bold;
+	font-size: 1em;
+	border: none;
+	padding: .5em 1em;
+	text-decoration: underline;
+	cursor: pointer;
+	transition: 0.5s ease;
+}
+
+.info:hover {
+	border-radius: 0 0 10px 10px;
+	background-color: lightsteelblue;
+}
+
+.prev, .next {
+	position: absolute;
+	bottom: 0;
+	cursor: pointer;
+	padding: 0.8em;
+	color: black;
+	transition: 0.5s ease;
+	background-color: darkslategray;
+	border: none;
+	border-radius: 50%;
+	user-select: none;
+}
+
+.prev {
+	border-radius: 10px 0 0 10px;
+	left: calc(0%+15%);
+}
+
+.next {
+	border-radius: 0 10px 10px 0;
+	right: 0;
+}
+
+.prev:hover,
+.next:hover {
+	background-color: darkslategray;
+	color: white;
 }
 
 .slide_content img {
@@ -33,11 +74,5 @@
     height: auto;
     margin-left: auto;
     margin-right: auto;
-}
-
-.slide_content a {
-    display: block;
-    text-align: center;
-    padding-top: 1.5em;
-    color: var(--linkColor);
+	user-select: none;
 }
