@@ -11,7 +11,6 @@
 	<meta name="keywords" content="Projects">
 	<meta name="descriprion" content="Page dedicated to the exploration of Zero Carbon's projects">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	<script src="../javascript/aboutUs.js"></script>
 	<script src="../javascript/root.js"></script>
 	<script src="../javascript/goTop.js"></script>
 	<link rel="stylesheet" href="../css/projects.css">
@@ -25,7 +24,7 @@
 </head>
 
 <body>
-	<header>
+	<header id="header">
 		<div id="topNavBar">
 			<h1>
 				<a href="home.html" id="textLogo"><span class="logoFirstHalf">Zero</span>Carbon</a>
@@ -43,29 +42,22 @@
 				<li><a href="#">Contacts</a></li>
 			</ul>
 		</nav>
-		<nav id="breadcrumb"> <!-- NASCOSTO IN DESKTOP -->
-			<p>You are here: <span lang="en">Projects</span></p>
+		<nav id="breadcrumb">
+			<p>You are here: Projects</p>
 		</nav>
 	</header>
 
 	<main>
 		<h1 id="explore">Explore our Projects</h1>
-		<div class="slideshow">
+		<div id="slideshow">
+			
 			<div class="slide_content">
 				<img id="blue_horizon" src="../images/ocean-3.jpg" alt="">
-				<h2>Blue Horizon</h2>
-				<!--Tendina per mostrare i dettagli?-->
-				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, sint atque eveniet rerum alias qui
-					in enim recusandae blanditiis veniam voluptatem ea voluptatum nihil? Recusandae impedit ea facere
-					repudiandae accusamus suscipit optio commodi enim ut tempora velit, aut incidunt.
-					Deserunt, dolorem consequuntur sapiente dicta architecto laborum commodi maxime atque labore iusto
-					accusantium nam eum soluta suscipit ullam eveniet repellendus possimus doloremque saepe consequatur
-					temporibus aspernatur eos maiores?
-					Deserunt reprehenderit aliquam vel consectetur ab qui explicabo incidunt voluptate, mollitia dolore
-					expedita veniam. Quibusdam iste nam, molestiae totam cupiditate sed, perferendis magnam eius quis
-					quasi facilis earum! Distinctio ratione laboriosam nemo id?
-				</p>
-				<a href="#">See more >></a>
+				<button class="info" onclick="showDetails()" title="Read more...">Blue Horizon</button>
+			</div>
+			<div class="slidenav">
+				<button class="prev" onclick="plusSlides(-1)" title="Previous">&#10094;</button>
+				<button class="next" onclick="plusSlides(1)" title="Next">&#10095;</button>
 			</div>
 		</div>
 		
@@ -73,10 +65,10 @@
 		
 	</main>
 
-	<footer>
-
+	<footer id="footer">
+	
 		<img src="../images/ZCLogo.png" id="ZCLogo" alt="Logo Zero Carbon">
-
+	
 		<dl>
 			<dt>
 				Legal Head Office
@@ -105,15 +97,15 @@
 				<abbr title="number">n.</abbr> 000874293
 			</dd>
 		</dl>
-
+	
 		<section>
 			<h4>
 				Zero Carbon on social media
 			</h4>
 			<nav>
 				<ul id="socialIcons">
-					<li><a href="https://twitter.com/" title="X" target="_blank"><img
-								src="../images/350x350 (1).png"></a></li>
+					<li><a href="https://twitter.com/" title="X" target="_blank"><img src="../images/350x350 (1).png"></a>
+					</li>
 					<li><a href="https://instagram.com/" title="Instagram" target="_blank"><img
 								src="../images/350x350 (2).png"></a></li>
 					<li><a href="https://facebook.com/" title="Facebook" target="_blank"><img
@@ -121,7 +113,7 @@
 				</ul>
 			</nav>
 		</section>
-
+	
 		<section>
 			<h4>
 				Policies
@@ -145,11 +137,12 @@
 				</ul>
 			</nav>
 		</section>
-
-		<p id="copyright">
-			Copyright &copy; 2023 Zero Carbon &minus; All rights reserved</span>
-		</p>
-
+	
+		<section id="copyright">
+			<p>Copyright &copy; 2023 Zero Carbon &minus; All rights reserved</p>
+			<p>Website developed by: <a href="developers.html">QuadraCoders</a></p>
+		</section>
+	
 	</footer>
 
 </body>

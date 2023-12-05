@@ -1,7 +1,6 @@
 * {
 	margin: 0;
 	padding: 0;
-	
 }
 
 *, *::before, *::after{
@@ -21,7 +20,7 @@
 	--flagColor: rgb(218, 103, 66);
 	--linkColor: rgb(255, 255, 255);
 	--font-body-family: "Roboto Condensed", sans-serif;
-	--mobileLineDivider: rgba(60, 60, 60, .5);
+	--mobileLineDivider: rgba(60, 60, 60, .4);
 }
 
 html {
@@ -35,8 +34,6 @@ html {
 main {
 	background-color: var(--bgColor);
 	color: var(--txtColor);
-	margin: auto;
-	width: 90%;
 }
 
 .goUp{
