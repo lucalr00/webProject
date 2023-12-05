@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var saved_value = select.value; 
     // nascondo tutti gli elementi tranne quello selezionato
-    var p;
+     var p;
     for(var i = 2020; i <= 2050; i++){
         p = document.getElementById(i.toString());
         if(p) {
