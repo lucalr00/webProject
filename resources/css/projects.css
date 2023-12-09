@@ -9,18 +9,24 @@
     margin-inline-end: 0px;
 }
 
-#slideshow {
-    position: relative;
+#slidenav {
+	display: flex;
+    column-gap: 1em;
+    flex-direction: row;
     justify-content: center;
 }
 
 .info {
+	display: block;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
 	color: black;
 	background-color: transparent;
 	font-weight: bold;
 	font-size: inherit;
 	border: none;
-	padding: .5em 1em;
+	padding: 1em 1em;
 	text-decoration: underline;
 	cursor: pointer;
 	transition: 0.5s ease;
@@ -44,10 +50,12 @@
 
 .prev {
 	border-radius: 10px 0 0 10px;
+	margin-right: 1.5em;
 }
 
 .next {
 	border-radius: 0 10px 10px 0;
+	margin-left: 1.5em;
 }
 
 .prev:hover,
@@ -64,12 +72,18 @@
 }
 
 .slide_content img {
-    display: block;
-    padding-bottom: 1.5em;
+    padding-bottom: 0.5em;
     padding-top: 1.5em;
     max-width: 100%;
     height: auto;
     margin-left: auto;
     margin-right: auto;
 	user-select: none;
+	/*background-color: ; Perché alcune immagini sono più piccole: invece che riadattarle
+	su schermi più grandi, si potrebbe usare uno sfondo carino*/
+}
+
+.slide_content {
+	display: none;
+	text-align: center;
 }

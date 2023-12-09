@@ -13,12 +13,13 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script src="../javascript/root.js"></script>
 	<script src="../javascript/goTop.js"></script>
+	<script src="../javascript/projects.js"></script>
 	<link rel="stylesheet" href="../css/projects.css">
 	<link rel="stylesheet" href="../css/root.css">
 	<link rel="stylesheet" href="../css/headerFooter.css">
 	<!--<link rel="stylesheet" media="screen and (min-width: 1024px)" href="../css/root.css"> -->
-	<link rel="stylesheet" media="screen and (min-width: 700px)" href="../css/devices/aboutUs.css">
-	<link rel="stylesheet" media="screen and (min-width: 700px)" href="#">
+	<!--<link rel="stylesheet" media="screen and (min-width: 700px)" href="../css/devices/"> -->
+	<!--<link rel="stylesheet" media="screen and (min-width: 700px)" href="#"> -->
 	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -36,7 +37,7 @@
 		<nav id="navBar" class="headerNav">
 			<ul>
 				<li><a href="home.html">Home</a></li>
-				<li><a href="projects.html">Projects</a></li>
+				<li><a href="#">Projects</a></li>
 				<li><a href="investments.html">Investments</a></li>
 				<li><a href="aboutUs.html">About Us</a></li>
 				<li><a href="#">Contacts</a></li>
@@ -53,9 +54,15 @@
 			
 			<div class="slide_content">
 				<img id="blue_horizon" src="../images/ocean-3.jpg" alt="">
-				<button class="info" onclick="showDetails()" title="Read more...">Blue Horizon</button>
+				<a href="../html/projects/blue_horizon.html" class="info" title="Read more...">Blue Horizon</a>
 			</div>
-			<div class="slidenav">
+
+			<div class="slide_content">
+				<img id="accessible_greenhouse" src="../images/Love_Your_Garden_Series_5_Episode_3__3_.webp" alt="">
+				<a href="../html/projects/accessible_greenhouse.html" class="info" title="Read more...">Accessible Greenhouse</a>
+			</div>
+			
+			<div id="slidenav">
 				<button class="prev" onclick="plusSlides(-1)" title="Previous">&#10094;</button>
 				<button class="next" onclick="plusSlides(1)" title="Next">&#10095;</button>
 			</div>
