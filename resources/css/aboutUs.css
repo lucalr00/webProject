@@ -46,26 +46,31 @@
 
 .card img {
 	width: 100%;
-	box-shadow: 0 0 20px 3px rgb(200, 200, 200);
+	box-shadow: 0 -3px 20px 3px rgb(200, 200, 200);
 	border-radius: 10px;
 	user-select: none;
 }
 
 .info {
-	color: black;
-	background-color: transparent;
+	color: white;
+	background-color: var(--headerBgColor);
 	font-weight: bold;
 	font-size: inherit;
 	border: none;
 	padding: .5em 1em;
-	text-decoration: underline;
 	cursor: pointer;
-	transition: 0.5s ease;
+	transition: 0.3s ease;
 }
 
+/*
 .info:hover {
+	background-color: var(--responsiveLinkBgColor);
 	border-radius: 0 0 10px 10px;
-	background-color: lightsteelblue;
+}*/
+
+
+.info span {
+	margin-left: 5px;
 }
 
 #cardsManager {
@@ -103,12 +108,9 @@
 
 .cardDetails {
 	display: none;
-	margin: auto;
 	background-color: lightsteelblue;
 	color: black;
 	padding: 1em;
-	border: none;
-	border-radius: 10px;
 }
 
 .cardDetails dt {

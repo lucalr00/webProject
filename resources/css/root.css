@@ -16,7 +16,7 @@
 	--txtColor: rgb(0, 0, 0);
 	--footerBgColor: rgb(0, 0, 0);
 	--footerTxtColor: rgb(255, 255, 255);
-	--visitedLinkColor: rgb(236, 106, 151);
+	--visitedLinkColor: rgb(250, 150, 20);
 	--flagColor: rgb(218, 103, 66);
 	--linkColor: rgb(255, 255, 255);
 	--font-body-family: "Roboto Condensed", sans-serif;
@@ -32,6 +32,7 @@ html {
 }
 
 main {
+	margin: auto;
 	background-color: var(--bgColor);
 	color: var(--txtColor);
 }

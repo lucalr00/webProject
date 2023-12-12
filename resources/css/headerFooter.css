@@ -4,6 +4,13 @@
 	padding-bottom: 1em;
 }
 
+.material-symbols-outlined{
+	vertical-align: middle;
+	padding: 0;
+	margin: 0;
+	
+}
+
 #topNavBar {
 	display: flex;
 	gap: 2em;
@@ -101,12 +108,13 @@ nav .active:hover {
 	padding-right: 3px;
 }
 
-/*INIZIAVA QUI*/
-
 #breadcrumb {
-	display: block;
 	padding-left: .5em;
 	margin-top: 1em;
+}
+
+#breadcrumb a{
+	color: white;
 }
 
 .headerNavResponsive ul {
@@ -122,7 +130,6 @@ nav .active:hover {
 .headerNavResponsive li {
 	display: block;
 	text-align: center;
-	margin: auto;
 }
 
 .headerNavResponsive ul {
@@ -155,9 +162,7 @@ nav .active:hover {
 }
 
 #footer {
-	min-height: 2vh;
 	position: static;
-	bottom: 0vh;
 	width: 100%;
 	margin-top: 5em;
 	padding: 1em;
@@ -206,7 +211,7 @@ section nav a {
 }
 
 footer #copyright {
-	margin: 2em 0;
+	margin: 2em 0 .5em 0;
 	text-align: center;
 }
 
@@ -236,7 +241,7 @@ footer #socialIcons {
 	row-gap: 1em;
 }
 
-footer #linkList {
+footer .linkList {
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -256,7 +261,7 @@ footer #linkList>* {
 	}
 
 	footer #socialIcons,
-	footer #linkList {
+	footer .linkList {
 		display: flex;
 		flex-direction: column;
 	}

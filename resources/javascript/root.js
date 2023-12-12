@@ -31,7 +31,3 @@ function responsiveNav() {
 	}
 }
 
-function search() {
-	alert("search works");
-}
-

@@ -1,4 +1,38 @@
-*{
-	color: yellow;
+.card img {
+	width: 70%;
 }
 
+@media only screen and (min-width: 1024px) {
+	main {
+		width: 90%;
+	}
+
+	.info {
+		display: block;
+		margin: auto;
+	}
+
+	#founders::before {
+		display: none;
+	}
+
+	.card img {
+		width: 50%;
+	}
+
+	.cardsDetails {
+		width: 60%;
+		margin: auto;
+	}
+	.cardDetails{
+		border-radius: 10px;
+	}
+
+}
+
+@media only screen and (min-width: 1440px) {
+	main {
+		width: 60%;
+	}
+
+}
