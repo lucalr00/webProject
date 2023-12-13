@@ -116,7 +116,7 @@ nav .active:hover {
 #breadcrumb a{
 	color: white;
 }
-
+	
 .headerNavResponsive ul {
 	background-color: var(--responsiveLinkBgColor);
 	z-index: 1;

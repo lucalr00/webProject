@@ -46,7 +46,7 @@
 
 .card img {
 	width: 100%;
-	box-shadow: 0 -3px 20px 3px rgb(200, 200, 200);
+	box-shadow: 0 -5px 20px 3px rgb(200, 200, 200);
 	border-radius: 10px;
 	user-select: none;
 }
@@ -78,15 +78,18 @@
 	flex-wrap: wrap;
 	justify-content: center;
 	column-gap: 1em;
+
+/*text-align: center;*/
 }
 
 
 .prev,
 .next {
+	margin: 0 1em;
 	cursor: pointer;
 	padding: 0.8em;
 	color: black;
-	transition: 0.3s ease;
+	transition: background-color 0.4s ease;
 	background-color: transparent;
 	border: none;
 	user-select: none;
@@ -102,9 +105,27 @@
 
 .prev:hover,
 .next:hover {
-	background-color: darkslategray;
+	background-color: var(--headerBgColor);
 	color: white;
 }
+
+
+
+#nextSpan{
+	visibility: hidden;
+}
+
+.next:hover::before{
+	content: 'Next';
+	margin-right: 3px;
+}
+
+.prev:hover::after{
+	content: 'Prevoius';
+	margin-left: 3px;
+}
+
+
 
 .cardDetails {
 	display: none;
@@ -162,6 +183,10 @@
 }
 
 @media only screen and (max-width: 250px) {
+
+	.card img{
+		border-radius: 0;
+	}
 
 	.info{
 		width: 100%;

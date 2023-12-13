@@ -64,8 +64,12 @@
 		display: block;
 	}
 
-	#header>* {
+	#header>*{
 		padding: 1em 0;
+	}
+	
+	#breadcrumb{
+		padding-bottom: 0;
 	}
 
 	#topNavBar {
@@ -78,10 +82,12 @@
 
 
 	#footerZcWrapper {
-		width: 70%;
+		width: max-content;
 		margin: auto;
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(2, minmax(max-content , 1fr));
+		column-gap: 5em;
+		justify-items: center;
 	}
 
 }

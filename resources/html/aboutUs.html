@@ -28,7 +28,7 @@
 	<header id="header">
 		<div id="topNavBar">
 		<h1>
-			<a href="home.html" id="textLogo"><span class="logoFirstHalf">Zero</span>Carbon</a>
+			<a href="home.html" title="Home" id="textLogo"><span class="logoFirstHalf">Zero</span>Carbon</a>
 		</h1>
 		<button id="menuLink" class="menuLink" onclick="responsiveNav()"><span class="material-symbols-outlined" id="closeMenu">close</span><span class="material-symbols-outlined" id="openMenu">menu</span>MENU</button>
 		</div>
@@ -66,12 +66,12 @@ Integer vitae enim et tellus dignissim tempus. Nunc vel eleifend ipsum. Praesent
 			</h3>
 
 			<div id="cardsContainer">
-				<div class="card">
+				<div id="cardOne" class="card">
 					<img src="../images/AlexanderGallagher.jpg" alt="Profile picture of Alexander Gallagher">
 					<button class="info" onclick="showDetails()" title="Read more...">Alexander Gallagher<span class="material-symbols-outlined">read_more</span></button>
 				</div>
 
-				<div class="card">
+				<div id="cardTwo" class="card">
 					<img src="../images/MichaelBennett.jpeg" alt="Profile picture of Michael Bennett">
 					<button class="info" onclick="showDetails()" title="Read more...">Michael Bennett<span class="material-symbols-outlined">read_more</span></button>
 				</div>
@@ -87,8 +87,12 @@ Integer vitae enim et tellus dignissim tempus. Nunc vel eleifend ipsum. Praesent
 				</div>
 
 				<div id="cardsManager">
-					<button class="prev" onclick="plusSlides(-1)" title="Previous">&#10094;</button>
-					<button class="next" onclick="plusSlides(1)" title="Next">&#10095;</button>
+					<button class="prev" onclick="plusSlides(-1)" >&#10094;</button>
+					<div id="cardsNumbers">
+						<button onclick="showSlides(1)">1</button>
+						<button onclick>2</button>
+					</div>
+					<button class="next" onclick="plusSlides(1)" >&#10095;</button>
 				</div>
 			
 			<div class="cardsDetails">
@@ -174,7 +178,7 @@ In her personal life, Ombretta is an avid supporter of the arts and philanthropy
 				Legal Head Office
 			</dt>
 			<dd>
-				100 Light <abbr title="Street">St</abbr>, Baltimore, <abb title="Maryland">MD</abb> 21202, <abbr title="United States">U.S.</abbr>
+				100 Light <abbr title="Street">St</abbr>, Baltimore, <abbr title="Maryland">MD</abbr> 21202, <abbr title="United States">U.S.</abbr>
 			</dd>
 			<dt>
 				Company Branch

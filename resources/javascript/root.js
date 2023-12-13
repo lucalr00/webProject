@@ -31,3 +31,14 @@ function responsiveNav() {
 	}
 }
 
+window.addEventListener('resize', run => {
+	var x = document.getElementById("navBar");
+	var y = document.getElementById("menuLink");
+	let closeIcon = document.getElementById("closeMenu");
+	if (window.matchMedia(`(min-width: 600px)`).matches) {
+		x.className = "headerNav";
+		y.className = "menuLink";
+		closeIcon.style.display = "none";
+	}
+});
+

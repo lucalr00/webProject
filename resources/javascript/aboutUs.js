@@ -9,11 +9,11 @@ let details = 0;
 function startScript() {
 	showSlides(slideIndex);
 };
-
-function showFirst() {
-	let slides = document.getElementsByClassName("card");
-	slides[0].style.display = "block";
-}
+//
+//function showFirst() {
+//	let slides = document.getElementsByClassName("card");
+//	slides[0].style.display = "block";
+//}
 
 // Next/previous
 function plusSlides(n) {
@@ -36,6 +36,10 @@ function showSlides(n) {
 	slides[slideIndex - 1].style.display = "block";
 	if (details == true) { showDetails(); }
 	else { closeDetails(); }
+}
+
+function slidesDots(){
+	slides[dot].style.display = "block";
 }
 
 function showDetails() {

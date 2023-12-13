@@ -1,3 +1,8 @@
+#howStarted h2, #founders h3{
+	font-size: 200%;
+	color: rgb(30, 30, 30);
+}
+
 .card img {
 	width: 70%;
 }
@@ -17,7 +22,7 @@
 	}
 
 	.card img {
-		width: 50%;
+		width: 15em;
 	}
 
 	.cardsDetails {
@@ -32,7 +37,7 @@
 
 @media only screen and (min-width: 1440px) {
 	main {
-		width: 60%;
+		max-width: 50%;
 	}
 
 }
