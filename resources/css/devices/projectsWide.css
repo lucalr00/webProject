@@ -1,50 +1,58 @@
 #explore {
     text-align: center;
     display: block;
-    padding-top: 1em;
+    padding: 0.5em 0em;
     font-size: 1.5em;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
 
+#slideshow {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
+
 #slidenav {
 	display: flex;
-    column-gap: 5em;
+    column-gap: 30vh;
     flex-direction: row;
     justify-content: center;
 }
 
 .info {
-	display: block;
+	display: flex;
 	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-	width: fit-content;
-	color: black;
-	background-color: transparent;
+    width: fit-content;
+	color: white;
+	background-color: darkslategray;
 	font-weight: bold;
 	font-size: inherit;
-	border: none;
-	padding: 1em 1em;
+	padding: 1em 1em 1em 1em;
 	text-decoration: underline;
+    margin-bottom: 1em;
+    margin-left: auto;
+    border: 1px solid;
 	cursor: pointer;
 	transition: 0.5s ease;
 }
 
 .info:hover {
-	border-radius: 0 0 10px 10px;
-	background-color: lightsteelblue;
+	border-radius: 70px;
+	background-color: greenyellow;
+    color: black;
 }
 
 .prev,
 .next {
+    display: inline-block;
 	cursor: pointer;
 	padding: 0.8em;
-	color: black;
+	color: white;
+    margin-bottom: 1em;
 	transition: 0.3s ease;
-	background-color: transparent;
+	background-color: darkslategray;
 	border: none;
 	user-select: none;
 }
@@ -59,21 +67,18 @@
 
 .prev:hover,
 .next:hover {
-	background-color: darkslategray;
-	color: white;
+	background-color: greenyellow;
+	color: black;
 }
 
-
 .slideimg {
-    padding-bottom: 0.5em;
+    padding-bottom: 1.5em;
     padding-top: 1.5em;
-    max-width: 100%;
-    height: auto;
+    width: auto;
+    max-height: 70vh;
     margin-left: auto;
     margin-right: auto;
 	user-select: none;
-	/*background-color: ; Perché alcune immagini sono più piccole: invece che riadattarle
-	su schermi più grandi, si potrebbe usare uno sfondo carino*/
 }
 
 .slide_content {
