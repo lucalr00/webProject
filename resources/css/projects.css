@@ -9,74 +9,86 @@
     margin-inline-end: 0px;
 }
 
+#slideshow {
+	background-color: rgba(25, 91, 204, 0.5);
+	padding-top: 1em;
+	padding-bottom: 1em;
+	margin: auto;
+	overflow: hidden;
+	display: block;
+	height: 60vh;
+}
+
 #slidenav {
 	display: flex;
-    column-gap: 5em;
+    column-gap: 5vh;
     flex-direction: row;
     justify-content: center;
 }
 
-.info {
-	display: block;
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-	width: fit-content;
-	color: black;
-	background-color: transparent;
-	font-weight: bold;
-	font-size: inherit;
-	border: none;
-	padding: 1em 1em;
-	text-decoration: underline;
+.dot {
 	cursor: pointer;
-	transition: 0.5s ease;
+	height: 15px;
+	width: 15px;
+	margin: 1em 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
 }
 
-.info:hover {
-	border-radius: 0 0 10px 10px;
-	background-color: lightsteelblue;
+.caption {
+	position: relative;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	bottom: 44px;
+	width: 40vh;
+	background: rgba(0, 0, 0, 0.8);
+	color: white;
+}
+
+.caption a {
+	font-size: 2em;
+	color: greenyellow;
+}
+
+.caption a:visited {
+	color: green;
 }
 
 .prev,
 .next {
 	cursor: pointer;
-	padding: 0.8em;
-	color: black;
+	padding: 1em 1.5em;
+	color: white;
+	margin-bottom: 1em;
 	transition: 0.3s ease;
-	background-color: transparent;
+	background-color: darkslategray;
 	border: none;
+	border-radius: 30px;
 	user-select: none;
-}
-
-.prev {
-	border-radius: 10px 0 0 10px;
-}
-
-.next {
-	border-radius: 0 10px 10px 0;
 }
 
 .prev:hover,
 .next:hover {
-	background-color: darkslategray;
-	color: white;
+	background-color: greenyellow;
+	color: black;
 }
 
-
 .slideimg {
-    padding-bottom: 0.5em;
-    padding-top: 1.5em;
-    max-width: 100%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
 	user-select: none;
-	/*background-color: ; Perché alcune immagini sono più piccole: invece che riadattarle
-	su schermi più grandi, si potrebbe usare uno sfondo carino*/
+	max-width: 100%;
+	overflow-clip-margin: content-box;
+    overflow: clip;
 }
 
 .slide_content {
 	display: none;
 	text-align: center;
+	margin: auto;
+	height: 80%;
+	width: 100%;
 }
