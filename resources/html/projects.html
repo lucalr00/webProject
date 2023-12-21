@@ -19,7 +19,7 @@
 	<link rel="stylesheet" href="../css/headerFooter.css">
 	
 	<!--<link rel="stylesheet" media="screen and (min-width: 1024px)" href="../css/root.css"> -->
-	<link rel="stylesheet" media="screen and (min-width: 1024px)" href="../css/devices/projectsDev.css">
+	<link rel="stylesheet" media="screen and (min-width: 300px)" href="../css/devices/projectsDev.css">
 
 	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -50,73 +50,62 @@
 	</header>
 
 	<main>
-		<h1 id="explore">Explore our Projects</h1>
+		<h2 id="explore">Explore our Projects</h1>
 		<div id="slideshow">
 			
 			<div class="slide_content">
-				<figure>
-					<img class="slideimg" id="blue_horizon" src="../images/ocean-3.jpg">
-					<figcaption class="caption">
-						<a href="../html/projects/blue_horizon.html" class="info" title="Read more...">Blue Horizon</a>
-					</figcaption>
-				</figure>
+				<img class="slideimg" id="blue_horizon" src="../images/ocean-3.jpg">
+				<button class="caption">
+					<a href="../html/projects/blue_horizon.html" class="info" title="Read more...">Blue Horizon</a>
+				</button>
 			</div>
 
 			<div class="slide_content">
-				<figure>
-					<img class="slideimg" id="accessible_greenhouse" src="../images/Garden.jpg">
-					<figcaption class="caption">
-						<a href="../html/projects/accessible_greenhouse.html" class="info" title="Read more...">Accessible Greenhouse</a>
-					</figcaption>
-				</figure>
+				<img class="slideimg" id="accessible_greenhouse" src="../images/Garden.jpg">
+				<button class="caption">
+					<a href="../html/projects/accessible_greenhouse.html" class="info" title="Read more...">Accessible Greenhouse</a>
+				</button>
 			</div>
 
 			<div class="slide_content">
-				<figure>
-					<img class="slideimg" id="forest_rise" src="../images/ForestRise.jpg">
-					<figcaption class="caption">
-						<a href="../html/projects/forest_rise.html" class="info" title="Read more...">ForestRise</a>
-					</figcaption>
-				</figure>
+				<img class="slideimg" id="forest_rise" src="../images/ForestRise.jpg">
+				<button class="caption">
+					<a href="../html/projects/forest_rise.html" class="info" title="Read more...">ForestRise</a>
+				</button>
 			</div>
 
 			<div class="slide_content">
-				<figure>
-					<img class="slideimg" id="green_future" src="../images/GreenFuture.jpeg">
-					<figcaption class="caption">
-						<a href="../html/projects/green_future.html" class="info" title="Read more...">Green Future</a>
-					</figcaption>
-				</figure>
+				<img class="slideimg" id="green_future" src="../images/GreenFuture.jpeg">
+				<button class="caption">
+					<a href="../html/projects/green_future.html" class="info" title="Read more...">Green Future</a>
+				</button>
 			</div>
 
 			<div class="slide_content">
-				<figure>
-					<img class="slideimg" id="FoRestore" src="../images/FoRestore.webp">
-					<figcaption class="caption">
-						<a href="../html/projects/FoRestore.html" class="info" title="Read more...">FoRestore</a>
-					</figcaption>
-				</figure>
+				<img class="slideimg" id="FoRestore" src="../images/FoRestore.webp">
+				<button class="caption">
+					<a href="../html/projects/FoRestore.html" class="info" title="Read more...">FoRestore</a>
+				</button>
 			</div>
 
 			<div class="slide_content">
-				<figure>
-					<img class="slideimg" id="plants_filter" src="../images/fitodepurazione.jpg">
-					<figcaption class="caption">
-						<a href="../html/projects/plants_filter.html" class="info" title="Read more...">Plants Filter</a>
-					</figcaption>
+				<img class="slideimg" id="plants_filter" src="../images/fitodepurazione.jpg">
+				<button class="caption">
+					<a href="../html/projects/plants_filter.html" class="info" title="Read more...">Plants Filter</a>
+				</button>
 				</figure>
 			</div>
-			
-			<div id="slidenav">
-				<button class="prev" onclick="plusSlides(-1)" title="Previous">&#10094;</button>
-				<span class="dot" onclick="currentSlide(1)"></span>
-				<span class="dot" onclick="currentSlide(2)"></span>
-				<span class="dot" onclick="currentSlide(3)"></span>
-				<span class="dot" onclick="currentSlide(4)"></span>
-				<span class="dot" onclick="currentSlide(5)"></span>
-				<span class="dot" onclick="currentSlide(6)"></span>
-				<button class="next" onclick="plusSlides(1)" title="Next">&#10095;</button>
-			</div>
+		</div>
+
+		<div id="slidenav">
+			<button class="prev" onclick="plusSlides(-1)" title="Previous">&#10094;</button>
+			<span class="dot" onclick="currentSlide(1)"></span>
+			<span class="dot" onclick="currentSlide(2)"></span>
+			<span class="dot" onclick="currentSlide(3)"></span>
+			<span class="dot" onclick="currentSlide(4)"></span>
+			<span class="dot" onclick="currentSlide(5)"></span>
+			<span class="dot" onclick="currentSlide(6)"></span>
+			<button class="next" onclick="plusSlides(1)" title="Next">&#10095;</button>
 		</div>
 		
 		<button class="goUp hidden" onclick="goTop()"><span>&UpArrow;</span>Back to top</button>
