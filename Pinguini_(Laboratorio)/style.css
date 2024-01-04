@@ -1,0 +1,335 @@
+/*rimuovo i margini prefdefiniti dal browser*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*Imposto dei colori e font principali da utilizzare per tutto il sito*/
+:root{
+    --headerBgColor:black;
+    --headerTxtColor: white;
+    --bgColor: white;
+    --txtColor: black;
+    --footerBgColor:black;
+    --footerTxtColor: white;
+    --visitedLinkColor: rgb(230,12,83);
+    --headColor: rgb(230,12,83);
+    --linkColor: white;
+    --flagColor: rgb(218, 125, 12);
+    --font-body-family:"roboto Condensed", sans-serif;
+
+}
+
+html{
+    font-size: 100%; /*rispetto le dimensioni scelte dall'utente*/
+    font-family: var(--font-body-family);
+    line-height: 1.5em;
+    margin: auto;/*per centrare un elemento*/
+    background-image: url("images/bg.png");
+}
+
+body{/*per mettere il footer in fondo alla pagina*/
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;/*100% del dispositivo*/
+}
+.navigationHelp{
+    position:absolute;
+    text-indent:-999em;
+}
+
+
+/********************************
+*HEADER
+********************************/
+
+header{
+    background-color: var(--headerBgColor);
+    color: var(--headerTxtColor);
+    text-align: center;
+    padding: 1em;
+}
+
+/*sostituisco il testo con una immagine*/
+header h1{
+    text-indent:-999em;
+    background-image: url(./images/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size:4em;
+    line-height: 1.5em;
+}
+
+/********************************
+*NAV
+********************************/
+nav{
+    background-color: var(--headerBgColor);
+    color: var(--headerTxtColor);
+}
+
+nav a:link{
+    color:var(--linkColor)
+}
+
+nav a:visited{
+    color: var(--visitedLinkColor);
+}
+
+#menu{
+    text-align: center;
+}
+
+#menu ul{/*centro il menu*/
+    max-width: 1024px;
+    padding: 1em;
+    margin: auto;
+    list-style-type: none;/*rimuovo i pallini*/
+}
+
+#menu ul li{/*metto la lista in linea*/
+    display: inline-block;
+    width: 22%; /*equispazio gli elementi della lista*/
+    margin:0 0.5em;
+}
+
+#breadcrumb{
+    padding: 1em;
+}
+
+#breadcrumb p{
+    max-width: 1024;
+    margin:auto;
+}
+
+/********************************
+*MAIN
+********************************/
+
+main{
+    color: var(--txtColor);
+    margin: auto;
+    width: 80%;
+}
+
+main h2{
+    text-align: center;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    font-size: 2em;
+}
+
+main h3{
+    text-align: center;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    font-size: 1.2em;
+}
+
+main.colonne{
+    column-count: 3;
+    width:90%;
+}
+
+.colonne dl {
+    font-size: 90%;
+    margin: auto;
+}
+
+main.colonne div dt, main.colonne div dd{
+    display: inline;
+    text-transform: uppercase;
+}
+
+.soldOut{
+    background-image: url(./images/soldout.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+dd.città{
+    color: var(--flagColor);
+    font-weight: bold;
+}
+main.colonne time span{
+    font-weight: bold;
+}
+
+main dl div{
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+}
+
+#imgIndex{
+    width:80%;
+}
+
+main a:link{
+    color:var(--linkColor)
+}
+
+main a:visited{
+    color: var(--visitedLinkColor);
+}
+
+
+/********************************
+*FOOTER
+********************************/
+
+footer{
+    background-color: var(--footerBgColor);
+    color: var(--footerTxtColor);
+    text-align: center;
+    padding: 1em;
+    margin-top: auto;
+}
+
+/********************************
+*COMPONENTI
+********************************/
+#componenti{
+    margin:auto;
+    width:95%;
+    max-width: 1024px;
+    padding-top: 1em;
+    padding-bottom: 2em;
+}
+
+#componenti>dt{
+    background-color: var(--headColor);
+    color: var(--txtColor);
+    border:1px solid black;
+    padding:0.5em;
+    font-size: 1.1em;
+}
+
+#componenti>dd{
+    background-color: var(--bgColor);
+    border: 1px solid black;
+    border-top: none;
+    padding: 0.5em;
+    margin-bottom: 1em;
+}
+
+#componenti>dd img{
+    width:15%;
+    float: left;
+    margin-right: 1em;
+}
+
+.componente dt{
+    float: left;
+    font-weight:bold;
+}
+
+/********************************
+*DISCOGRAFIA
+********************************/   
+#album {
+    list-style-type: none;/*rimuovo i pallini*/
+    text-align: center;
+    margin:auto;
+}
+
+#album li{
+    display: inline-block;
+    width:26%;
+    aspect-ratio: 1/1;
+    padding: 2em;
+}
+
+#album li a{
+    display:block;
+    width:100%;
+    height:100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    overflow: hidden;
+    font-size: 7em;
+    line-height: 1.5em;
+
+}
+
+#album li a:link{
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transition:.5s;
+}
+#album li a:hover{
+    filter:grayscale(0%);
+    transform:scale(1.1);
+}
+
+#fakenews{
+    background-image: url(./images/fakenews.jpg);
+}
+
+#ahia{
+    background-image: url(./images/ahia.jpg);
+}
+
+#ringo{
+    background-image: url(./images/fuorihyperingo.jpg);
+}
+
+#hype{
+    background-image: url(./images/fuorihype.jpg);
+}
+
+#brucata{
+    background-image: url(./images/gioventubrucata.jpg);
+}
+
+#calcio{
+    background-image: url(./images/calcio.jpg);
+}
+
+#reNudo{
+    background-image: url(./images/renudo.jpg);
+}
+
+
+/********************************
+*TABELLA
+********************************/
+table{
+    margin: auto;
+    width: 80%;
+}
+
+tr th, tr td{
+    padding-left:0.2em;
+    padding-right: 0.2em;
+    text-align: left;
+}
+
+table thead{
+    background: var(--flagColor);
+}
+
+tr:nth-child(odd){
+   background-color: rgba(218, 125, 12, 0.5);
+   
+}
+
+tr:nth-child(even){
+    background-color:rgba(218, 125, 12, 0.9);
+}
+
+thead th{
+    font-weight: bold;
+}
+
+th{
+    font-weight: normal;
+}
+
+th time span{
+    font-weight: bold;
+}
+

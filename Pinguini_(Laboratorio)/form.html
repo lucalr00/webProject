@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Pinguini Tattici Nucleari</title>
+    <meta name="keywords" content="Pinguini Tattici Nucleari, fake news tour 2024, concerti">
+    <meta name="description" content="Sito ufficiale dei Pinguini Tattici Nucleari, gruppo fondato da Riccardo Zanotti">
+    <link rel="stylesheet" href="style.css" media="screen">
+    <link rel="stylesheet" href="mini.css" media="screen and (max-width:600px)">
+    <link rel="stylesheet" href="print.css" media="print">
+    <script src="form.js"></script>
+
+</head>
+<body onload="caricamento()">
+    <header>
+        <h1>Pinguini Tattici Nucleari</h1>
+    </header>
+    
+    <!--menu-->
+    <nav id="menu">
+        <ul>
+            <li lang="en">Home</li>
+            <li><a href="biografia.html">Biografia</a></li>
+            <li><a href="componenti.html">Componenti</a></li>
+            <li><a href="discografiaTemplate.html">Discografia</a></li>
+        </ul>
+    </nav>
+    
+    <!--indica in quale pagina ti trovi-->
+    <nav id="breadcrumb">
+        <p>Ti trovi in: <span lang="en">Home</span></p>
+    </nav>
+
+    <main >
+        <form method="post" action="aggiungiTraccia.php" onsubmit="validazioneForm()">
+            <fieldset>
+                <legend>Album</legend>
+                <label for="album">Seleziona l'album: </label>
+                <select id="album" name="album">
+                    <option value="1">Fake News</option><option value="2">Ahia!</option><option value="3">Fuori dall'Hype Ringo Starr</option><option value="4">Fuori dall'Hype</option><option value="5">Gioventù brucata</option><option value="6">Diamo un calcio all'adilà</option><option value="7">Il Re è nudo</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Informazioni sulla traccia</legend>
+                <label for="titolo">Titolo: </label>
+                <span><input type="text" name="titolo" id="titolo" value="" /></span><br/>
+                <label for="durata">Durata: </label>
+                <span><input type="text" name="durata" id="durata" value="" /></span>
+            </fieldset>
+            <fieldset>
+                <legend>Contenuto Esplicito</legend>
+                <label for="rYes">Si</label>
+                <input type="radio" name="esplicito" id="rYes" value="Yes" />
+                <label for="rNo">No</label>
+                <span><input type="radio" name="esplicito" id="rNo" value="No" /></span>
+            </fieldset>
+            <fieldset>
+                <legend>Informazioni aggiuntive</legend>
+                <label for="dataRadio">Data del primo passaggio in radio: </label>
+                <span><input type="text" name="dataRadio" id="dataRadio" value=""/></span><br/>
+                <label for="urlVideo">URL del video: </label>
+                <span><input type="text" name="urlVideo" id="urlVideo"/></span><br/>
+                <label for="note">Note: </label>
+                <input type="text" name="note" id="note"/>
+            </fieldset>
+            <fieldset>
+                <legend>Bottoni</legend>
+                <input type="submit" id="submit" name="submit" value="Inserisci traccia"/>
+                <input type="reset" id="reset" value="Cancella tutto"/>
+            </fieldset>
+        </form>
+    </main>
+   
+    <footer><P>Nome&amp; Cognome-<span lang="en">All rights reserved.</span></P></footer>
+</body>
+</html>

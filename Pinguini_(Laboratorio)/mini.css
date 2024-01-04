@@ -1,0 +1,91 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+/********************************
+*HEADER
+********************************/
+header h1{
+    font-size: 2em;
+    line-height: 1em;
+}
+
+/********************************
+*NAV
+********************************/
+#menu ul{
+    width:auto;   
+}
+
+#menu ul li{
+    display:block;
+    margin:auto;
+    width:100%;
+    font-size: 1.6em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+#breadcrumb p{
+    font-size: 1.5em;
+}
+
+/********************************
+*MAIN
+********************************/
+main.colonne{
+    column-width:300px;
+}
+
+#imgIndex{
+    display:none;
+}
+
+/********************************
+*COMPONENTI
+********************************/
+#componenti{
+    width:98%;
+    
+}
+
+/********************************
+*DISCOGRAFIA
+********************************/  
+#album{
+    width:auto;
+}
+#album li img{
+    width:12em;
+ }
+
+/********************************
+*TABELLA
+********************************/
+thead{
+    display: none;
+}
+
+tr, th, td{
+    display: block;
+}
+
+th{
+    background-color: var(--flagColor);
+    color: var(--headerTxtColor);
+    border-bottom:1px solid black;
+}
+
+td[data-title]:before{
+    content: attr(data-title) ":\00A0";
+    font-weight: bold;
+}
+
+tr{
+    border: 1px solid black;
+}
+
+.soldOut{
+    background-image: none;
+}

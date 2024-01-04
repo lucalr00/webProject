@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mini.css" media="screen and (max-width:600px)">
+    <link rel="stylesheet" href="print.css" media="print">
+    <title>Biglietti</title>
+</head>
+
+<body>
+  <header>
+    <nav aria-label="aiuti alla navigazione ">
+      <a class="navigationHelp" href="#content">vai al contenuto</a>
+    </nav>
+    <h1>Pinguini Tattici Nucleari</h1>
+</header>
+
+<!--menu-->
+<nav id="menu" aria-label="site menu">
+  <a class="navigationHelp" href="#content">salta il menu di navigazione</a>
+    <ul>
+        <li id="currentLink" lang="en"><a href="index.html">Home</a></li>
+        <li><a href="biografia.html">Biografia</a></li>
+        <li><a href="componenti.html">Componenti</a></li>
+        <li><a href="discografiaTemplate.html">Discografia</a></li>
+    </ul>
+</nav>
+
+<!--indica in quale pagina ti trovi-->
+<nav id="breadcrumb">
+  <p>Ti trovi in: <a href="index.html" lang="en" >Home</a>&gt; &gt; Biglietti</p>
+</nav>
+
+    <main>
+        <!--formato tabellare-->
+        <p id="sumTabella" class="navigationHelp"> In questa tabella vengono elencate le informazioni relative ai concerti</p>
+        <table aria-describedby="sumTabella">
+            <caption>I prossimi concerti</caption>
+           
+            <thead>
+            <tr>
+              <th scope="col">DATA</th>
+              <th scope="col">CITTÀ</th>
+              <th scope="col">LUOGO</th>
+              <th scope="col">BIGLIETTI</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+              <th scope="row"><time datetime="2024-04-03"><span>03</span> Aprile 2024</time></th><!--metto th perchè è la chiave della tabella-->
+              <td data-title="città">Jesolo (<abbr title="Venezia">VE</abbr>)</td>
+              <td data-title="luogo">Palazzo del Turismo</td>
+              <td data-title="disponibilità biglietti" class="soldOut">No</td>
+            </tr>
+            <tr>
+                <th scope="row"><time datetime="2024-04-04"><span>04</span> Aprile 2024</time></th>
+                <td data-title="città">Jesolo (<abbr title="Venezia">VE</abbr>)</td>
+                <td data-title="luogo">Palazzo del Turismo</td>
+                <td data-title="disponibilità biglietti" class="soldOut">No</td>
+            </tr>
+            <tr>
+                <th scope="row"><time datetime="2024-04-08"><span>08</span> Aprile 2024</time></th>
+                <td data-title="città">Milano</td>
+                <td data-title="luogo">Mediolanum Forum</td>
+                <td data-title="disponibilità biglietti" class="soldOut">No</td>
+              </tr>
+              <!--convertire tutti come le prime tre-->
+              <tr>
+                <th scope="row"><time datetime="2024-04-09"><span>09</span> Aprile 2024</time></th>
+                <td data-title="città">Milano</td>
+                <td data-title="luogo">Mediolanum Forum</td>
+                <td data-title="disponibilita biglietti class">Si</td>
+              </tr>
+              <tr>
+                <th scope="row"><time datetime="2024-04-11"><span>11</span> Aprile 2024</time></th>
+                <td data-title="città">Milano</td>
+                <td data-title="luogo">Mediolanum Forum</td>
+                <td data-title="disponibilità biglietti" class="soldOut">No</td>
+              </tr>
+              <tr>
+                <th scope="row"><time datetime="2024-04-12"><span>12</span> Aprile 2024</time></th>
+                <td data-title="città">Milano</td>
+                <td data-title="luogo">Mediolanum Forum</td>
+                <td data-title="disponibilita biglietti">Si</td>
+              </tr>
+              <tr>
+                <th scope="row"><time datetime="2024-04-13"><span>13</span> Aprile 2024</time></th>
+                <td data-title="città">Milano</td>
+                <td data-title="luogo">Mediolanum Forum</td>
+                <td data-title="disponibilita biglietti">Si</td>
+              </tr>
+            
+            <tr>
+              <th scope="row"><time datetime="2024-04-16"><span>16</span> Aprile 2024</time></th>
+              <td data-title="città">Torino</td>
+              <td data-title="luogo">Palaolimpico di Torino</td>
+              <td data-title="disponibilità biglietti" class="soldOut">No</td>
+            </tr>
+            <tr>
+              <th scope="row"><time datetime="2024-04-17"><span>17</span> Aprile 2024</time></th>
+              <td data-title="città">Torino</td>
+              <td data-title="luogo">Palaolimpico di Torino</td>
+              <td data-title="disponibilità biglietti" class="soldOut">No</td>
+            </tr>
+            <tr>
+              <th scope="row"><time datetime="2024-04-19"><span>19</span> Aprile 2024</time></th>
+              <td data-title="città">Torino</td>
+              <td data-title="luogo">Palaolimpico di Torino</td>
+              <td data-title="disponibilità biglietti" class="soldOut">No</td>
+            </tr>
+            <tr>
+              <th scope="row"><time datetime="2024-04-20"><span>20</span> Aprile 2024</time></th>
+              <td data-title="città">Torino</td>
+              <td data-title="luogo">Palaolimpico di Torino</td>
+              <td data-title="disponibilità biglietti">Si</td>
+            </tr>
+            <tr>
+              <th scope="row"><time datetime="2024-04-23"><span>23</span> Aprile 2024</time></th>
+              <td data-title="città">Pesaro</td>
+              <td data-title="luogo">Vitrifrigo Arena</td>
+              <td data-title="disponibilità biglietti">Si</td>
+            </tr>
+            <tr>
+              <th scope="row"><time datetime="2024-04-24"><span>24</span> Aprile 2024</time></th>
+              <td data-title="città">Pesaro</td>
+              <td data-title="luogo">Vitrifrigo Arena</td>
+              <td data-title="disponibilità biglietti" class="soldOut">No</td>
+            </tr>
+            <tr>
+              <th scope="row"><time datetime="2024-04-26"><span>26</span> Aprile 2024</time></th>
+              <td data-title="città">Bologna</td>
+              <td>Unipol Arena</td>
+              <td data-title="disponibilità biglietti" class="soldOut">No</td>
+            </tr>
+            <tr>
+              <th scope="row"><time datetime="2024-04-27"><span>27</span> Aprile 2024</time></th>
+              <td data-title="città">Bologna</td>
+              <td data-title="luogo">Unipol Arena</td>
+              <td data-title="disponibilità biglietti" class="soldOut">No</td>
+            </tr>
+            <tr>
+              <th scope="row"><time datetime="2024-04-29"><span>29</span> Aprile 2024</time></th>
+              <td data-title="città">Livorno</td>
+              <td data-title="luogo">Modigliani Forum</td>
+              <td data-title="disponibilità biglietti" class="soldOut">No</td>
+            </tr>
+            <tr>
+              <th scope="row"><time datetime="2024-04-30"><span>30</span> Aprile 2024</time></th>
+              <td data-title="città">Livorno</td>
+              <td data-title="luogo">Modigliani Forum</td>
+              <td data-title="disponibilità biglietti" class="soldOut">No</td>
+            </tr>
+            <tr>
+              <th scope="row"><time datetime="2024-05-02"><span>02</span> Maggio 2024</time></th>
+              <td data-title="città">Firenze</td>
+              <td data-title="luogo">Mandela Forum</td>
+              <td data-title="disponibilità biglietti" class="soldOut">No</td>
+            </tr>
+            <tr>
+              <th scope="row"><time datetime="2024-05-03"><span>03</span> Maggio 2024</time></th>
+              <td data-title="città">Firenze</td>
+              <td data-title="luogo">Mandela Forum</td>
+              <td data-title="disponibilità biglietti" class="soldOut">No</td>
+            </tr>
+            <tr>
+              <th scope="row"><time datetime="2024-05-04"><span>04</span> Maggio 2024</time></th>
+              <td data-title="città">Firenze</td>
+              <td data-title="luogo">Mandela Forum</td>
+              <td data-title="disponibilità biglietti" class="soldOut">No</td>
+            </tr>
+            <tr>
+              <th scope="row"><time datetime="2024-05-07"><span>07</span> Maggio 2024</time></th>
+              <td data-title="città">Roma</td>
+              <td data-title="luogo">Palazzo dello Sport</td>
+              <td data-title="disponibilità biglietti" class="soldOut">No</td>
+            </tr>
+            <tr>
+              <th scope="row"><time datetime="2024-05-08"><span>08</span> Maggio 2024</time></th>
+              <td data-title="città">Roma</td>
+              <td data-title="luogo">Palazzo dello Sport</td>
+              <td data-title="disponibilità biglietti" class="soldOut">No</td>
+            </tr>
+            <tr>
+              <th scope="row"><time datetime="2024-05-10"><span>10</span> Maggio 2024</time></th>
+              <td data-title="città">Roma</td>
+              <td data-title="luogo">Palazzo dello Sport</td>
+              <td data-title="disponibilità biglietti" class="soldOut">No</td>
+            </tr>
+            <tr>
+              <th scope="row"><time datetime="2024-05-11"><span>11</span> Maggio 2024</time></th>
+              <td data-title="città">Roma</td>
+              <td data-title="luogo">Palazzo dello Sport</td>
+              <td data-title="disponibilità biglietti">Si</td>
+            </tr>
+            <tr>
+              <th scope="row"><time datetime="2024-05-15"><span>15</span> Maggio 2024</time></th>
+              <td data-title="città">Bologna</td>
+              <td data-title="luogo">Unipol Arena</td>
+              <td data-title="disponibilità biglietti" class="soldOut">No</td>
+            </tr>
+            <tr>
+              <th scope="row"><time datetime="2024-05-16"><span>16</span> Maggio 2024</time></th>
+              <td data-title="città">Bologna</td>
+              <td data-title="luogo">Unipol Arena</td>
+              <td data-title="disponibilità biglietti" class="soldOut">No</td>
+            </tr>
+            <tr>
+              <th scope="row"><time datetime="2024-05-17"><span>17</span> Maggio 2024</time></th>
+              <td data-title="città">Milano</td>
+              <td data-title="luogo">Mediolanum Forum</td>
+              <td data-title="disponibilità biglietti" class="soldOut">No</td>
+            </tr>
+            <tr>
+              <th scope="row"><time datetime="2024-05-20"><span>20</span> Maggio 2024</time></th>
+              <td data-title="città">Napoli</td>
+              <td data-title="luogo">Palapartenope</td>
+              <td data-title="disponibilità biglietti" class="soldOut">No</td>
+            </tr>
+            <tr>
+              <th scope="row"><time datetime="2024-05-21"><span>21</span> Maggio 2024</time></th>
+              <td data-title="città">Napoli</td>
+              <td data-title="luogo">Palapartenope</td>
+              <td data-title="disponibilità biglietti" class="soldOut">No</td>
+            </tr>
+            <tr>
+              <th scope="row"><time datetime="2024-05-24"><span>24</span> Maggio 2024</time></th>
+              <td data-title="città">Bari</td>
+              <td data-title="luogo">Palaflorio</td>
+              <td data-title="disponibilità biglietti" class="soldOut">No</td>
+            </tr>
+            <tr>
+              <th scope="row"><time datetime="2024-05-25"><span>25</span> Maggio 2024</time></th>
+              <td data-title="città">Bari</td>
+              <td data-title="luogo">Palaflorio</td>
+              <td data-title="disponibilità biglietti" class="soldOut">No</td>
+            </tr>
+            <tr>
+              <th scope="row"><time datetime="2024-05-28"><span>28</span> Maggio 2024</time></th>
+              <td data-title="città">Messina</td>
+              <td data-title="luogo">Palarescifina</td>
+              <td data-title="disponibilità biglietti" class="soldOut">No</td>
+            </tr>
+            <tr>
+              <th scope="row"><time datetime="2024-05-29"><span>29</span> Maggio 2024</time></th>
+              <td data-title="città">Messina</td>
+              <td data-title="luogo">Palarescifina</td>
+              <td data-title="disponibilità biglietti" class="soldOut">No</td>
+            </tr>
+          </tbody>
+
+        </table> 
+    </main>
+    <footer><P>Nome&amp; Cognome-<span lang="en">All rights reserved.</span></P></footer>
+</body>
+</html>
