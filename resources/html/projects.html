@@ -17,9 +17,10 @@
 	<link rel="stylesheet" href="../css/projects.css">
 	<link rel="stylesheet" href="../css/root.css">
 	<link rel="stylesheet" href="../css/headerFooter.css">
-	
+	<link rel="stylesheet" media="screen and (min-width: 600px)" href="../css/devices/headerFooterDev.css">
+	<link rel="stylesheet" media="screen and (min-width: 600px)" href="../css/devices/projectsDev.css">
+
 	<!--<link rel="stylesheet" media="screen and (min-width: 1024px)" href="../css/root.css"> -->
-	<link rel="stylesheet" media="screen and (min-width: 300px)" href="../css/devices/projectsDev.css">
 
 	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -51,71 +52,75 @@
 
 	<main>
 		<h2 id="explore">Explore our Projects</h1>
-		<div id="slideshow">
-			
-			<div class="slide_content">
-				<img class="slideimg" id="blue_horizon" src="../images/ocean-3.jpg">
-				<button class="caption">
-					<a href="../html/projects/blue_horizon.html" class="info" title="Read more...">Blue Horizon</a>
-				</button>
+			<div id="slideshow">
+
+				<div class="slide_content">
+					<img class="slideimg" id="blue_horizon" src="../images/ocean-3.jpg">
+					<button class="caption">
+						<a href="../html/projects/blue_horizon.html" class="info" title="Read more...">Blue Horizon</a>
+					</button>
+				</div>
+
+				<div class="slide_content">
+					<img class="slideimg" id="accessible_greenhouse" src="../images/Garden.jpg">
+					<button class="caption">
+						<a href="../html/projects/accessible_greenhouse.html" class="info"
+							title="Read more...">Accessible Greenhouse</a>
+					</button>
+				</div>
+
+				<div class="slide_content">
+					<img class="slideimg" id="forest_rise" src="../images/ForestRise.jpg">
+					<button class="caption">
+						<a href="../html/projects/forest_rise.html" class="info" title="Read more...">ForestRise</a>
+					</button>
+				</div>
+
+				<div class="slide_content">
+					<img class="slideimg" id="green_future" src="../images/GreenFuture.jpeg">
+					<button class="caption">
+						<a href="../html/projects/green_future.html" class="info" title="Read more...">Green Future</a>
+					</button>
+				</div>
+
+				<div class="slide_content">
+					<img class="slideimg" id="FoRestore" src="../images/FoRestore.webp">
+					<button class="caption">
+						<a href="../html/projects/FoRestore.html" class="info" title="Read more...">FoRestore</a>
+					</button>
+				</div>
+
+				<div class="slide_content">
+					<img class="slideimg" id="plants_filter" src="../images/fitodepurazione.jpg">
+					<button class="caption">
+						<a href="../html/projects/plants_filter.html" class="info" title="Read more...">Plants
+							Filter</a>
+					</button>
+					</figure>
+				</div>
 			</div>
 
-			<div class="slide_content">
-				<img class="slideimg" id="accessible_greenhouse" src="../images/Garden.jpg">
-				<button class="caption">
-					<a href="../html/projects/accessible_greenhouse.html" class="info" title="Read more...">Accessible Greenhouse</a>
-				</button>
+			<div id="slidenav">
+				<button class="prev" aria-label="Slide precedente" onclick="plusSlides(-1)"
+					title="Previous">&#10094;</button>
+				<button class="dot" aria-label="Slide 1" onclick="currentSlide(1)"></button>
+				<button class="dot" aria-label="Slide 2" onclick="currentSlide(2)"></button>
+				<button class="dot" aria-label="Slide 3" onclick="currentSlide(3)"></button>
+				<button class="dot" aria-label="Slide 4" onclick="currentSlide(4)"></button>
+				<button class="dot" aria-label="Slide 5" onclick="currentSlide(5)"></button>
+				<button class="dot" aria-label="Slide 6" onclick="currentSlide(6)"></button>
+				<button class="next" aria-label="Slide successiva" onclick="plusSlides(1)"
+					title="Next">&#10095;</button>
 			</div>
 
-			<div class="slide_content">
-				<img class="slideimg" id="forest_rise" src="../images/ForestRise.jpg">
-				<button class="caption">
-					<a href="../html/projects/forest_rise.html" class="info" title="Read more...">ForestRise</a>
-				</button>
-			</div>
+			<button class="goUp hidden" onclick="goTop()"><span>&UpArrow;</span>Back to top</button>
 
-			<div class="slide_content">
-				<img class="slideimg" id="green_future" src="../images/GreenFuture.jpeg">
-				<button class="caption">
-					<a href="../html/projects/green_future.html" class="info" title="Read more...">Green Future</a>
-				</button>
-			</div>
-
-			<div class="slide_content">
-				<img class="slideimg" id="FoRestore" src="../images/FoRestore.webp">
-				<button class="caption">
-					<a href="../html/projects/FoRestore.html" class="info" title="Read more...">FoRestore</a>
-				</button>
-			</div>
-
-			<div class="slide_content">
-				<img class="slideimg" id="plants_filter" src="../images/fitodepurazione.jpg">
-				<button class="caption">
-					<a href="../html/projects/plants_filter.html" class="info" title="Read more...">Plants Filter</a>
-				</button>
-				</figure>
-			</div>
-		</div>
-
-		<div id="slidenav">
-			<button class="prev" onclick="plusSlides(-1)" title="Previous">&#10094;</button>
-			<span class="dot" onclick="currentSlide(1)"></span>
-			<span class="dot" onclick="currentSlide(2)"></span>
-			<span class="dot" onclick="currentSlide(3)"></span>
-			<span class="dot" onclick="currentSlide(4)"></span>
-			<span class="dot" onclick="currentSlide(5)"></span>
-			<span class="dot" onclick="currentSlide(6)"></span>
-			<button class="next" onclick="plusSlides(1)" title="Next">&#10095;</button>
-		</div>
-		
-		<button class="goUp hidden" onclick="goTop()"><span>&UpArrow;</span>Back to top</button>
-		
 	</main>
 
 	<footer id="footer">
-	
+
 		<img src="../images/ZCLogo.png" id="ZCLogo" alt="Logo Zero Carbon">
-	
+
 		<dl>
 			<dt>
 				Legal Head Office
@@ -144,14 +149,15 @@
 				<abbr title="number">n.</abbr> 000874293
 			</dd>
 		</dl>
-	
+
 		<section>
 			<h4>
 				Zero Carbon on social media
 			</h4>
 			<nav>
 				<ul id="socialIcons">
-					<li><a href="https://twitter.com/" title="X" target="_blank"><img src="../images/350x350 (1).png"></a>
+					<li><a href="https://twitter.com/" title="X" target="_blank"><img
+								src="../images/350x350 (1).png"></a>
 					</li>
 					<li><a href="https://instagram.com/" title="Instagram" target="_blank"><img
 								src="../images/350x350 (2).png"></a></li>
@@ -160,7 +166,7 @@
 				</ul>
 			</nav>
 		</section>
-	
+
 		<section>
 			<h4>
 				Policies
@@ -184,12 +190,12 @@
 				</ul>
 			</nav>
 		</section>
-	
+
 		<section id="copyright">
 			<p>Copyright &copy; 2023 Zero Carbon &minus; All rights reserved</p>
 			<p>Website developed by: <a href="developers.html">QuadraCoders</a></p>
 		</section>
-	
+
 	</footer>
 
 </body>
