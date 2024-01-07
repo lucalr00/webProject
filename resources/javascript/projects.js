@@ -18,6 +18,7 @@ function showSlide(currentIndex)
 {
     let index;
     let slide = document.getElementsByClassName("slide_content");
+    let dots = document.getElementsByClassName("dot");
     
     if(currentIndex > slide.length)
     {
@@ -33,7 +34,12 @@ function showSlide(currentIndex)
         slide[index].style.display = "none";
     }
 
+    for (index = 0; index < dots.length; index++) {
+        dots[index].className = dots[index].className.replace(" active", "");
+    }
+
     slide[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
 }
 
 function currentSlide(currentIndex) {

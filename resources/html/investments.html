@@ -5,8 +5,8 @@
 	<meta charset="utf-8">
 	<title>ZERO CARBON &minus; INVESTMENTS</title>
 	<!--<meta http-equiv="refresh" content="0;URL=aboutUs.html">-->
-	<meta name="keywords" content="iserire">
-	<meta name="description" content="inserire">
+	<meta name="keywords" content="Investments, our annual investments, progress">
+	<meta name="description" content="See our annual investments and progress of ZeroCarbon">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script src="../javascript/root.js"></script>
@@ -14,9 +14,10 @@
 	<script src="../javascript/investments.js"></script>
 	<script src="../javascript/investments_charts.js"></script>
 	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-	<link rel="stylesheet"  href="../css/investments.css">
-	<link rel="stylesheet" href="../css/root.css">
-	<link rel="stylesheet" href="../css/headerFooter.css">
+	<link rel="stylesheet" type="text/css" href="../css/investments.css">
+	<link rel="stylesheet" type="text/css" href="../css/root.css">
+	<link rel="stylesheet" type="text/css" href="../css/headerFooter.css">
+	<link rel="stylesheet" type="text/css" media="screen and (min-width: 600px)" href="../css/devices/headerFooterDev.css">
 	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -24,14 +25,12 @@
 <body>
 	<header id="header">
 		<div id="topNavBar">
-			<h1>
-				<a href="home.html" id="textLogo"><span class="logoFirstHalf">Zero</span>Carbon</a>
-			</h1>
-			<button id="menuLink" class="menuLink" onclick="responsiveNav()"><span class="material-symbols-outlined"
-					id="closeMenu">close</span><span class="material-symbols-outlined"
-					id="openMenu">menu</span>MENU</button>
+		<h1>
+			<a href="home.html" title="Home" id="textLogo"><span class="logoFirstHalf">Zero</span>Carbon</a>
+		</h1>
+		<button id="menuLink" class="menuLink" onclick="responsiveNav()"><span class="material-symbols-outlined" id="closeMenu">close</span><span class="material-symbols-outlined" id="openMenu">menu</span>MENU</button>
 		</div>
-		<nav id="navBar" class="headerNav">
+		<nav id="navBar" class="headerNav" aria-label="Navigation Bar">
 			<ul>
 				<li><a href="home.html">Home</a></li>
 				<li><a href="projects.html">Projects</a></li>
@@ -40,8 +39,9 @@
 				<li><a href="#">Contacts</a></li>
 			</ul>
 		</nav>
-		<nav id="breadcrumb"> <!-- NASCOSTO IN DESKTOP -->
-			<p>You are here: <span lang="en">Investments</span></p>
+		
+		<nav id="breadcrumb" aria-label="Path"> <!-- NASCOSTO IN DESKTOP -->
+			<p>You are here: <a href="home.html">Home</a> &#47; Investments</p>
 		</nav>
 	</header>
 	<main>
@@ -111,27 +111,26 @@
 			</table>
 		</div>
 		
-		<button class="goUp hidden" onclick="goTop()"><span>&UpArrow;</span>Back to top</button>
+		<button class="goUp hidden" aria-label="Back to Top" onclick="goTop()"><span>&UpArrow;</span>Back to top</button>
 		
 	</main>
 	<footer id="footer">
-
+		
 		<img src="../images/ZCLogo.png" id="ZCLogo" alt="Logo Zero Carbon">
-
+		<div id="footerZcWrapper">
+		<section id="zcCorporate">
 		<dl>
 			<dt>
 				Legal Head Office
 			</dt>
 			<dd>
-				100 Light <abbr title="Street">St</abbr>, Baltimore, <abb title="Maryland">MD</abb> 21202, <abbr
-					title="United States">U.S.</abbr>
+				100 Light <abbr title="Street">St</abbr>, Baltimore, <abbr title="Maryland">MD</abbr> 21202, <abbr title="United States">U.S.</abbr>
 			</dd>
 			<dt>
 				Company Branch
 			</dt>
 			<dd>
-				121 <abbr title="Southwest">SW</abbr> Salmon <abbr title="Street">St</abbr>, Portland, <abbr
-					title="Oregon">OR</abbr> 97204, <abbr title="United States">U.S.</abbr>
+				121 <abbr title="Southwest">SW</abbr> Salmon <abbr title="Street">St</abbr>, Portland, <abbr title="Oregon">OR</abbr> 97204, <abbr title="United States">U.S.</abbr>
 			</dd>
 			<dt>
 				Corporate Capital
@@ -143,54 +142,52 @@
 				<abbr title="Employer Identification Number">EIN</abbr>
 			</dt>
 			<dd>
-				<abbr title="number">n.</abbr> 000874293
+				000874293
 			</dd>
 		</dl>
-
-		<section>
-			<h4>
-				Zero Carbon on social media
-			</h4>
+		</section>
+		
+		<section id="zcSocial">
+		<h4>
+			Zero Carbon on social media
+		</h4>
 			<nav>
-				<ul id="socialIcons">
-					<li><a href="https://twitter.com/" title="X" target="_blank"><img
-								src="../images/350x350 (1).png"></a></li>
-					<li><a href="https://instagram.com/" title="Instagram" target="_blank"><img
-								src="../images/350x350 (2).png"></a></li>
-					<li><a href="https://facebook.com/" title="Facebook" target="_blank"><img
-								src="../images/350x350.png"></a></li>
+				<ul id="socialIcons" aria-label="Social Area">
+					<li><a href="https://twitter.com/" title="X" target="_blank"><img src="../images/350x350 (1).png"></a></li>
+					<li><a href="https://instagram.com/" title="Instagram" target="_blank"><img src="../images/350x350 (2).png"></a></li>
+					<li><a href="https://facebook.com/" title="Facebook" target="_blank"><img src="../images/350x350.png"></a></li>
 				</ul>
 			</nav>
 		</section>
-
-		<section>
+		
+		<section id="zcPolicies">
 			<h4>
 				Policies
 			</h4>
-			<nav>
-				<ul>
-					<li><a href="privacyPolicy.html" title="Privacy policy" target="_blank">Privacy policy</a></li>
+			<nav aria-label="Policy Area">
+				<ul class="linkList">
+				<li><a href="privacyPolicy.html" title="Privacy policy" target="_blank">Privacy policy</a></li>
 				</ul>
 			</nav>
 		</section>
-		<section>
+		<section id="zcLinks">
 			<h4>
 				Others links
 			</h4>
-			<nav>
-				<ul id="linkList">
-					<li><a href="pishing.html" title="Pishing" target="_blank">Pishing</a></li>
+			<nav aria-label="Links to Phishing, Contacts and Admin Area pages">
+				<ul class="linkList">
+					<li><a href="pishing.html" title="Phishing" target="_blank">Phishing</a></li>
 					<li><a href="javascript:void(0);">Contacts</a></li>
-					<li><a id="adminArea" href="javascript:void(0);"><span class="material-symbols-outlined"
-								id="loginIcon">Login</span>Admin Area</a></li>
+					<li><a id="adminArea" href="javascript:void(0);"><span class="material-symbols-outlined" id="loginIcon">Login</span>Admin Area</a></li>
 				</ul>
 			</nav>
 		</section>
-
-		<p id="copyright">
-			Copyright &copy; 2023 Zero Carbon &minus; All rights reserved</span>
-		</p>
-
+		</div>			
+		<div id="copyright" aria-label="Copyright">
+			<p>Copyright &copy; 2023 Zero Carbon &minus; All rights reserved</p>
+			<p>Website developed by: <a href="developers.html">QuadraCoders</a></p>
+		</div>
+		
 	</footer>
 </body>
 
