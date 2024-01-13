@@ -13,6 +13,7 @@
 	<script src="../javascript/goTop.js"></script>
 	<script src="../javascript/investments.js"></script>
 	<script src="../javascript/investments_charts.js"></script>
+	<script src="../javascript/investments_tables.js"></script>
 	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="../css/investments.css">
 	<link rel="stylesheet" type="text/css" href="../css/root.css">
@@ -36,7 +37,7 @@
 				<li><a href="projects.html">Projects</a></li>
 				<li><a href="investments.html">Investments</a></li>
 				<li><a href="aboutUs.html">About Us</a></li>
-				<li><a href="#">Contacts</a></li>
+				<li><a href="contacts.html">Contacts</a></li>
 			</ul>
 		</nav>
 		
@@ -49,8 +50,8 @@
 		<div class="container">
 			<div class="box1">
 				<div class="container_years">
-				<p>Years Goals</p>
-				<select class="list_years">
+					<p id="year-label">Years Goals</p>
+					<select class="list_years" aria-labelledby="year-label">
 					<option value="2023">2023</option>
 					<option value="2022">2022</option>
 					<option value="2021">2021</option>
@@ -87,8 +88,10 @@
 			<div class="box2">
 				<h3>Investment progress</h3>
 				<!-- questo  e` per il grafico -->
-				<div id="graph"></div> 
+				<div id="graph" role="img" aria-label="Investment progress graph"></div> 
 			</div>
+
+			<div class="box3">
 			<table id="table_2020">
 				<caption>Investments over time (in millions of dollars)</caption>
 				<thead>
@@ -99,16 +102,73 @@
 				</thead>
 				<tbody>
 				  <tr>
-					<td>January 2020</td>
+					<th scope="row">January 2020</th>
 					<td>$1 million</td>
 				  </tr>
 				  <tr>
-					<td>February 2020</td>
+					<th scope="row">February 2020</th>
 					<td>$2 million</td>
 				  </tr>
-				  <!-- Add more rows as needed -->
 				</tbody>
 			</table>
+			<table id="table_2021">
+				<caption>Investments over time (in millions of dollars)</caption>
+				<thead>
+				  <tr>
+					<th scope="col">Date</th>
+					<th scope="col">Investment</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">January 2021</th>
+					<td>$1 million</td>
+				  </tr>
+				  <tr>
+					<th scope="row">February 2021</th>
+					<td>$2 million</td>
+				  </tr>
+				</tbody>
+			</table>
+			<table id="table_2022">
+				<caption>Investments over time (in millions of dollars)</caption>
+				<thead>
+				  <tr>
+					<th scope="col">Date</th>
+					<th scope="col">Investment</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">January 2022</th>
+					<td>$1 million</td>
+				  </tr>
+				  <tr>
+					<th scope="row">February 2022</th>
+					<td>$2 million</td>
+				  </tr>
+				</tbody>
+			</table>
+			<table id="table_2023">
+				<caption>Investments over time (in millions of dollars)</caption>
+				<thead>
+				  <tr>
+					<th scope="col">Date</th>
+					<th scope="col">Investment</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">January 2023</th>
+					<td>$1 million</td>
+				  </tr>
+				  <tr>
+					<th scope="row">February 2023</th>
+					<td>$2 million</td>
+				  </tr>
+				</tbody>
+			</table>
+			</div>
 		</div>
 		
 		<button class="goUp hidden" aria-label="Back to Top" onclick="goTop()"><span>&UpArrow;</span>Back to top</button>
