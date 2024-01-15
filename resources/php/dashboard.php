@@ -8,7 +8,7 @@ if ($_SESSION['connesso'] != true) {
 }
 
 $connessione = new connection();
-$paginaHTML = file_get_contents(".." . DIRECTORY_SEPARATOR . "html" . DIRECTORY_SEPARATOR . "adminArea" . DIRECTORY_SEPARATOR . "adminArea.html");
+$paginaHTML = file_get_contents(".." . DIRECTORY_SEPARATOR . "html" . DIRECTORY_SEPARATOR . "adminArea" . DIRECTORY_SEPARATOR . "adminDashboard.html");
 
 if ($connessione->isConnected()) {
 
@@ -23,9 +23,9 @@ if ($connessione->isConnected()) {
                        </div>';
         }
 
-        echo str_replace("<adminLoginInfo />", $divInfo, $paginaHTML);
+        echo str_replace("<adminLoginInfo/>", $divInfo, $paginaHTML);
     } else {
-        echo str_replace("<adminLoginInfo />", "User info: Info not present", $paginaHTML);
+        echo str_replace("<adminLoginInfo/>", "User info: not present", $paginaHTML);
     }
 } else {
     die("Connection error");

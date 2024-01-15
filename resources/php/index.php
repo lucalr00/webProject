@@ -33,7 +33,7 @@ if ($connessione->isConnected()) {
         echo str_replace("<socialRoomNews/>", "No news to load", $paginaHTML);
     }
 } else {
-    die("No connection to Social Room");
+    die("Error, can't connect to DB");
 }
 
 $connessione->closeConnection();

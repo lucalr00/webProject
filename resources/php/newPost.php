@@ -1,6 +1,6 @@
 <?php
 require_once "connection.php";
-require_once "prenotazione.php";
+require_once "news.php";
 require_once "input_check.php";
 require_once "session.php";
 
@@ -17,25 +17,21 @@ if ($_SESSION['avRfr']=='') {
                         <h3>Server response status:</h3>';
             $connessione = new connection();
             if ($connessione->isConnected()) {
-                $result_prenotazione = $news->inserisciPrenotazione($connessione);
+                $result_prenotazione = $news->newPost($connessione);
                 if ($result_prenotazione) {
                     $mes .= '<div class="conferma"><p>Successfully published</p></div>';
                 } else
-                    $mes .= '<div class="errori"><p>Errore nell\' inserimento della prenotazione. Riprovare</p></div>';
+                    $mes .= '<div class="errori"><p>Error, can\'t record the new post in the database</p></div>';
             } else
-                $mes .= '<div class="errori"><p>Connection to DB failed</p></div>';
+                $mes .= '<div class="errori"><p>Error, can\'t connect to the database</p></div>';
         }
         
-        $mes .= '<div id="refresh"><p>Reloading the page in 5 seconds...</p></div>';
-        header('refresh:5;url=socialRoom.php');
+        $mes .= '<div id="refresh"><p>Reloading the page in 3 seconds...</p></div>';
+        header('refresh:3;url=socialRoom.php');
         echo $paginaHTML = str_replace('<mes/>', $mes, $paginaHTML);
         
     } else {
         $messaggioPerForm = '<div class="errori" ><ul>';
-
-        if ($news->getCheckin()) {
-            $messaggioPerForm .= '<li>La data di check in non può essere dopo la data di check out</li>';
-        }
 
         $messaggioPerForm .= '</ul></div>';
 
