@@ -71,9 +71,9 @@ if ($connessione->isConnected()) {
         }
 
         $ulNews .= '</ul>';
-        echo str_replace("<socialRoomNews />", $ulNews, $paginaHTML);
+        echo str_replace("<socialRoomNews/>", $ulNews, $paginaHTML);
     } else {
-        echo str_replace("<socialRoomNews />", "No news found in the database", $paginaHTML);
+        echo str_replace("<socialRoomNews/>", "No news found in the database", $paginaHTML);
     }
 } else {
     die("Connection error");

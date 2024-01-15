@@ -44,12 +44,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $queryResult = mysqli_query($connessione->getConnection(), $query);
             if (mysqli_affected_rows($connessione->getConnection()) >= 1) {
                 $connessione->closeConnection();
-                echo "<div class='mess'>Prenotazione eliminata con successo, reindirizzamento in corso</div>";
-                header("refresh:5;url=socialRoom.php");
+                echo "<div class='mess'>Post deleted, page refresh in 3 seconds...</div>";
+                header("refresh:3;url=socialRoom.php");
                 exit();
             } else {
-                echo "<div class='err'>Errore nella rimozione della prenotazione </div>";
-                header("refresh:5;url=socialRoom.php");
+                echo "<div class='err'>Error, can't delete the post, page refresh in 3 seconds...</div>";
+                header("refresh:3;url=socialRoom.php");
                 exit();
             }
         } else {
@@ -61,23 +61,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $queryResult = mysqli_query($connessione->getConnection(), $query);
                 if (mysqli_affected_rows($connessione->getConnection()) >= 1) {
                     $connessione->closeConnection();
-                    echo "<div class='mess'>Prenotazione aggiornata con successo, reindirizzamento in corso</div>";
-                    header("refresh:5;url=socialRoom.php");
+                    echo "<div class='mess'>Post edited, page refresh in 3 seconds...</div>";
+                    header("refresh:3;url=socialRoom.php");
                     exit();
                 } else {
-                    echo "<div class='err'>Errore nell'aggiornamento della prenotazione </div>";
-                    header("refresh:5;url=socialRoom.php");
+                    echo "<div class='err'>Error, can't edit the post, page refresh in 3 seconds...</div>";
+                    header("refresh:3;url=socialRoom.php");
                     exit();
                 }
             } else {
                 echo $errorino . "</ul></div>";
-                header("refresh:5;url=socialRoom.php");
+                header("refresh:3;url=socialRoom.php");
                 exit();
             }
         }
     } else {
-        echo "<div class='mess'> Errore nell'instaurazione della connessione</div>";
-        header("refresh:5;url=socialRoom.php");
+        echo "<div class='mess'>Error, can't connect to the database, page refresh in 3 seconds...</div>";
+        header("refresh:3;url=socialRoom.php");
         exit();
     }
 } else {

@@ -73,7 +73,7 @@ class connection
 
     public function getUserInfo()
     {
-        $querySelect = "SELECT Username,Role FROM admin WHERE userID='{$_SESSION['userID']}'";
+        $querySelect = "SELECT Username,Role FROM users WHERE userID='{$_SESSION['userID']}'";
         $queryResult = mysqli_query($this->connection, $querySelect);
 
         if (mysqli_num_rows($queryResult) != 0) {

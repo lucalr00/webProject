@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // CONTROLLI UTENTE E PASSWORD
 
-        $query = "SELECT userID FROM admin WHERE userID=\"$userID\" AND Password=\"$userPW\"";
+        $query = "SELECT userID FROM users WHERE userID=\"$userID\" AND Password=\"$userPW\"";
         $queryResult = mysqli_query($connessione->getConnection(), $query);
 
         if (mysqli_affected_rows($connessione->getConnection()) == 1) {
@@ -41,11 +41,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $error .= '<li>Wrong Username or Password</li>';
         }
     } else {
-        $error .= '<li>Can\'t connect to the Database</li>';
+        $error .= '<li>Error, can\'t connect to the database</li>';
     }
     $error .= '</ul></div>';
 
-    $paginaHTML = str_replace('<errors />', $error, $paginaHTML);
+    $paginaHTML = str_replace('<errors/>', $error, $paginaHTML);
 }
 echo $paginaHTML;
 
