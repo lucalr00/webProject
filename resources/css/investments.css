@@ -43,7 +43,7 @@ h3{
 
 .box3 {
     width: 100%;
-    height: 15em;
+    height: 20em;
     background-color: white;
 }
 .box3 table caption {
@@ -61,7 +61,14 @@ h3{
     width: 5em;
 	border: solid var(--mobileLineDivider) 1px;
 }
-
+main {
+    padding: 0.5em;
+}
+@media screen and (min-width: 750px) {
+    main {
+        width: 70%; /* Adjust as needed */
+    }
+}
   
 
   
