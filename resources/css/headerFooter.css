@@ -37,7 +37,7 @@
 }
 
 
-nav ul li {
+#navBar ul li {
 	display: inline;
 	list-style: none;
 	padding: .3em;
@@ -45,13 +45,13 @@ nav ul li {
 	/*debug*/
 }
 
-nav ul li a {
+#navBar ul li a {
 	color: var(--linkColor);
 	/*border: solid 1px white;
 	/*debug*/
 }
 
-nav ul li a {
+#navBar ul li a {
 	display: inline-block;
 	/*border: solid 1px white;
 	/*debug*/
@@ -86,20 +86,20 @@ nav ul li a {
 	background-color: var(--responsiveLinkBgColor);
 }
 
-nav ul li .active {
+#navBar ul li .active {
 	color: white !important;
 	text-decoration: none !important;
 }
 
-nav ul li a:visited {
+#navBar ul li a:visited {
 	color: var(--visitedLinkColor);
 }
 
-nav ul li a:hover:not(.active) {
+#navBar ul li a:hover:not(.active) {
 	transform: scale(1.15);
 }
 
-nav .active:hover {
+#navBar .active:hover {
 	text-decoration: underline !important;
 }
 

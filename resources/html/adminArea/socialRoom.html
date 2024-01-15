@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>ZERO CARBON &minus; ADMIN SOCIAL MANAGEMENT</title>
+	<!--<meta http-equiv="refresh" content="3; URL=aboutUs.html">-->
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/resources/css/root.css">
+	<link rel="stylesheet" type="text/css" href="/resources/css/headerFooter.css">
+	<link rel="stylesheet" type="text/css" href="/resources/css/adminArea.css">
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+	<header id="header">
+		<div id="topNavBar">
+			<h1>
+				<a href="/resources/php/index.php" title="Home" id="textLogo"><span class="logoFirstHalf">Zero</span>Carbon</a>
+			</h1>
+	</header>
+
+	<main>
+
+		<nav>
+			<ul>
+				<li>
+					<a href="/resources/php/login.php">Dashboard</a>
+				</li>
+				<li>
+					<a href="#">Settings</a>
+				</li>
+				<li>
+					<a href="/resources/php/logout.php">Logout</a>
+				</li>
+			</ul>
+		</nav>
+
+		<div id="socialRoom manager">
+			<section>
+				<h2>
+					Management of new news
+				</h2>
+				<form class="book" action="/resources/php/newPost.php" method="post">
+					<fieldset>
+						<legend>Record a new news</legend>
+						<section id=news-d-t-d>
+							<div id="newsDate">
+								<label for="publicationDate"> Date:</label>
+								<input type="datetime-local" id="publicationDate" name="date" min="2000-01-01T00:00"
+									max="2025-01-01T00:00" />
+							</div>
+							<div id="titleArea" class="campo_chk">
+								<label for="title">Title:</label>
+								<input type="text" name="title" id="title" aria-required="true"
+									aria-label="Add or Edit the title" title="Enter the title"
+									placeholder="Enter the title of the news" required />
+							</div>
+							<div id="descriptionArea" class="campo_chk">
+								<label for="description">Description:</label>
+								<textarea name="description" id="description" aria-required="true"
+									aria-label="Add or edit the description" title="Enter the description"
+									placeholder="Enter the description of the news" required></textarea>
+							</div>
+						</section>
+						<section id="socialReference" class="campo_chk">
+							<div id="socialIcon">
+								<label for="selSocialIcon">Social icon:</label>
+								<select name="icon" id="selSocialIcon">
+									<option value="noicon">No icon</option>
+									<option value="facebook">Facebook</option>
+									<option value="instagram">Instagram</option>
+									<option value="xtwitter">X (Twitter)</option>
+								</select>
+							</div>
+							<div id="socialLinkArea">
+								<label for="socialLink">News link:</label>
+								<input type="link" name="socialLink" id="socialLink" aria-required="true"
+									aria-label="Add or edit the social link of the current news" />
+							</div>
+						</section>
+						<div id="submitControl">
+							<button type="reset" id="resetFields" title="Reset all fields"
+								aria-label="Button to reste all fields">Reset</button>
+							<button type="submit" id="submitNew" name="submitNew" title="Publicate the news"
+								aria-label="Button to publicate the news">New Post</button>
+						</div>
+					</fieldset>
+				</form>
+				<mes/>
+			</section>
+			<section>
+				<h2>
+					Management of present news
+				</h2>
+				<socialRoomNews />
+			</section>
+		</div>
+
+	</main>
+
+	<footer id="footer">
+
+		<div id="copyright" aria-label="Copyright">
+			<p>Copyright &copy; 2023 Zero Carbon &minus; All rights reserved</p>
+			<p>Website developed by: <a href="developers.html">QuadraCoders</a></p>
+		</div>
+
+	</footer>
+</body>
+
+</html>
