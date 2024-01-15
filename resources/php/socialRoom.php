@@ -43,7 +43,7 @@ if ($connessione->isConnected()) {
  <section id="socialReference" class="campo_chk">
                     <div class="social-icon">
 					<label for="socialIcon">Current icon:</label>
-					<img id="socialIcon" src="/resources/images/socialIcon/' . $news['Icon'] . '" title="' . $news['Icon'] . '" alt=" ' . $news['aText'] . '">
+					<img id="socialIcon" src="../images/socialIcon/' . $news['Icon'] . '.png" title="' . $news['Icon'] . '" alt=" ' . $news['aText'] . '">
                     </div>
                     <div id="socialIconEd">
                         <label for="editSocialIcon">Social icon:</label>

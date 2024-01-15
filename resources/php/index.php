@@ -16,7 +16,7 @@ if ($connessione->isConnected()) {
 					<header>
 						<div class="socialInfo">
 							<time datetime="' . $news['Date'] . '" pubdate="pubdate">' . $news['Date'] . '</time>
-							<img id="socialIcon" src="/resources/images/socialIcon/' . $news['Icon'] . '" title="' . $news['Icon'] . '" alt=" ' . $news['aText'] . '">
+							<img id="socialIcon" src="../images/socialIcon/' . $news['Icon'] . '.png" title="' . $news['Icon'] . '" alt=" ' . $news['aText'] . '">
 						</div>
 						<h2>' . $news['Title'] . '</h2>
 					</header>
