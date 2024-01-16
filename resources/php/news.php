@@ -41,6 +41,16 @@ class news
             return false;
         }
     }
+    
+    public function getTitle(){
+        return $this->title;
+    }
+    public function getCheckout(){
+        return $this->check_out;
+    }
+    public function getDesc(){
+        return $this->richieste;
+    }
 
 }
 

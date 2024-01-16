@@ -8,6 +8,8 @@ if ($_SESSION['connesso'] != true) {
     exit();
 }
 
+// $paginaHTML = file_get_contents(".." . DIRECTORY_SEPARATOR . "html" . DIRECTORY_SEPARATOR . "adminArea" . DIRECTORY_SEPARATOR . "socialRoom.html");
+
 $id = "";
 $date = "";
 $title = "";
@@ -36,6 +38,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $link = $_POST['Link'];
     }
 
+    $mes = '';
+
     $connessione = new connection();
     if ($connessione->isConnected()) {
 
@@ -44,40 +48,61 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $queryResult = mysqli_query($connessione->getConnection(), $query);
             if (mysqli_affected_rows($connessione->getConnection()) >= 1) {
                 $connessione->closeConnection();
-                echo "<div class='mess'>Post deleted, page refresh in 3 seconds...</div>";
-                header("refresh:3;url=socialRoom.php");
-                exit();
+                $mes .= '<div class="success">Post successfully deleted</div>';
             } else {
-                echo "<div class='err'>Error, can't delete the post, page refresh in 3 seconds...</div>";
-                header("refresh:3;url=socialRoom.php");
-                exit();
+                $mes .= '<div class="error">Error, can\'t delete the post</div>';
             }
+            $_SESSION['respStatus'] = $mes;
+            header('location:redirect.php');
+            exit();
         } else {
             $querable = true;
-            $errorino = "<div class='err'><ul>";
+            $mes = '<ul id=wrongInput>';
 
+            if (ctype_space($title)) {
+                $querable = false;
+                $mes .= '<li class="error">Error, title consists of whitespace characters only</li>';
+            }
+            if (ctype_space($description)) {
+                $querable = false;
+                $mes .= '<li class="error">Error, description consists of whitespace characters only</li>';
+            }
+            if (! inputCheck::minLength($title, $description)) {
+                $querable = false;
+                $mes .= '<li class="error">Error, title and description must have a length of 4 characters</li>';
+            }
+            if (! inputCheck::maxLengthTitle($title)) {
+                $querable = false;
+                $mes .= '<li class="error">Error, title length is greater than 30 characters</li>';
+            }
+            if (! inputCheck::maxLengthDspt($description)) {
+                $querable = false;
+                $mes .= '<li class="error">Error, description length is greater than 100 characters</li>';
+            }
+
+            $mes .= '</ul>';
             if ($querable) {
                 $query = "UPDATE socialNews SET Date=\"$date\",Title=\"$title\",Description=\"$description\",Icon=\"$icon\",Link=\"$link\" WHERE Id=\"$id\"";
                 $queryResult = mysqli_query($connessione->getConnection(), $query);
                 if (mysqli_affected_rows($connessione->getConnection()) >= 1) {
                     $connessione->closeConnection();
-                    echo "<div class='mess'>Post edited, page refresh in 3 seconds...</div>";
-                    header("refresh:3;url=socialRoom.php");
-                    exit();
+                    $mes .= '<div class="success">Post successfully edited</div>';
                 } else {
-                    echo "<div class='err'>Error, can't edit the post, page refresh in 3 seconds...</div>";
-                    header("refresh:3;url=socialRoom.php");
-                    exit();
+                    $mes .= '<div class="error">Error, edit at least one field</div>';
                 }
+                $_SESSION['respStatus'] = $mes;
+                header('location:redirect.php');
+                exit();
             } else {
-                echo $errorino . "</ul></div>";
-                header("refresh:3;url=socialRoom.php");
+                $_SESSION['inputFault'] = true;
+                $_SESSION['respStatus'] = $mes;
+                header('location:redirect.php');
                 exit();
             }
         }
     } else {
-        echo "<div class='mess'>Error, can't connect to the database, page refresh in 3 seconds...</div>";
-        header("refresh:3;url=socialRoom.php");
+        $_SESSION['respStatus'] = $mes;
+        header('location:redirect.php');
         exit();
     }
 } else {

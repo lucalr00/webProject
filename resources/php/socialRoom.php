@@ -2,8 +2,6 @@
 require_once "connection.php";
 require_once "session.php";
 
-$_SESSION['avRfr'] = '';
-
 if ($_SESSION['connesso'] != true) {
     header('location:login.php');
     exit();
@@ -16,11 +14,9 @@ if ($connessione->isConnected()) {
 
     $getNews = $connessione->getSocialNews();
     if ($getNews != null) {
-
         $ulNews = '<ul class="admin" id="prenotazione">';
-
         foreach ($getNews as $news) {
-            $ulNews .= '<li><form class="book" action="editPost.php" method="post" aria-label="Form per gestire le prenotazioni"> <fieldset class="display_admin" >
+            $ulNews .= '<li><form class="book" action="editPost.php" method="post" aria-label="Post editing form"> <fieldset class="display_admin" >
                     <legend>Edit Social Room News</legend>
 					<div id="newsIdDb">
                     <label for="idNumber">News Id number: ' . $news['Id'] . '</label>
@@ -29,15 +25,15 @@ if ($connessione->isConnected()) {
                     <section id=news-d-t-d>
                     <div id="newsDate">
                     <label for="publicationDate"> Date:</label>
-                    <input type="datetime-local" id="publicationDate" name="Date" value="' . $news['Date'] . '"/>
+                    <input type="datetime-local" id="publicationDate" name="Date" min="2000-01-01T00:00" max="2025-01-01T00:00" aria-required="true" aria-label="Enter the publication date" value="' . $news['Date'] . '" required />
 					</div>
                     <div id="titleArea" class="campo_chk">
 					<label for="title">Title:</label>
-					<input type="text" name="Title" id="title" aria-required="true" value="' . $news['Title'] . '" aria-label="Add or Edit the title" title="Enter the title" required />
+					<input type="text" name="Title" id="title" aria-required="true" minlength="4" maxlength="30" placeholder="Write a title. min 4 and max 30 characters" value="' . $news['Title'] . '" aria-label="Add or Edit the title" title="Enter the title" required />
 </div>
 					<div id="descriptionArea" class="campo_chk">
 					<label for="description">Description:</label>
-					<textarea name="Description" id="description" aria-required="true" aria-label="Add or edit the description" title="Enter the description" required>' . $news['Description'] . '</textarea>
+					<textarea name="Description" id="description" minlength="4" maxlength="100" rows="5" cols="30" placeholder="Write a description. min 4 and max 100 characters" aria-required="true" aria-label="Add or edit the description" title="Enter the description" required>' . $news['Description'] . '</textarea>
 </div>
                    </section>
  <section id="socialReference" class="campo_chk">
@@ -66,14 +62,14 @@ if ($connessione->isConnected()) {
 <div id="submitControl">
                     <button type="submit" id="submitMod" name="submitEdt" title="Edit the news" aria-label="Button to edit the news">Edit</button>
 					<button type="submit" id="submitDel" name="submitDel" title="Delete the news" aria-label="Button to delete the news">Delete</button>	
-</div>					
+</div>
 </fieldset></form></li>';
         }
 
         $ulNews .= '</ul>';
-        echo str_replace("<socialRoomNews/>", $ulNews, $paginaHTML);
+        echo str_replace("<socialRoomNews />", $ulNews, $paginaHTML);
     } else {
-        echo str_replace("<socialRoomNews/>", "No news found in the database", $paginaHTML);
+        echo str_replace("<socialRoomNews />", "No news found in the database", $paginaHTML);
     }
 } else {
     die("Connection error");
