@@ -13,12 +13,6 @@ class connection
 
     private $connection;
 
-    /*
-     * private const HOST = 'localhost';
-     * private const USERNAME = 'comodei';
-     * private const PASSWORD = 'wail7tePahk8cahw';
-     * private const DATABASE = 'comodei';
-     */
     public function __construct()
     {
         $this->connection = mysqli_connect(connection::HOST, connection::USERNAME, connection::PASSWORD, connection::DATABASE);

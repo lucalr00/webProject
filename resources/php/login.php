@@ -2,15 +2,15 @@
 require_once "session.php";
 require_once "connection.php";
 
-if ($_SESSION['connesso'] == true) {
+if ($_SESSION['connected'] == true) {
     header('location:dashboard.php');
-    exit();
+    exit;
 }
 
-$paginaHTML = file_get_contents(".." . DIRECTORY_SEPARATOR . "html" . DIRECTORY_SEPARATOR . "login.html");
+$fileHTML = file_get_contents(".." . DIRECTORY_SEPARATOR . "html" . DIRECTORY_SEPARATOR . "login.html");
 
-$utente = "";
-$password = "";
+$userID = "";
+$userPW = "";
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['userID'])) {
         $userID = $_POST['userID'];
@@ -19,35 +19,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $userPW = $_POST['userPW'];
     }
 
-    $connessione = new connection();
-    $error = '<div class="errors"><ul>';
+    $conn = new connection();
+    $mes = '<div id="loginError"><ul>';
 
-    if ($connessione->isConnected()) {
+    if ($conn->isConnected()) {
 
         // CONTROLLI UTENTE E PASSWORD
 
         $query = "SELECT userID FROM users WHERE userID=\"$userID\" AND Password=\"$userPW\"";
-        $queryResult = mysqli_query($connessione->getConnection(), $query);
+        $queryResult = mysqli_query($conn->getConnection(), $query);
 
-        if (mysqli_affected_rows($connessione->getConnection()) == 1) {
-            $_SESSION['connesso'] = true;
+        if (mysqli_affected_rows($conn->getConnection()) == 1) {
+            $_SESSION['connected'] = true;
             $_SESSION['userID'] = $userID;
 
-            $connessione->closeConnection();
+            $conn->closeConnection();
 
             header('location:dashboard.php');
             exit();
         } else {
-            $error .= '<li>Wrong Username or Password</li>';
+            $mes .= '<li class="error">Wrong Username or Password</li>';
         }
     } else {
-        $error .= '<li>Error, can\'t connect to the database</li>';
+        $mes .= '<li class="error">Error, can\'t connect to the database</li>';
     }
-    $error .= '</ul></div>';
+    $mes .= '</ul></div>';
 
-    $paginaHTML = str_replace('<errors/>', $error, $paginaHTML);
+    $fileHTML = str_replace('<mes />', $mes, $fileHTML);
 }
-echo $paginaHTML;
+echo $fileHTML;
 
 ?>
 

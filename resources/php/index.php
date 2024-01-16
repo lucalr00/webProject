@@ -1,12 +1,12 @@
 <?php
 require_once "connection.php";
 
-$connessione = new connection();
-$paginaHTML = file_get_contents(".." . DIRECTORY_SEPARATOR . "html" . DIRECTORY_SEPARATOR . "home.html");
+$conn = new connection();
+$fileHTML = file_get_contents(".." . DIRECTORY_SEPARATOR . "html" . DIRECTORY_SEPARATOR . "home.html");
 
-if ($connessione->isConnected()) {
+if ($conn->isConnected()) {
 
-    $getNews = $connessione->getSocialNews();
+    $getNews = $conn->getSocialNews();
     if ($getNews != null) {
 
         $divNews = '<div id="scrollableContent">';
@@ -28,14 +28,14 @@ if ($connessione->isConnected()) {
         }
 
         $divNews .= '</div>';
-        echo str_replace("<socialRoomNews/>", $divNews, $paginaHTML);
+        echo str_replace("<socialRoomNews/>", $divNews, $fileHTML);
     } else {
-        echo str_replace("<socialRoomNews/>", "No news to load", $paginaHTML);
+        echo str_replace("<socialRoomNews/>", "No news to load", $fileHTML);
     }
 } else {
     die("Error, can't connect to DB");
 }
 
-$connessione->closeConnection();
+$conn->closeConnection();
 
 ?>

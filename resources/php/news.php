@@ -1,6 +1,6 @@
 <?php
 require_once "connection.php";
-require_once "input_check.php";
+require_once "inputCheck.php";
 
 class news
 {
@@ -24,9 +24,13 @@ class news
         $this->link = $lnk;
     }
 
-    public function isCorrect()
-    { 
-        return true;
+    public function inputCheck()
+    {
+        if(!inputCheck::minLength($this->title, $this->description)&&!inputCheck::maxLengthTitle($this->title)&&!inputCheck::maxLengthDsp($this->description)&&inputCheck::iconName($this->icon)){
+            return true;
+        }else{
+            return false;
+        }
     }
 
     public function newPost(connection $db)
@@ -45,11 +49,11 @@ class news
     public function getTitle(){
         return $this->title;
     }
-    public function getCheckout(){
-        return $this->check_out;
+    public function getDescription(){
+        return $this->description;
     }
-    public function getDesc(){
-        return $this->richieste;
+    public function getIcon(){
+        return $this->icon;
     }
 
 }

@@ -2,17 +2,17 @@
 require_once "connection.php";
 require_once "session.php";
 
-if ($_SESSION['connesso'] != true) {
+if ($_SESSION['connected'] != true) {
     header('location:login.php');
     exit();
 }
 
-$connessione = new connection();
-$paginaHTML = file_get_contents(".." . DIRECTORY_SEPARATOR . "html" . DIRECTORY_SEPARATOR . "adminArea" . DIRECTORY_SEPARATOR . "socialRoom.html");
+$conn = new connection();
+$fileHTML = file_get_contents(".." . DIRECTORY_SEPARATOR . "html" . DIRECTORY_SEPARATOR . "adminArea" . DIRECTORY_SEPARATOR . "socialRoom.html");
 
-if ($connessione->isConnected()) {
+if ($conn->isConnected()) {
 
-    $getNews = $connessione->getSocialNews();
+    $getNews = $conn->getSocialNews();
     if ($getNews != null) {
         $ulNews = '<ul class="admin" id="prenotazione">';
         foreach ($getNews as $news) {
@@ -54,7 +54,7 @@ if ($connessione->isConnected()) {
                     
                     <div id="socialLinkArea">
                     <label for="socialLink">Link:</label>
-					<input type="link" name="Link" id="socialLink" aria-required="true" value="' . $news['Link'] . '" aria-label="Add or edit the social link of the current news"/>
+					<input type="url" name="Link" id="socialLink" aria-required="true" value="' . $news['Link'] . '" aria-label="Add or edit the social link of the current news"/>
                     </div>
                     
 </section>  
@@ -67,14 +67,14 @@ if ($connessione->isConnected()) {
         }
 
         $ulNews .= '</ul>';
-        echo str_replace("<socialRoomNews />", $ulNews, $paginaHTML);
+        echo str_replace("<socialRoomNews />", $ulNews, $fileHTML);
     } else {
-        echo str_replace("<socialRoomNews />", "No news found in the database", $paginaHTML);
+        echo str_replace("<socialRoomNews />", "No news found in the database", $fileHTML);
     }
 } else {
     die("Connection error");
 }
 
-$connessione->closeConnection();
+$conn->closeConnection();
 
 ?>

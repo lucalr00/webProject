@@ -1,9 +1,9 @@
 <?php
 require_once "session.php";
 require_once "connection.php";
-require_once "input_check.php";
+require_once "inputCheck.php";
 
-if ($_SESSION['connesso'] != true) {
+if ($_SESSION['connected'] != true) {
     header('location:login.php');
     exit();
 }
@@ -40,14 +40,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $mes = '';
 
-    $connessione = new connection();
-    if ($connessione->isConnected()) {
+    $conn = new connection();
+    if ($conn->isConnected()) {
 
         if (isset($_POST['submitDel'])) {
             $query = "DELETE FROM socialNews WHERE Id=\"$id\"";
-            $queryResult = mysqli_query($connessione->getConnection(), $query);
-            if (mysqli_affected_rows($connessione->getConnection()) >= 1) {
-                $connessione->closeConnection();
+            $queryResult = mysqli_query($conn->getConnection(), $query);
+            if (mysqli_affected_rows($conn->getConnection()) >= 1) {
+                $conn->closeConnection();
                 $mes .= '<div class="success">Post successfully deleted</div>';
             } else {
                 $mes .= '<div class="error">Error, can\'t delete the post</div>';
@@ -79,35 +79,39 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $querable = false;
                 $mes .= '<li class="error">Error, description length is greater than 100 characters</li>';
             }
+            if (! inputCheck::iconName($icon)) {
+                $querable = false;
+                $mes .= '<li class="error">Error, icon not valid</li>';
+            }
 
             $mes .= '</ul>';
             if ($querable) {
                 $query = "UPDATE socialNews SET Date=\"$date\",Title=\"$title\",Description=\"$description\",Icon=\"$icon\",Link=\"$link\" WHERE Id=\"$id\"";
-                $queryResult = mysqli_query($connessione->getConnection(), $query);
-                if (mysqli_affected_rows($connessione->getConnection()) >= 1) {
-                    $connessione->closeConnection();
+                $queryResult = mysqli_query($conn->getConnection(), $query);
+                if (mysqli_affected_rows($conn->getConnection()) >= 1) {
+                    $conn->closeConnection();
                     $mes .= '<div class="success">Post successfully edited</div>';
                 } else {
                     $mes .= '<div class="error">Error, edit at least one field</div>';
                 }
                 $_SESSION['respStatus'] = $mes;
                 header('location:redirect.php');
-                exit();
+                exit;
             } else {
                 $_SESSION['inputFault'] = true;
                 $_SESSION['respStatus'] = $mes;
                 header('location:redirect.php');
-                exit();
+                exit;
             }
         }
     } else {
         $_SESSION['respStatus'] = $mes;
         header('location:redirect.php');
-        exit();
+        exit;
     }
 } else {
     header('location:socialRoom.php');
-    exit();
+    exit;
 }
 
 ?>

@@ -18,7 +18,7 @@ class inputCheck
         }
         return true;
     }
-    
+
     public static function maxLengthDspt($dspt)
     {
         if (strlen($dspt) > 100) {
@@ -27,6 +27,26 @@ class inputCheck
         return true;
     }
 
+    public static function iconName($icon)
+    {
+        $icons = array(
+            "facebook",
+            "instagram",
+            "xtwitter",
+            "noicon"
+        );
+        if (in_array($icon, $icons, true)) {
+            return true;
+        } elseif (in_array($icon, $icons, true)) {
+            return true;
+        } elseif (in_array($icon, $icons, true)) {
+            return true;
+        } elseif (in_array($icon, $icons, true)) {
+            return true;
+        } else
+            return false;
+    }
+/*
     public static function date_check($field)
     {
         if (preg_match("/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/", $field) == 1) { // preg_match data
@@ -53,16 +73,8 @@ class inputCheck
         }
         return false;
     }
+*/
 
-    public static function check_email($email)
-    {
-        if (preg_match('/^([\w\-\+\.]+)\@([\w\-\+\.]+)\.([\w\-\+\.]+)$/', $email) == 1) {
-            if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                return true;
-            }
-        }
-        return false;
-    }
 }
 
 ?>

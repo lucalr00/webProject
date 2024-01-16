@@ -2,17 +2,17 @@
 require_once "connection.php";
 require_once "session.php";
 
-if ($_SESSION['connesso'] != true) {
+if ($_SESSION['connected'] != true) {
     header('location:login.php');
     exit();
 }
 
-$connessione = new connection();
-$paginaHTML = file_get_contents(".." . DIRECTORY_SEPARATOR . "html" . DIRECTORY_SEPARATOR . "adminArea" . DIRECTORY_SEPARATOR . "adminDashboard.html");
+$conn = new connection();
+$fileHTML = file_get_contents(".." . DIRECTORY_SEPARATOR . "html" . DIRECTORY_SEPARATOR . "adminArea" . DIRECTORY_SEPARATOR . "adminDashboard.html");
 
-if ($connessione->isConnected()) {
+if ($conn->isConnected()) {
 
-    $getInfo = $connessione->getUserInfo();
+    $getInfo = $conn->getUserInfo();
     if ($getInfo != null) {
 
         $divInfo = '<div id="welcomeInfo">';
@@ -23,14 +23,14 @@ if ($connessione->isConnected()) {
                        </div>';
         }
 
-        echo str_replace("<adminLoginInfo/>", $divInfo, $paginaHTML);
+        echo str_replace("<adminLoginInfo/>", $divInfo, $fileHTML);
     } else {
-        echo str_replace("<adminLoginInfo/>", "User info: not present", $paginaHTML);
+        echo str_replace("<adminLoginInfo/>", "User info: not present", $fileHTML);
     }
 } else {
     die("Connection error");
 }
 
-$connessione->closeConnection();
+$conn->closeConnection();
 
 ?>
