@@ -8,8 +8,13 @@ h2 {
 h3{
     margin-bottom: 2em;
 }
-.description_years p {
+
+.description_years .description {
     display: none;
+}
+
+.active {
+    display: block;
 }
 
 .box3 table{
