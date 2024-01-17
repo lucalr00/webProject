@@ -8,16 +8,14 @@
 		width: 80dvw;
 		margin: auto;
 	}
+
+	.caption {
+		font-size: 1.5em;
+	}
 }
 
 @media only screen and (max-width: 600px) {
 	#slideshow {
 		height: 30dvh;
-	}
-}
-
-@media only screen and (max-width: 300px) {
-	.dot {
-		display: hidden;
 	}
 }
