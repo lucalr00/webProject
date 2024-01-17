@@ -11,7 +11,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script src="../javascript/root.js"></script>
 	<script src="../javascript/goTop.js"></script>
-	<script src="../javascript/investments.js"></script>
+	<script src="../javascript/investments_paragraph.js"></script>
 	<script src="../javascript/investments_charts.js"></script>
 	<script src="../javascript/investments_tables.js"></script>
 	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
@@ -47,18 +47,18 @@
 	</header>
 	<main>
 		<h2>Our annual investments</h2>
-		<div class="container">
-			<div class="box1">
-				<div class="container_years">
+		<div id="investments_detail">
+			<section id="investments_section">
+				<div id="container_years">
 					<p id="year-label">Years Goals</p>
-					<select class="list_years" aria-labelledby="year-label">
+					<select id="list_years" aria-labelledby="year-label">
 					<option value="2023">2023</option>
 					<option value="2022">2022</option>
 					<option value="2021">2021</option>
 					<option value="2020">2020</option>
 				</select>
 				</div>
-				<div class="description_years">
+				<div id="description_years">
 				<p id="2023" class="description">
 					We are proud to announce that in 2023, we invested 185 million dollars in various environmental projects that aimed to protect the planet and improve the lives of people.
 					We supported initiatives such as reducing methane emissions from dairy cows, providing financing and technical assistance to developing countries that want to switch 
@@ -97,16 +97,16 @@
 					We are proud of our achievements and we look forward to continuing our efforts to build a better world.
 				</p>
 				</div>
-			</div>
+			</section>
 
-			<div class="box2">
+			<section id="graph_section">
 				<h3>Investment progress</h3>
 				<!-- questo  e` per il grafico -->
 				<div id="graph" role="img" aria-label="Investment progress graph"></div> 
-			</div>
+			</section>
 
-			<div class="box3">
-			<table id="table_2023">
+			<section id="table_section">
+			<table id="table_2023" class="tbl">
 				<caption>Investments over time (in millions of dollars)</caption>
 				<thead>
 				  <tr>
@@ -165,7 +165,7 @@
 				  </tr>
 				</tbody>
 			</table>
-			<table id="table_2022">
+			<table id="table_2022" class="tbl">
 				<caption>Investments over time (in millions of dollars)</caption>
 				<thead>
 				  <tr>
@@ -224,7 +224,7 @@
 					</tr>
 				  </tbody>
 			</table>
-			<table id="table_2021">
+			<table id="table_2021" class="tbl">
 				<caption>Investments over time (in millions of dollars)</caption>
 				<thead>
 				  <tr>
@@ -283,7 +283,7 @@
 					  </tr>
 				</tbody>
 			</table>
-			<table id="table_2020">
+			<table id="table_2020" class="tbl">
 				<caption>Investments over time (in millions of dollars)</caption>
 				<thead>
 				  <tr>
@@ -342,7 +342,7 @@
 					  </tr>
 				</tbody>
 			</table>
-			</div>
+			</section>
 		</div>
 		
 		<button class="goUp hidden" aria-label="Back to Top" onclick="goTop()"><span>&UpArrow;</span>Back to top</button>

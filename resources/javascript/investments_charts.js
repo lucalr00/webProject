@@ -99,7 +99,7 @@ window.onload = function () {
 
 document.addEventListener('DOMContentLoaded', function() {
     // prendo l'elemento selezionato
-    var select = document.querySelector('.list_years');
+    var select = document.querySelector('#list_years');
 
     select.addEventListener('change', function() {
         // mostro il grafico che corrisponde all'anno selezionato
