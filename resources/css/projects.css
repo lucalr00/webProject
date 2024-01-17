@@ -46,14 +46,10 @@ slidenav.active, slidenav.dot:hover {
 	text-align: center;
 	margin: 2em 0;
 	border: none;
-}
-
-.caption a {
-	font-size: 1.5em;
+	font-size: 1.2em;
 	color: white;
 	background-color: var(--headerBgColor);
 	padding: 0.5em 1em;
-	font-style: bold;
 }
 
 .prev,
@@ -90,4 +86,5 @@ slidenav.active, slidenav.dot:hover {
 	height: 100%;
 	width: 100%;
 	object-fit: scale-down;
+	margin-bottom: 2em;
 }
