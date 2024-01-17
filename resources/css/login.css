@@ -1,4 +1,4 @@
-#login {
+#loginForm {
     width: auto;
     margin: 10% 10%;
     padding: 20px;
@@ -8,30 +8,34 @@
     font-family: Arial, sans-serif;
 }
 
-#login label {
-    display: block;
-    margin-bottom: 10px;
+#loginForm label {
+	display: block;
+    margin-bottom: 5px;
 }
 
-#login input[type="text"], #login input[type="password"] {
+#username, #password{
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-#login button {
+#username{
+	margin-bottom: 2em;
+}
+
+#loginBt {
+	color: white;
     width: 100%; 
     display: block;
     padding: 10px;
     margin: 20px auto; 
     border: none;
     border-radius: 5px;
-    background-color: #007BFF;
-    color: white;
+    background-color: var(--headerBgColor);
     cursor: pointer;
 }
 
-#login button:hover {
-    background-color: #0056b3;
+#loginBt:hover {
+    background-color: var(--responsiveLinkBgColor);
 }
