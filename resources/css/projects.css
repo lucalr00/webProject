@@ -66,8 +66,15 @@ slidenav.active, slidenav.dot:hover {
 	height: 3em;
 }
 
+.active, .dot:hover {
+	background-color: #717171;
+}
+
+
 .prev:hover,
-.next:hover {
+.next:hover,
+.prev:focus,
+.next:focus {
 	background-color: greenyellow;
 	color: black;
 }
