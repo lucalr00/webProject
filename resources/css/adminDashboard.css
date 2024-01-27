@@ -1,0 +1,38 @@
+#topNavBar{
+	display: block;
+}
+
+nav ul li {
+	display: inline;
+	padding: .5em;
+}
+
+nav ul li a {
+	padding: 1em .5em;
+}
+
+nav ul {
+	color: white;
+	margin: 2em auto;
+	padding: 1em;
+	background-color: var(--headerBgColor);
+	text-align: center;
+}
+
+nav ul li a:visited {
+	color: var(--visitedLinkColor);
+}
+
+@media only screen and (min-width: 1024px) {
+	main {
+		width: 70%;
+	}
+
+}
+
+@media only screen and (min-width: 1440px) {
+	main {
+		max-width: 50%;
+	}
+
+}

@@ -1,0 +1,85 @@
+#scrollableContent .content {
+	flex: 0 0 25em;
+}
+
+.content .desc {
+	height: 18em;
+	padding: 0 5px;
+
+}
+
+#welcomeText h3::after {
+	height: 50dvh;
+}
+
+@media only screen and (min-width: 700px) {
+	.highlight {
+		width: 40em;
+		margin: auto;
+	}
+}
+
+
+@media only screen and (min-width: 1024px) {
+	main {
+		width: 90%;
+		background-color: rgb(245, 245, 245);
+	}
+
+	body {
+		background-color: rgb(245, 245, 245);
+	}
+
+	main>* {
+		background-color: white;
+		border-radius: 1em;
+	}
+	
+	#welcomeText{
+		padding: 0;
+		padding-top: 2em;
+	}
+
+	#socialRoom, #highlights {
+		margin: 2em 0;
+		padding: 1em 0;
+	}
+
+	#highlights::before, #socialRoom::before {
+		display: none;
+	}
+
+	.info {
+		display: block;
+		margin: auto;
+	}
+
+	#founders::before {
+		display: none;
+	}
+
+	.card img {
+		width: 15em;
+	}
+
+	.cardsDetails {
+		width: 60%;
+		margin: auto;
+	}
+
+	.cardDetails {
+		border-radius: 10px;
+	}
+
+}
+
+@media only screen and (min-width: 1440px) {
+	main {
+		max-width: 80%;
+	}
+
+	#welcomeText h3::after {
+		height: 80dvh;
+	}
+
+}

@@ -23,9 +23,9 @@ if ($conn->isConnected()) {
                        </div>';
         }
 
-        echo str_replace("<adminLoginInfo/>", $divInfo, $fileHTML);
+        echo str_replace("<adminLoginInfo />", $divInfo, $fileHTML);
     } else {
-        echo str_replace("<adminLoginInfo/>", "User info: not present", $fileHTML);
+        echo str_replace("<adminLoginInfo />", "User info: not present", $fileHTML);
     }
 } else {
     die("Connection error");

@@ -1,0 +1,41 @@
+#loginForm {
+    width: auto;
+    margin: 10% 10%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    font-family: Arial, sans-serif;
+}
+
+#loginForm label {
+	display: block;
+    margin-bottom: 5px;
+}
+
+#username, #password{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#username{
+	margin-bottom: 2em;
+}
+
+#loginBt {
+	color: white;
+    width: 100%; 
+    display: block;
+    padding: 10px;
+    margin: 20px auto; 
+    border: none;
+    border-radius: 5px;
+    background-color: var(--headerBgColor);
+    cursor: pointer;
+}
+
+#loginBt:hover {
+    background-color: var(--responsiveLinkBgColor);
+}

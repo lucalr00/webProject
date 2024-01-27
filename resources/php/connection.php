@@ -39,7 +39,7 @@ class connection
 
     public function getSocialNews()
     {
-        $querySelect = "SELECT DISTINCT Id,Date,Title,Description,socialNews.Icon,Link,altText FROM socialNews\n" . "LEFT JOIN icons\n" . "ON icons.icon WHERE socialNews.Icon=icons.Icon\n" . "ORDER BY Date DESC;";
+        $querySelect = "SELECT DISTINCT Id,Date,Title,Description,socialNews.Icon,Link,altText, Author FROM socialNews\n" . "LEFT JOIN icons\n" . "ON icons.icon WHERE socialNews.Icon=icons.Icon\n" . "ORDER BY Date DESC;";
         $queryResult = mysqli_query($this->connection, $querySelect);
 
         if (mysqli_num_rows($queryResult) != 0) {
@@ -53,7 +53,8 @@ class connection
                     "Description" => $row['Description'],
                     "Icon" => $row['Icon'],
                     "Link" => $row['Link'],
-                    "aText" => $row['altText']
+                    "aText" => $row['altText'],
+                    "Author" => $row['Author']
                 );
 
                 array_push($listNews, $news);

@@ -24,38 +24,42 @@ class news
         $this->link = $lnk;
     }
 
-    public function inputCheck()
-    {
-        if(!inputCheck::minLength($this->title, $this->description)&&!inputCheck::maxLengthTitle($this->title)&&!inputCheck::maxLengthDsp($this->description)&&inputCheck::iconName($this->icon)){
-            return true;
-        }else{
-            return false;
-        }
-    }
-
     public function newPost(connection $db)
     {
         $query = "INSERT INTO socialNews(Date,Title,Description,Icon,Link)
-            VALUES (\"$this->date\",\"$this->title\",\"$this->description\",\"$this->icon\", \"$this->link\")";
+            VALUES (?, ?, ?, ?, ?)";
 
-        $queryResult = mysqli_query($db->getConnection(), $query);
-        if (mysqli_affected_rows($db->getConnection()) > 0) {
+        $mysqli = $db->getConnection();
+        $stmt = $mysqli->prepare($query);
+
+        $stmt->bind_param('sssss', $this->date, $this->title, $this->description, $this->icon, $this->link);
+        $stmt->execute();
+        if ($stmt->affected_rows > 0) {
             return true;
         } else {
             return false;
         }
     }
-    
-    public function getTitle(){
+
+    public function getTitle()
+    {
         return $this->title;
     }
-    public function getDescription(){
+
+    public function getDescription()
+    {
         return $this->description;
     }
-    public function getIcon(){
+
+    public function getIcon()
+    {
         return $this->icon;
     }
 
+    public function getLink()
+    {
+        return $this->link;
+    }
 }
 
 ?>

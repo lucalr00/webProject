@@ -6,14 +6,23 @@ require_once "session.php";
 
 if ($_SESSION['connected'] != true) {
     header('location:login.php');
-    exit;
+    exit();
 }
 
+$mes = '';
+
 if (isset($_POST['submitNew'])) {
-    $news = new news($_POST['date'], $_POST['title'], $_POST['description'], $_POST['icon'], $_POST['socialLink']);
-    $mes = '';
+    $title = htmlspecialchars(strip_tags($_POST['title']));
+    $description = htmlspecialchars(strip_tags($_POST['description']));
+    $icon = $_POST['icon'];
+    $link = filter_var($_POST['socialLink'], FILTER_SANITIZE_URL);
+    $author = $_SESSION['author'];
+    $news = new news($_POST['date'], $title, $description, $icon, $link);
+
     $querable = true;
-    
+
+    $mes .= '<ul id="wrongInput">';
+
     if (ctype_space($news->getTitle())) {
         $querable = false;
         $mes .= '<li class="error">Error, title consists of whitespace characters only</li>';
@@ -24,26 +33,32 @@ if (isset($_POST['submitNew'])) {
     }
     if (! inputCheck::minLength($news->getTitle(), $news->getDescription())) {
         $querable = false;
-        $mes .= '<li class="error">Error, title and description must have a length of 4 characters</li>';
+        $mes .= '<li class="error">Error, title and description must have a length of 5 characters</li>';
     }
     if (! inputCheck::maxLengthTitle($news->getTitle())) {
         $querable = false;
-        $mes .= '<li class="error">Error, title length is greater than 30 characters</li>';
+        $mes .= '<li class="error">Error, title length is greater than 75 characters</li>';
     }
     if (! inputCheck::maxLengthDspt($news->getDescription())) {
         $querable = false;
-        $mes .= '<li class="error">Error, description length is greater than 100 characters</li>';
+        $mes .= '<li class="error">Error, description length is greater than 630 characters</li>';
     }
     if (! inputCheck::iconName($news->getIcon())) {
         $querable = false;
         $mes .= '<li class="error">Error, icon not valid</li>';
     }
-    
+    if (! inputCheck::link($news->getLink())) {
+        $querable = false;
+        $mes .= '<li class="error">Error, link not valid</li>';
+    }
+
+    $mes .= '</ul>';
+
     if ($querable) {
         $conn = new connection();
         if ($conn->isConnected()) {
-            $resultConn = $news->newPost($connessione);
-            if ($result_prenotazione) {
+            $resultConn = $news->newPost($conn);
+            if ($resultConn) {
                 $mes .= '<div class="success"><p>Post successfully published</p></div>';
             } else
                 $mes .= '<div class="error"><p>Error, can\'t record the new post in the database</p></div>';
@@ -53,13 +68,15 @@ if (isset($_POST['submitNew'])) {
         $_SESSION['inputFault'] = true;
         $_SESSION['respStatus'] = $mes;
         header('location:redirect.php');
-        exit();
+        exit;
     }
 
     $_SESSION['respStatus'] = $mes;
     header('location:redirect.php');
-}else{
-    header('location:socialRoom.php');
+} else {
+    $_SESSION['inputFault'] = true;
+    $_SESSION['respStatus'] = '<div class="error"><p>Error, form not submitted</p></div>';
+    header('location:redirect.php');
 }
 
 ?>

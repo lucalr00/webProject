@@ -1,0 +1,129 @@
+#welcomeText,
+#highlights {
+	margin: 2em 0;
+}
+
+#welcomeText h2 {
+	padding-bottom: 1em;
+}
+
+#welcomeText>* {
+	text-align: center;
+}
+
+#welcomeText span {
+	display: block;
+}
+
+#welcomeText h3::after {
+	content: "";
+	display: block;
+	margin-top: 1em;
+	text-align: center;
+	padding: 25%;
+	width: 100%;
+	background-image: url(../images/KLblur.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-radius: 10px;
+	box-shadow: 3px -3px 15px 3px rgb(150, 150, 150);
+}
+
+#highlights::before,
+#socialRoom::before {
+	content: "";
+	display: block;
+	margin-bottom: 2em;
+	width: 100%;
+	border: solid 1px var(--mobileLineDivider);
+}
+
+#highlights h2,
+#socialRoom h2 {
+	padding-bottom: 1em;
+	text-align: center;
+}
+
+#lastUp {
+	padding-top: 1em;
+	text-align: left;
+}
+
+.highlight {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.highlight abbr {
+	padding-left: .5em;
+}
+
+
+#scrollableContent {
+	display: flex;
+	gap: 2em;
+	margin-top: 1em;
+	padding: 1em;
+	overflow-x: scroll;
+	scroll-snap-type: x mandatory;
+}
+
+#scrollableContent .content {
+	flex: 0 0 10em;
+	scroll-snap-align: start;
+	border: solid black 1px;
+	padding: .5em;
+	border-radius: 10px;
+	box-shadow: 0 0 10px 1px rgb(150, 150, 150);
+}
+
+.socialInfo {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.socialInfo span {
+	justify-content: flex-end;
+	margin-left: auto;
+}
+
+.socialInfo img {
+	border-radius: 10px;
+	width: 10%;
+}
+
+.content p {
+	padding: 1em;
+	padding-left: 0;
+	height: 10em;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+#icon::after {
+	content: "";
+	width: 2em;
+	height: 2em;
+	border-radius: 10px;
+	background: transparent url(../images/350x350.png) no-repeat;
+	background-size: contain;
+	display: block;
+}
+
+
+.contentLink {
+	display: block;
+	text-align: center;
+	padding: .2em;
+	border-radius: 0 0 10px 10px;
+	background-color: var(--headerBgColor);
+	color: white;
+	transition: 400ms ease;
+}
+
+.content footer a:hover {
+	background-color: var(--responsiveLinkBgColor);
+}

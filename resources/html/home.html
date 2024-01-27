@@ -7,16 +7,18 @@
 	<meta name="keywords" content="Homepage, ZeroCarbon">
 	<meta name="description" content="Homepage of ZeroCarbon">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	<script src="../javascript/root.js"></script>
-	<script src="../javascript/goTop.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" rel="stylesheet" />
 	<link rel="stylesheet" type="text/css" href="../css/home.css">
 	<link rel="stylesheet" type="text/css" href="../css/root.css">
 	<link rel="stylesheet" type="text/css" href="../css/headerFooter.css">
 	<link rel="stylesheet" type="text/css" media="screen and (min-width: 600px)"
 		href="../css/devices/headerFooterDev.css">
+	<link rel="stylesheet" type="text/css" media="screen and (min-width: 600px)" href="../css/devices/homeDev.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" async></script>
+	<script src="../javascript/root.js"></script>
+	<script src="../javascript/goTop.js"></script>
+	<script src="../javascript/home.js"></script>
 	<link rel="icon" type="image/x-icon" href="../images/ZCLogoIcon.png">
-	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
 
 <body>
@@ -31,11 +33,11 @@
 		</div>
 		<nav id="navBar" class="headerNav" aria-label="Navigation Bar">
 			<ul>
-				<li><a href="../php/index.php">Home</a></li>
-				<li><a href="../html/projects.html">Projects</a></li>
-				<li><a href="../html/investments.html">Investments</a></li>
-				<li><a href="../html/aboutUs.html">About Us</a></li>
-				<li><a href="../html/contacts.html">Contacts</a></li>
+				<li><a class="navLink" href="../php/index.php">Home</a></li>
+				<li><a class="navLink" href="../html/projects.html">Projects</a></li>
+				<li><a class="navLink" href="../html/investments.html">Investments</a></li>
+				<li><a class="navLink" href="../html/aboutUs.html">About Us</a></li>
+				<li><a class="navLink" href="../html/contacts.html">Contacts</a></li>
 			</ul>
 		</nav>
 
@@ -69,15 +71,19 @@
 				<h3>CO2 Saved</h3>
 				<p>992,080.00 <abbr title="Pounds">lb</abbr></p>
 			</article>
-			<p id="lastUp">Last updated: <time datetime="2023-11-12">12-November-2023</time></p>
+			<p id="lastUp">Last updated: <time datetime="2024-01-12">12-January-2024</time></p>
 		</section>
 
 		<section id="socialRoom">
-			<h2>Social room</h2>
-			<p>The latest publications to keep up to date with the activities we carry out and our projects.</p>
+			<h2>Social Room</h2>
+			<p class="socialMsg">The latest publications to keep up to date with the activities we carry out and our
+				projects.</p>
 
-			<socialRoomNews/>
+			<socialRoomNews />
 
+			<p class="socialMsg">scroll for more<span class="material-symbols-outlined socialSpan">
+					transition_push
+				</span></p>
 		</section>
 
 		<button class="goUp hidden" aria-label="Back to Top" onclick="goTop()"><span>&UpArrow;</span>Back to
@@ -86,7 +92,7 @@
 	</main>
 	<footer id="footer">
 
-		<img src="../images/ZCLogo.png" id="ZCLogo" alt="Logo Zero Carbon">
+		<img loading="lazy" src="../images/ZCLogo.png" id="ZCLogo" alt="Logo Zero Carbon">
 		<div id="footerZcWrapper">
 			<section id="zcCorporate">
 				<dl>
@@ -125,12 +131,12 @@
 				</h4>
 				<nav id="socialNav">
 					<ul id="socialIcons" aria-label="Social Area">
-						<li><a href="https://twitter.com/" title="X" target="_blank"><img
-									src="../images/socialIcon/xtwitter.png"></a></li>
-						<li><a href="https://instagram.com/" title="Instagram" target="_blank"><img
-									src="../images/socialIcon/instagram.png"></a></li>
-						<li><a href="https://facebook.com/" title="Facebook" target="_blank"><img
-									src="../images/socialIcon/facebook.png"></a></li>
+						<li><a href="https://twitter.com/" title="X" target="_blank"><img loading="lazy"
+									src="../images/socialIcon/xtwitter.png" alt="X (old Twitter) icon"></a></li>
+						<li><a href="https://instagram.com/" title="Instagram" target="_blank"><img loading="lazy"
+									src="../images/socialIcon/instagram.png" alt="Instagram icon"></a></li>
+						<li><a href="https://facebook.com/" title="Facebook" target="_blank"><img loading="lazy"
+									src="../images/socialIcon/facebook.png" alt="Facebook icon"></a></li>
 					</ul>
 				</nav>
 			</section>

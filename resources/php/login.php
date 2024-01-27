@@ -13,10 +13,10 @@ $userID = "";
 $userPW = "";
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['userID'])) {
-        $userID = $_POST['userID'];
+        $userID = htmlspecialchars(strip_tags($_POST['userID']));
     }
     if (isset($_POST['userPW'])) {
-        $userPW = $_POST['userPW'];
+        $userPW = htmlspecialchars(strip_tags($_POST['userPW']));
     }
 
     $conn = new connection();

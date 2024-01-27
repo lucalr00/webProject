@@ -1,0 +1,75 @@
+
+
+
+
+h2 {
+    text-align: center;
+    color: #333;
+    padding: 20px 0;
+}
+
+p {
+    color: #666;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.contact-method {
+    margin: 0 auto 2em auto;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    width: 80%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.contact-method h3 {
+    color: #333;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+.contact-method a {
+    color: #0088cc;
+    text-decoration: none;
+    display: block;
+}
+
+.contact-method a:hover {
+    text-decoration: underline;
+}
+
+
+.contact-method address {
+    text-align: center;
+    display: block;
+}
+
+
+.contact-method ul {
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+
+
+
+#breadcrumb p {
+    color: #ffffff;
+	font-size: 16px;
+}
+
+
+#footer :last-child {
+    color: #ffffff;
+    font-size: 16px;
+}
+
+
+#copyright p{
+    color: #ffffff;
+    font-size: 16px;
+}

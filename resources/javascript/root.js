@@ -1,11 +1,12 @@
 
-$(document).ready(function() {
+window.addEventListener('load', () => {
 	console.log("DOM ready: root.js");
 	navHighlight();
-});
+
+})
 
 function navHighlight() {
-	$('a').each(function() {
+		$('.navLink').each(function() {
 		if ($(this).prop('href') == window.location.href) {
 			$(this).addClass('active');
 		}

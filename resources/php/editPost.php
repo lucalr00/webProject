@@ -42,11 +42,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $conn = new connection();
     if ($conn->isConnected()) {
-
+        $mysqli = $conn->getConnection();
         if (isset($_POST['submitDel'])) {
-            $query = "DELETE FROM socialNews WHERE Id=\"$id\"";
-            $queryResult = mysqli_query($conn->getConnection(), $query);
-            if (mysqli_affected_rows($conn->getConnection()) >= 1) {
+            $query = "DELETE FROM socialNews WHERE Id=?";
+            $stmt = $mysqli->prepare($query);
+            $stmt->bind_param('i', $id);
+            $stmt->execute();
+            if ($stmt->affected_rows == 1) {
                 $conn->closeConnection();
                 $mes .= '<div class="success">Post successfully deleted</div>';
             } else {
@@ -57,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             exit();
         } else {
             $querable = true;
-            $mes = '<ul id=wrongInput>';
+            $mes .= '<ul id="wrongInput">';
 
             if (ctype_space($title)) {
                 $querable = false;
@@ -69,26 +71,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
             if (! inputCheck::minLength($title, $description)) {
                 $querable = false;
-                $mes .= '<li class="error">Error, title and description must have a length of 4 characters</li>';
+                $mes .= '<li class="error">Error, title and description must have a length of 5 characters</li>';
             }
             if (! inputCheck::maxLengthTitle($title)) {
                 $querable = false;
-                $mes .= '<li class="error">Error, title length is greater than 30 characters</li>';
+                $mes .= '<li class="error">Error, title length is greater than 75 characters</li>';
             }
             if (! inputCheck::maxLengthDspt($description)) {
                 $querable = false;
-                $mes .= '<li class="error">Error, description length is greater than 100 characters</li>';
+                $mes .= '<li class="error">Error, description length is greater than 500 characters</li>';
             }
             if (! inputCheck::iconName($icon)) {
                 $querable = false;
                 $mes .= '<li class="error">Error, icon not valid</li>';
             }
+            if (! inputCheck::link($link)) {
+                $querable = false;
+                $mes .= '<li class="error">Error, link not valid</li>';
+            }
 
             $mes .= '</ul>';
             if ($querable) {
-                $query = "UPDATE socialNews SET Date=\"$date\",Title=\"$title\",Description=\"$description\",Icon=\"$icon\",Link=\"$link\" WHERE Id=\"$id\"";
-                $queryResult = mysqli_query($conn->getConnection(), $query);
-                if (mysqli_affected_rows($conn->getConnection()) >= 1) {
+                $query = "UPDATE socialNews SET Date=?,Title=?,Description=?,Icon=?, Link=? WHERE Id=?";
+                $stmt = $mysqli->prepare($query);
+                $stmt->bind_param('sssssi', $date, $title, $description, $icon, $link, $id);
+                $stmt->execute();
+                if ($stmt->affected_rows == 1) {
                     $conn->closeConnection();
                     $mes .= '<div class="success">Post successfully edited</div>';
                 } else {

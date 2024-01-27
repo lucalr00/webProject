@@ -3,24 +3,29 @@
 	padding: 0;
 }
 
-*, *::before, *::after{
+*,
+*::before,
+*::after {
 	box-sizing: inherit;
 }
 
 :root {
-	--headerBgColor: rgb(40, 61, 110);
+	--headerBgColor: rgb(40, 40, 90);
+	/*--headerBgColor: rgb(40, 61, 110);*/
 	--responsiveLinkBgColor: rgb(40, 40, 90);
 	--responsiveLinkHoverBgColor: rgb(20, 20, 60);
 	--headerTxtColor: rgb(255, 255, 255);
-	--bgColor: rgb(255, 255, 255);
+	--bgColor: rgb(245, 245, 245);
 	--txtColor: rgb(0, 0, 0);
 	--footerBgColor: rgb(0, 0, 0);
 	--footerTxtColor: rgb(255, 255, 255);
-	--visitedLinkColor: rgb(250, 150, 20);
+	--visitedLinkColor: rgb(255, 255, 200);
+	--mobWelcomeColor: rgb(10, 50, 90);
 	--flagColor: rgb(218, 103, 66);
 	--linkColor: rgb(255, 255, 255);
 	--font-body-family: "Roboto Condensed", sans-serif;
 	--mobileLineDivider: rgba(60, 60, 60, .4);
+	--newsHdColor: rgb(0, 105, 130);
 }
 
 html {
@@ -31,20 +36,24 @@ html {
 	box-sizing: border-box;
 }
 
+body {
+	background-color: var(--bgColor);
+}
+
 main {
 	margin: auto;
 	background-color: var(--bgColor);
 	color: var(--txtColor);
 }
 
-.goUp{
+.goUp {
 	position: fixed;
 	background-color: var(--headerBgColor);
 	color: white;
 	font-weight: bold;
 	text-transform: uppercase;
 	border: none;
-	bottom: 3em;
+	bottom: 2em;
 	right: 1em;
 	height: 6em;
 	width: 6em;
@@ -63,11 +72,25 @@ main {
 	display: none;
 }
 
-.goUp span{
+.goUp span {
 	font-size: 2em;
 }
 
-.goUp:hover{
+.goUp:hover {
 	background-color: var(--responsiveLinkBgColor);
 }
 
+a :visited {
+	color: var(--visitedLinkColor);
+}
+
+a {
+	color: white;
+}
+
+@media only screen and (min-width: 1024px) {
+	.goUp {
+		right: 5%;
+	}
+
+}

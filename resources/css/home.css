@@ -1,10 +1,52 @@
+#srollableContent button {
+	position: absolute;
+	top: 0;
+}
+
 #welcomeText,
 #highlights {
-	margin: 2em 0;
+	padding: 2em 0;
+}
+
+.socialMsg {
+	padding: 0 3px;
+	margin-bottom: .5em;
+}
+
+.socialSpan {
+	padding: 0 3px !important;
+}
+
+.socialMsg:last-child {
+	text-align: center;
+	padding-top: 5px;
+	color: rgb(69, 69, 69);
+	font-weight: bold;
+}
+
+#welcomeText {
+	position: relative;
+	height: 60dvh;
+	background: no-repeat url(../images/KLblur.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
 }
 
 #welcomeText h2 {
-	padding-bottom: 1em;
+	margin-top: 1em;
+	font-size: 200%;
+	line-height: 1.5em;
+	backdrop-filter: blur(2px);
+	padding: .5em 0;
+}
+
+#welcomeText h3 {
+	backdrop-filter: blur(10px);
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 1em 0;
 }
 
 #welcomeText>* {
@@ -13,20 +55,6 @@
 
 #welcomeText span {
 	display: block;
-}
-
-#welcomeText h3::after {
-	content: "";
-	display: block;
-	margin-top: 1em;
-	text-align: center;
-	padding: 25%;
-	width: 100%;
-	background-image: url(../images/KLblur.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	border-radius: 10px;
-	box-shadow: 3px -3px 15px 3px rgb(150, 150, 150);
 }
 
 #highlights::before,
@@ -40,90 +68,182 @@
 
 #highlights h2,
 #socialRoom h2 {
-	padding-bottom: 1em;
+	margin-bottom: 1em;
 	text-align: center;
 }
 
 #lastUp {
-	padding-top: 1em;
+	padding-right: 3px;
+	padding-left: 3px;
 	text-align: left;
 }
 
 .highlight {
+	padding: .5em 3px;
+	border-top: solid 1px var(--mobileLineDivider);
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	flex-wrap: wrap;
 }
 
+#highlights article:last-of-type {
+	border-bottom: solid 1px var(--mobileLineDivider);
+	margin-bottom: 1em;
+}
+
+.highlight p {
+	margin-left: 3px;
+}
+
 .highlight abbr {
 	padding-left: .5em;
 }
 
+/* <SOCIAL ROOM> */
+
+#socialRoom:nth-last-child(4) {
+	color: palegreen;
+	text-align: center;
+}
 
 #scrollableContent {
 	display: flex;
 	gap: 2em;
-	margin-top: 1em;
-	padding: 1em;
+	padding: 1em 0;
 	overflow-x: scroll;
 	scroll-snap-type: x mandatory;
 }
 
 #scrollableContent .content {
-	flex: 0 0 10em;
-	scroll-snap-align: start;
-	border: solid black 1px;
-	padding: .5em;
+	scroll-snap-align: center;
+	max-height: 75dvh;
+	flex: 0 0 18em;
+	display: flex;
+	flex-direction: column;
+	border: solid rgb(69, 69, 69) 1px;
 	border-radius: 10px;
 	box-shadow: 0 0 10px 1px rgb(150, 150, 150);
+}
+
+.content header {
+	/*min-height: 20%;*/
+	border-bottom: solid 1px var(--newsHdColor);
+}
+
+.content footer {
+	display: flex;
+	flex-grow: 1;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+.content h3 {
+	text-align: center;
+	padding: 3px;
+	color: var(--newsHdColor);
+
 }
 
 .socialInfo {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-around;
 	align-items: center;
+	border-radius: 10px 10px 0 0;
+	/*border-bottom: solid 1px var(--mobileLineDivider);*/
+	background-color: var(--mobWelcomeColor);
+	color: white;
 }
 
-.socialInfo span {
-	justify-content: flex-end;
-	margin-left: auto;
-}
-
-.socialInfo img {
+.socialInfo .socialIcon {
 	border-radius: 10px;
-	width: 10%;
+	width: 3em;
+	padding: 4px;
 }
 
-.content p {
-	padding: 1em;
-	padding-left: 0;
-	height: 10em;
+.mainContent {
+	position: relative;
+	flex-grow: 2;
 	overflow-y: auto;
 	overflow-x: hidden;
+	margin: 1em 0;
+	padding: 0 1em;
 }
 
-#icon::after {
-	content: "";
-	width: 2em;
-	height: 2em;
-	border-radius: 10px;
-	background: transparent url(../images/350x350.png) no-repeat;
-	background-size: contain;
-	display: block;
+.mainContent p {
+	white-space: pre-wrap;
 }
 
+.author {
+	color: rgb(69, 69, 69);
+	padding-left: 3px;
+	text-transform: capitalize;
+}
 
-.contentLink {
+.refLink {
+	font-weight: bold;
 	display: block;
 	text-align: center;
-	padding: .2em;
+	padding: .5em;
 	border-radius: 0 0 10px 10px;
-	background-color: var(--headerBgColor);
+	background-color: var(--mobWelcomeColor);
 	color: white;
-	transition: 400ms ease;
+}
+
+.refLinkBlank {
+	visibility: hidden;
 }
 
 .content footer a:hover {
-	background-color: var(--responsiveLinkBgColor);
+	background-color: rgb(0, 105, 130);
+}
+
+/* </SOCIAL ROOM> */
+
+@media only screen and (max-width: 380px) {
+
+	.highlight {
+		display: block;
+	}
+
+	#scrollableContent .content {
+		flex: 0 0 14em;
+	}
+	
+	#welcomeText{
+		background: none;
+		background-color: var(--mobWelcomeColor);
+		height: auto;
+		color: white;
+	}
+	
+	#welcomeText h2{
+		margin-top: 0;
+	}
+	
+	#welcomeText h2, #welcomeText h3{
+		backdrop-filter: unset;
+	}
+	
+	#welcomeText h3{
+		position: static;
+	}
+	
+	#highlights::before{
+		display: none;
+	}
+	
+	.socialInfo{
+		padding: .5em;
+	}
+
+}
+
+@media only screen and (max-width: 250px) {
+
+	#scrollableContent .content {
+		flex: 0 0 10em;
+	}
+
 }

@@ -5,14 +5,16 @@
 <head>
 	<meta charset="utf-8">
 	<title>ZERO CARBON &minus; MANAGE SOCIAL ROOM</title>
-	<!--<meta http-equiv="refresh" content="3; URL=aboutUs.html">-->
 	<meta name="keywords" content="">
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="../css/root.css">
 	<link rel="stylesheet" type="text/css" href="../css/headerFooter.css">
-	<link rel="stylesheet" type="text/css" href="#">
+	<link rel="stylesheet" type="text/css" href="../css/socialRoom.css">
+	<link rel="stylesheet" type="text/css" media="screen and (min-width: 768px)" href="../css/devices/aboutUsDev.css">
+	<link rel="stylesheet" type="text/css" media="screen and (min-width: 600px)"
+		href="../css/devices/headerFooterDev.css">
 	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -46,63 +48,72 @@
 			</ul>
 		</nav>
 
-		<div id="socialRoom manager">
-			<section>
+		<div id="socialRoomMnager">
+			<section id="newNewsCont">
 				<h2>
 					Management of new news
 				</h2>
 				<form class="book" action="newPost.php" method="post" aria-label="Post registration form">
 					<fieldset>
 						<legend>Record a new news</legend>
-						<section id=news-d-t-d>
-							<div id="newsDate">
-								<label for="publicationDate"> Date:</label>
-								<input type="datetime-local" id="publicationDate" name="date" min="2000-01-01T00:00"
-									max="2025-01-01T00:00" aria-required="true" aria-label="Enter the publication date"
-									required />
+						<section class=news-d-t-d>
+							<div class="newsDate">
+								<label> Date:
+									<input type="datetime-local" class="publicationDate" name="date"
+										min="2000-01-01T00:00" max="2025-01-01T00:00" aria-required="true"
+										aria-label="Enter the publication date" required />
+								</label>
 							</div>
-							<div id="titleArea" class="campo_chk">
-								<label for="title">Title:</label>
-								<input type="text" name="title" id="title" minlength="4" maxlength="30"
-									placeholder="Write a title. min 4 and max 30 characters" aria-required="true"
-									aria-label="Add or Edit the title" title="Enter the title"
-									placeholder="Enter the title of the news" required />
+							<div class="titleArea">
+								<label>Title:
+									<input type="text" name="title" class="title" minlength="5" maxlength="75"
+										placeholder="Write a title. min 5 and max 75 characters" aria-required="true"
+										aria-label="Add or Edit the title" title="Enter the title"
+										placeholder="Enter the title of the news" required />
+								</label>
 							</div>
-							<div id="descriptionArea" class="campo_chk">
-								<label for="description">Description:</label>
-								<textarea name="description" id="description" minlength="4" maxlength="100" rows="5"
-									cols="30" placeholder="Write a description. min 4 and max 100 characters"
-									aria-required="true" aria-label="Add or edit the description"
-									title="Enter the description" placeholder="Enter the description of the news"
-									required></textarea>
-							</div>
-						</section>
-						<section id="socialReference" class="campo_chk">
-							<div id="socialIcon">
-								<label for="selSocialIcon">Social icon:</label>
-								<select name="icon" id="selSocialIcon">
-									<option value="noicon">No icon</option>
-									<option value="facebook">Facebook</option>
-									<option value="instagram">Instagram</option>
-									<option value="xtwitter">X (Twitter)</option>
-								</select>
-							</div>
-							<div id="socialLinkArea">
-								<label for="socialLink">News link:</label>
-								<input type="url" name="socialLink" id="socialLink" aria-required="true"
-									aria-label="Add or edit the social link of the current news" />
+							<div class="descriptionArea">
+								<label>Description:
+									<textarea name="description" class="description" minlength="5" maxlength="500"
+										rows="5" placeholder="Write a description. min 5 and max 500 characters"
+										aria-required="true" aria-label="Add or edit the description"
+										title="Enter the description" placeholder="Enter the description of the news"
+										required></textarea>
+								</label>
 							</div>
 						</section>
-						<div id="submitControl">
+						<section class="socialReference">
+							<div class="socialIconNew">
+								<label>Social icon:
+									<select name="icon" class="selSocialIcon" aria-required="true"
+										aria-label="Select the relative social icon">
+										<option value="noicon">No icon</option>
+										<option value="facebook">Facebook</option>
+										<option value="instagram">Instagram</option>
+										<option value="xtwitter">X (Twitter)</option>
+									</select>
+								</label>
+							</div>
+							<div class="socialLinkArea">
+								<label>News link:
+									<input type="url" name="socialLink" class="socialLink" aria-required="false"
+										aria-label="Add or edit the social link of the current news"
+										placeholder="http:// https:// or left blank" />
+								</label>
+							</div>
+						</section>
+						<div class="submitControl">
 							<button type="reset" id="resetFields" title="Reset all fields"
-								aria-label="Button to reste all fields">Reset</button>
+								aria-label="Reset fields button">Reset<span
+									class="material-symbols-outlined">clear_all</span></button>
 							<button type="submit" id="submitNew" name="submitNew" title="Publicate the news"
-								aria-label="Button to publicate the news">New Post</button>
+								aria-label="Pubblicate new post button">New Post<span
+									class="material-symbols-outlined">post_add</span></button>
 						</div>
 					</fieldset>
 				</form>
 			</section>
-			<section>
+			<section id="editNewsCont">
 				<h2>
 					Management of present news
 				</h2>
