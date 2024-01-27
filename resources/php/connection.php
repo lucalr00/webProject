@@ -66,28 +66,6 @@ class connection
         }
     }
 
-    public function getUserInfo()
-    {
-        $querySelect = "SELECT Username,Role FROM users WHERE userID='{$_SESSION['userID']}'";
-        $queryResult = mysqli_query($this->connection, $querySelect);
-
-        if (mysqli_num_rows($queryResult) != 0) {
-
-            $adminInfo = array();
-            while ($row = mysqli_fetch_assoc($queryResult)) {
-                $info = array(
-                    "Username" => $row['Username'],
-                    "Role" => $row['Role']
-                );
-
-                array_push($adminInfo, $info);
-            }
-
-            return $adminInfo;
-        } else {
-            return null;
-        }
-    }
 }
 
 ?>
