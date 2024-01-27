@@ -4,7 +4,7 @@ require_once "connection.php";
 
 if ($_SESSION['connected'] == true) {
     header('location:dashboard.php');
-    exit();
+    exit;
 }
 
 $fileHTML = file_get_contents(".." . DIRECTORY_SEPARATOR . "html" . DIRECTORY_SEPARATOR . "login.html");
@@ -13,37 +13,31 @@ $userID = "";
 $userPW = "";
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['userID'])) {
-        //$userID = $_POST['userID'];
-        
         $userID = htmlspecialchars(strip_tags($_POST['userID']));
-        echo $userID;
     }
     if (isset($_POST['userPW'])) {
-        $userPW = $_POST['userPW'];
-        //$userPW = htmlspecialchars(strip_tags($_POST['userPW']));
+        $userPW = htmlspecialchars(strip_tags($_POST['userPW']));
     }
 
     $conn = new connection();
     $mes = '<div id="loginError"><ul>';
 
     if ($conn->isConnected()) {
-        $mysqli = $conn->getConnection();
-        $stmt = $mysqli->prepare("SELECT Username FROM users WHERE userID=? AND  Password=? LIMIT 1");
-        $stmt->bind_param('ss', $userID, $userPW);
-        $stmt->execute();
-        $stmt->bind_result($username);
-        $stmt->store_result();
-        if ($stmt->num_rows == 1)
-        {
-            while ($stmt->fetch())
-            {
-                $_SESSION['connected'] = true;
-                $_SESSION['username'] = $username;
-                echo 'Success!';
-                exit();
-            }
-        } else {
 
+        // CONTROLLI UTENTE E PASSWORD
+
+        $query = "SELECT userID FROM users WHERE userID=\"$userID\" AND Password=\"$userPW\"";
+        $queryResult = mysqli_query($conn->getConnection(), $query);
+
+        if (mysqli_affected_rows($conn->getConnection()) == 1) {
+            $_SESSION['connected'] = true;
+            $_SESSION['userID'] = $userID;
+
+            $conn->closeConnection();
+
+            header('location:dashboard.php');
+            exit();
+        } else {
             $mes .= '<li class="error">Wrong Username or Password</li>';
         }
     } else {

@@ -7,14 +7,15 @@ if ($_SESSION['connected'] != true) {
     exit;
 }
 
-/*
-if ($_SESSION['role'] != "SMM"){
-    $roleError = 'Does not have the role of social management.';
+
+if ($_SESSION['userRole'] != "Social Media Manager"){
+    $roleError = 'Does not have the role of social manager.';
     $_SESSION['respStatus'] = $roleError;
+    $_SESSION['notGranted'] = true;
     header('location:redirect.php');
     exit;
 }
-*/
+
 
 $conn = new connection();
 $fileHTML = file_get_contents(".." . DIRECTORY_SEPARATOR . "html" . DIRECTORY_SEPARATOR . "adminArea" . DIRECTORY_SEPARATOR . "socialRoom.html");

@@ -3,7 +3,7 @@ require_once "session.php";
 
 if ($_SESSION['connected'] != true) {
     header('location:login.php');
-    exit;
+    exit();
 }
 
 $response = $_SESSION['respStatus'];
@@ -11,7 +11,12 @@ unset($_SESSION['respStatus']);
 
 $fileHTML = file_get_contents(".." . DIRECTORY_SEPARATOR . "html" . DIRECTORY_SEPARATOR . "adminArea" . DIRECTORY_SEPARATOR . "redirect.html");
 
-if ($_SESSION['inputFault']) {
+if ($_SESSION['notGranted']) {
+    unset($_SESSION['notGranted']);
+    header('refresh:3;url=dashboard.php');
+    $response .= '<div id="refresh"><p>Redirecting in 3 seconds...</p></div>';
+    
+} elseif ($_SESSION['inputFault']) {
     unset($_SESSION['inputFault']);
     $response .= '<div id="refresh">
                     <p>Automatic redirection disabled</p>
