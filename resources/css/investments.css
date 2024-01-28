@@ -60,7 +60,14 @@ h3{
 
 #table_section table th, #table_section table td {
     text-align: left; 
+    border: 1px solid black;
 }
+
+#table_section table {
+    border-collapse: collapse;
+    margin-bottom: 1em;
+}
+
 
 #container_years p::after {
 	content: '';
@@ -69,12 +76,14 @@ h3{
     width: 5em;
 	border: solid var(--mobileLineDivider) 1px;
 }
+
+
 main {
     padding: 0.5em;
 }
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 768px) {
     main {
-        width: 70%; /* Adjust as needed */
+        width: 70%; 
     }
 }
   
