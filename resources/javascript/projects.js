@@ -9,9 +9,9 @@ function startScript() {
 	showSlide(slideIndex);
 };
 
-function showFirstSlide() {
-    let slide = document.getElementsByClassName("slide_content");
-    slide[0].style.display = "block";
+function currentSlide(index)
+{
+    showSlide(index);
 }
 
 function showSlide(currentIndex)
@@ -29,17 +29,17 @@ function showSlide(currentIndex)
         slideIndex = slide.length;
     }
     
-    for(index = 0; index < slide.length; ++index)
+    for(index = 0; index < slide.length; index++)
     {
-        slide[index].style.display = "none";
+        slide[index].className ="slide_content hidden";
     }
 
     for (index = 0; index < dots.length; index++) {
-        dots[index].className = dots[index].className.replace(" active", "");
+        dots[index].className = "dot disable"
     }
 
-    slide[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
+    slide[slideIndex - 1].className = "slide_content visible"
+    dots[slideIndex - 1].className = "dot enable";
 }
 
 function currentSlide(currentIndex) {

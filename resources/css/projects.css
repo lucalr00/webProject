@@ -32,13 +32,17 @@
 	height: 1.5em;
 	width: 1.5em;
 	margin: 1.5em 1dvw;
-	background-color: #bbb;
 	border: none;
 	border-radius: 50%;
 	transition: background-color 0.6s ease;
 }
 
-slidenav.active, slidenav.dot:hover {
+.disable, .dot
+{
+	background-color: #bbb;
+}
+
+.enable, .dot:hover {
 	background-color: #717171;
 }
 
@@ -86,6 +90,16 @@ slidenav.active, slidenav.dot:hover {
 	height: 100%;
 	width: 100%;
 	object-fit: contain;
+}
+
+.visible, .slide_content
+{
+	display: block;
+}
+
+.hidden, .slide_content
+{
+	display: hidden;
 }
 
 .slideimg {
