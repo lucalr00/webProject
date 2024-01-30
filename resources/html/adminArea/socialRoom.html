@@ -5,8 +5,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>ZERO CARBON &minus; MANAGE SOCIAL ROOM</title>
-	<meta name="keywords" content="">
-	<meta name="description" content="">
+	<meta name="keywords" content="Management, news, present">
+	<meta name="description" content="Page to manage the Social Room area of the home page">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="../css/root.css">
@@ -24,9 +24,10 @@
 	<header id="header">
 		<div id="topNavBar">
 			<h1>
-				<a href="index.php" title="Home" id="textLogo"><span class="logoFirstHalf">Zero</span>Carbon</a>
+				<a href="../index.php" title="Home" id="textLogo"><span class="logoFirstHalf">Zero</span>Carbon</a>
 			</h1>
-			<nav id="breadcrumb" aria-label="Path"> <!-- NASCOSTO IN DESKTOP -->
+
+			<nav id="breadcrumb" aria-label="breadcrumbs">
 				<p>You are here: <a href="dashboard.php">Admin Dashboard</a> &#47; Manage Social Room</p>
 			</nav>
 		</div>
@@ -67,16 +68,16 @@
 							<div class="titleArea">
 								<label>Title:
 									<input type="text" name="title" class="title" minlength="5" maxlength="75"
-										placeholder="Write a title. min 5 and max 75 characters" aria-required="true"
-										aria-label="Add or Edit the title" title="Enter the title"
+										placeholder="min 5 and max 75 characters" aria-required="true"
+										aria-label="Add the title" title="Enter the title"
 										placeholder="Enter the title of the news" required />
 								</label>
 							</div>
 							<div class="descriptionArea">
 								<label>Description:
 									<textarea name="description" class="description" minlength="5" maxlength="500"
-										rows="5" placeholder="Write a description. min 5 and max 500 characters"
-										aria-required="true" aria-label="Add or edit the description"
+										rows="5" placeholder="min 5 and max 500 characters"
+										aria-required="true" aria-label="Add the description"
 										title="Enter the description" placeholder="Enter the description of the news"
 										required></textarea>
 								</label>
@@ -97,17 +98,17 @@
 							<div class="socialLinkArea">
 								<label>News link:
 									<input type="url" name="socialLink" class="socialLink" aria-required="false"
-										aria-label="Add or edit the social link of the current news"
+										aria-label="Add the social link of the current news"
 										placeholder="http:// https:// or left blank" />
 								</label>
 							</div>
 						</section>
 						<div class="submitControl">
 							<button type="reset" id="resetFields" title="Reset all fields"
-								aria-label="Reset fields button">Reset<span
+								aria-label="Reset fields">Reset<span
 									class="material-symbols-outlined">clear_all</span></button>
 							<button type="submit" id="submitNew" name="submitNew" title="Publicate the news"
-								aria-label="Pubblicate new post button">New Post<span
+								aria-label="Pubblicate new post">New Post<span
 									class="material-symbols-outlined">post_add</span></button>
 						</div>
 					</fieldset>
@@ -118,7 +119,7 @@
 					Management of present news
 				</h2>
 				<div>
-					<inputMsg />
+		<!--			<inputMsg />-->
 				</div>
 				<socialRoomNews />
 			</section>
@@ -128,7 +129,7 @@
 
 	<footer id="footer">
 
-		<div id="copyright" aria-label="Copyright">
+		<div id="copyright">
 			<p>Copyright &copy; 2024 Zero Carbon &minus; All rights reserved</p>
 			<p>Website developed by: QuadraCoders</p>
 		</div>

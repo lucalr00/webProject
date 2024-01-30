@@ -1,5 +1,4 @@
-
-#howStarted{
+#howStarted {
 	width: 90%;
 	margin: auto;
 }
@@ -31,6 +30,7 @@
 #cardsContainer {
 	display: flex;
 	flex-direction: column;
+	list-style: none;
 }
 
 #cardsContainer:nth-child(2) {
@@ -38,7 +38,6 @@
 }
 
 .card {
-	display: none;
 	margin: auto;
 	text-align: center;
 	width: 50%;
@@ -79,15 +78,29 @@
 	justify-content: center;
 	column-gap: 1em;
 
-/*text-align: center;*/
+	/*text-align: center;*/
 }
 
+.dot {
+	cursor: pointer;
+	height: 1.5em;
+	width: 1.5em;
+	margin: 1.5em 1dvw;
+	background-color: var(--headerBgColor);
+	border: none;
+	border-radius: 50%;
+	transition: background-color;
+}
+
+.dot:hover,
+.active {
+	background-color: var(--newsHdColor);
+}
 
 .prev,
 .next {
-	margin: 0 1em;
 	cursor: pointer;
-	padding: 0.8em;
+	padding: 0.5em;
 	color: black;
 	transition: background-color 0.4s ease;
 	background-color: transparent;
@@ -111,16 +124,16 @@
 
 
 
-#nextSpan{
+#nextSpan {
 	visibility: hidden;
 }
 
-.next:hover::before{
+.next:hover::before {
 	content: 'Next';
 	margin-right: 3px;
 }
 
-.prev:hover::after{
+.prev:hover::after {
 	content: 'Prevoius';
 	margin-left: 3px;
 }
@@ -128,7 +141,6 @@
 
 
 .cardDetails {
-	display: none;
 	background-color: lightsteelblue;
 	color: black;
 	padding: 1em;
@@ -182,21 +194,28 @@
 	}
 }
 
+@media only screen and (max-width: 319px){
+	.next:hover::before,
+	.prev:hover::after {
+		display: none;
+	}
+}
+
 @media only screen and (max-width: 250px) {
 
-	.card img{
+	.card img {
 		border-radius: 0;
 	}
 
-	.info{
+	.info {
 		width: 100%;
 	}
 
 	body {
 		hyphens: auto;
 	}
-	
-	#cardsContainer .card{
+
+	#cardsContainer .card {
 		width: 100%;
 	}
 

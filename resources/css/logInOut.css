@@ -1,0 +1,47 @@
+#header {
+	background-color: var(--headerBgColor);
+	color: var(--headerTxtColor);
+	padding-bottom: 1em;
+}
+
+#topNavBar {
+	padding: 1em 0;
+	text-align: center;
+}
+
+#breadcrumb {
+	padding-left: .5em;
+	margin-top: 1em;
+}
+
+main{
+	margin-top: 2em;
+	text-align: center;
+}
+
+main p{
+	margin-top: 2em;
+}
+
+#footer {
+	text-align: center;
+	position: static;
+	margin-top: 5em;
+	padding: 1em;
+	background-color: darkslategray;
+	color: white;
+}
+
+footer #copyright p:nth-child(2) {
+	margin-top: 1em;
+	background: linear-gradient(to right, darkslategray 20%, var(--headerBgColor) 40%, var(--responsiveLinkBgColor) 60%, var(--responsiveLinkBgColor) 80%, darkslategray);
+	padding: .5em 0;
+}
+
+footer #copyright::before {
+	content: '';
+	display: block;
+	margin-bottom: .5em;
+	width: 100%;
+	border: dashed 2px white;
+}

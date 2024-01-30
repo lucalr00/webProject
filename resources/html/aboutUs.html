@@ -5,7 +5,6 @@
 <head>
 	<meta charset="utf-8">
 	<title>ZERO CARBON &minus; ABOUT US</title>
-	<!--<meta http-equiv="refresh" content="3; URL=aboutUs.html">-->
 	<meta name="keywords"
 		content="ZeroCarbon, started, founders, Alexander Gallagher, Michale Bennett, Jack Reynolds, Ombretta Sinclair">
 	<meta name="description" content="Get to know how ZeroCarbon started and its founders">
@@ -17,7 +16,6 @@
 	<link rel="stylesheet" type="text/css" href="../css/aboutUs.css" media="screen">
 	<link rel="stylesheet" type="text/css" href="../css/root.css" media="screen">
 	<link rel="stylesheet" type="text/css" href="../css/headerFooter.css" media="screen">
-	<!--<link rel="stylesheet" media="screen and (min-width: 1024px)" href="../css/root.css"> -->
 	<link rel="stylesheet" type="text/css" media="screen and (min-width: 768px)" href="../css/devices/aboutUsDev.css">
 	<link rel="stylesheet" type="text/css" media="screen and (min-width: 600px)"
 		href="../css/devices/headerFooterDev.css">
@@ -31,24 +29,24 @@
 	<header id="header">
 		<div id="topNavBar">
 			<h1>
-				<a href="../php/index.php" title="Home" id="textLogo"><span class="logoFirstHalf">Zero</span>Carbon</a>
+				<a href="../index.php" title="Home" id="textLogo"><span class="logoFirstHalf">Zero</span>Carbon</a>
 			</h1>
-			<button id="menuLink" class="menuLink" onclick="responsiveNav()"><span class="material-symbols-outlined"
-					id="closeMenu">close</span><span class="material-symbols-outlined"
-					id="openMenu">menu</span>MENU</button>
+			<button id="menuLink" class="menuLink" onclick="responsiveNav()"><span aria-hidden="true"
+					class="material-symbols-outlined hidden" id="closeMenu">close</span><span aria-hidden="true"
+					class="material-symbols-outlined visible" id="openMenu">menu</span>MENU</button>
 		</div>
 		<nav id="navBar" class="headerNav" aria-label="Navigation Bar">
 			<ul>
-				<li><a href="../php/index.php">Home</a></li>
-				<li><a href="../html/projects.html">Projects</a></li>
-				<li><a href="../html/investments.html">Investments</a></li>
-				<li><a href="../html/aboutUs.html">About Us</a></li>
-				<li><a href="../html/contacts.html">Contacts</a></li>
+				<li><a href="../index.php">Home</a></li>
+				<li><a href="projects.html">Projects</a></li>
+				<li><a href="investments.html">Investments</a></li>
+				<li>About Us</li>
+				<li><a href="contacts.html">Contacts</a></li>
 			</ul>
 		</nav>
 
-		<nav id="breadcrumb" aria-label="Path"> <!-- NASCOSTO IN DESKTOP -->
-			<p>You are here: <a href="/resources/php/index.php">Home</a> &#47; About Us</p>
+		<nav id="breadcrumb" aria-label="breadcrumbs">
+			<p>You are here: <a href="../index.php">Home</a> &#47; About Us</p>
 		</nav>
 	</header>
 
@@ -81,47 +79,47 @@
 				semper, blandit sollicitudin tortor rhoncus. Integer ornare ex non ligula maximus, id scelerisque justo
 				auctor. Fusce pulvinar, risus a venenatis vestibulum, ligula erat convallis libero, consequat rutrum
 				tellus sapien et nisi. Phasellus iaculis egestas venenatis. Aenean ac nulla dolor.</p>
-
 		</section>
 
 		<section id="founders">
-			<h3>
+			<h2>
 				The founders
-			</h3>
-
-			<div id="cardsContainer">
-				<div id="cardOne" class="card">
+			</h2>
+			<ul id="cardsContainer" aria-label="slideshow of 4 items">
+				<li class="card">
 					<img src="../images/AlexanderGallagher.jpg" alt="Profile picture of Alexander Gallagher">
-					<button class="info" aria-label="Open Details" onclick="showDetails()"
-						title="Read more...">Alexander Gallagher<span
+					<button class="info" aria-label="open Alexander Gallagher's biography"
+						onclick="showDetails()">Alexander Gallagher<span aria-hidden="true"
 							class="material-symbols-outlined">read_more</span></button>
-				</div>
+				</li>
 
-				<div id="cardTwo" class="card">
+				<li class="card">
 					<img src="../images/MichaelBennett.jpeg" alt="Profile picture of Michael Bennett">
-					<button class="info" aria-label="Open Details" onclick="showDetails()" title="Read more...">Michael
-						Bennett<span class="material-symbols-outlined">read_more</span></button>
-				</div>
+					<button class="info" aria-label="open Michael Bennet's biography" onclick="showDetails()">Michael
+						Bennett<span aria-hidden="true" class="material-symbols-outlined">read_more</span></button>
+				</li>
 
-				<div class="card">
+				<li class="card">
 					<img src="../images/JackReynolds.jpeg" alt="Profile picture of Jack Reynolds">
-					<button class="info" aria-label="Open Details" onclick="showDetails()" title="Read more...">Jack
-						Reynolds<span class="material-symbols-outlined">read_more</span></button>
-				</div>
+					<button class="info" aria-label="open Jack Reynolds's biography" onclick="showDetails()">Jack
+						Reynolds<span aria-hidden="true" class="material-symbols-outlined">read_more</span></button>
+				</li>
 
-				<div class="card">
+				<li class="card">
 					<img src="../images/OmbrettaSinclair.png" alt="Profile picture of Ombretta Sinclair">
-					<button class="info" aria-label="Open Details" onclick="showDetails()" title="Read more...">Ombretta
-						Sinclair<span class="material-symbols-outlined">read_more</span></button>
-				</div>
+					<button class="info" aria-label="open Ombretta Sinclair's biography"
+						onclick="showDetails()">Ombretta
+						Sinclair<span aria-hidden="true" class="material-symbols-outlined">read_more</span></button>
+				</li>
 
 				<div id="cardsManager">
-					<button class="prev" aria-label="Previous Slide" onclick="plusSlides(-1)">&#10094;</button>
-					<div id="cardsNumbers">
-						<button aria-label="Show first slide" onclick="showSlides(1)">1</button>
-						<button aria-label="Show second slide" onclick>2</button>
-					</div>
-					<button class="next" aria-label="Next Slide" onclick="plusSlides(1)">&#10095;</button>
+					<button class="prev" aria-label="Previous slide" onclick="plusSlides(-1)"
+						title="Previous">&#10094;</button>
+					<button class="dot" aria-label="Select slide 1 of 4" onclick="currentSlide(1)"></button>
+					<button class="dot" aria-label="Select slide 2 of 4" onclick="currentSlide(2)"></button>
+					<button class="dot" aria-label="Select slide 3 of 4" onclick="currentSlide(3)"></button>
+					<button class="dot" aria-label="Select slide 4 of 4" onclick="currentSlide(4)"></button>
+					<button class="next" aria-label="Next slide" onclick="plusSlides(1)" title="Next">&#10095;</button>
 				</div>
 
 				<div class="cardsDetails">
@@ -135,21 +133,28 @@
 						<dt>Gender:</dt>
 						<dd>Male</dd>
 						<dt>Biography:</dt>
-						<dd>From an early age, Alexander displayed an innate curiosity and an insatiable appetite for
-							learning. Raised in a modest family, he worked tirelessly to put himself through college,
+						<dd>From an early age, Alexander displayed an innate curiosity and an insatiable appetite
+							for
+							learning. Raised in a modest family, he worked tirelessly to put himself through
+							college,
 							earning a degree in business administration that laid the foundation for his future
 							endeavors. Armed with a potent combination of intellect and tenacity, he embarked on a
 							career that would see him rise through the ranks of the business world.
 							Beyond the boardroom, Alexander became known for his commitment to corporate social
-							responsibility. He championed sustainable practices, philanthropy, and initiatives aimed at
-							fostering positive social change. His belief in the symbiotic relationship between business
+							responsibility. He championed sustainable practices, philanthropy, and initiatives aimed
+							at
+							fostering positive social change. His belief in the symbiotic relationship between
+							business
 							success and societal well-being became a guiding principle for Whitman Enterprises.
-							Despite the heights of success, Alexander remained a down-to-earth individual, known for his
-							humility and approachability. Colleagues and employees alike speak of his open-door policy
-							and genuine interest in the well-being of those around him. His leadership style was one of
+							Despite the heights of success, Alexander remained a down-to-earth individual, known for
+							his
+							humility and approachability. Colleagues and employees alike speak of his open-door
+							policy
+							and genuine interest in the well-being of those around him. His leadership style was one
+							of
 							collaboration and empowerment, fostering a corporate culture that valued creativity,
 							diversity, and inclusivity.</dd>
-						<button type="button" id="closeDetails" aria-label="Close Details"
+						<button type="button" id="closeDetails" aria-label="Close biography"
 							onclick="closeDetails()">CLOSE</button>
 					</dl>
 
@@ -163,22 +168,31 @@
 						<dt>Gender:</dt>
 						<dd>Male</dd>
 						<dt>Biography:</dt>
-						<dd>Growing up in a close-knit family, Michael displayed an early penchant for leadership and an
-							insatiable curiosity about the world of business. His parents, both hardworking individuals
-							with a modest background, instilled in him the values of perseverance and integrity. Even as
-							a young boy, Michael demonstrated an entrepreneurial spirit, organizing neighborhood events
+						<dd>Growing up in a close-knit family, Michael displayed an early penchant for leadership
+							and an
+							insatiable curiosity about the world of business. His parents, both hardworking
+							individuals
+							with a modest background, instilled in him the values of perseverance and integrity.
+							Even as
+							a young boy, Michael demonstrated an entrepreneurial spirit, organizing neighborhood
+							events
 							and finding creative ways to solve problems.
-							Michael's academic journey was marked by exceptional achievement. He earned a scholarship to
-							a prestigious business school, where he excelled in his studies. His professors recognized
-							not only his intellectual prowess but also his ability to think outside the box. During this
-							time, he developed a keen interest in emerging technologies and their potential to reshape
+							Michael's academic journey was marked by exceptional achievement. He earned a
+							scholarship to
+							a prestigious business school, where he excelled in his studies. His professors
+							recognized
+							not only his intellectual prowess but also his ability to think outside the box. During
+							this
+							time, he developed a keen interest in emerging technologies and their potential to
+							reshape
 							industries.
 							Fuelled by a desire to make a broader impact, Michael ventured into entrepreneurship. He
 							co-founded a startup that disrupted the market with its cutting-edge solutions. The
 							company's success attracted the attention of industry leaders, leading to a strategic
-							acquisition that further solidified Michael's reputation as a forward-thinking entrepreneur.
+							acquisition that further solidified Michael's reputation as a forward-thinking
+							entrepreneur.
 						</dd>
-						<button type="button" id="closeDetails" aria-label="Close Details"
+						<button type="button" id="closeDetails" aria-label="Close biography"
 							onclick="closeDetails()">CLOSE</button>
 					</dl>
 
@@ -193,13 +207,16 @@
 						<dd>Male</dd>
 						<dt>Biography:</dt>
 						<dd>Jack's journey in the business world began after he earned his degree in Business
-							Administration from the prestigious University of Chicago. Armed with a keen analytical mind
-							and a natural ability to strategize, he quickly climbed the corporate ladder in the finance
+							Administration from the prestigious University of Chicago. Armed with a keen analytical
+							mind
+							and a natural ability to strategize, he quickly climbed the corporate ladder in the
+							finance
 							sector, where he honed his skills in operations and management.
-							Beyond his professional endeavors, Jack is known for his commitment to community service. He
+							Beyond his professional endeavors, Jack is known for his commitment to community
+							service. He
 							actively supports various charitable organizations, focusing on initiatives that promote
 							education and empower underprivileged communities.</dd>
-						<button type="button" id="closeDetails" aria-label="Close Details"
+						<button type="button" id="closeDetails" aria-label="Close biography"
 							onclick="closeDetails()">CLOSE</button>
 					</dl>
 
@@ -213,9 +230,11 @@
 						<dt>Gender:</dt>
 						<dd>Female</dd>
 						<dt>Biography:</dt>
-						<dd>From a young age, Ombretta of Italian descent, exhibited a natural aptitude for mathematics,
+						<dd>From a young age, Ombretta of Italian descent, exhibited a natural aptitude for
+							mathematics,
 							earning her a scholarship to a prestigious university where she immersed herself in the
-							study of economics and finance. Her academic prowess, coupled with an insatiable curiosity,
+							study of economics and finance. Her academic prowess, coupled with an insatiable
+							curiosity,
 							propelled her to the top of her class and caught the attention of leading financial
 							institutions.
 							Beyond her professional achievements, Ombretta is known for her commitment to financial
@@ -223,27 +242,25 @@
 							knowledge, she actively engages in educational initiatives, striving to demystify the
 							intricacies of investing for the wider community.
 							In her personal life, Ombretta is an avid supporter of the arts and philanthropy. Her
-							charitable endeavors reflect a commitment to making a positive impact beyond the financial
+							charitable endeavors reflect a commitment to making a positive impact beyond the
+							financial
 							realm. Whether sponsoring local arts initiatives or contributing to causes close to her
-							heart, Ombretta Sinclair is dedicated to creating a lasting legacy of both financial success
+							heart, Ombretta Sinclair is dedicated to creating a lasting legacy of both financial
+							success
 							and societal betterment.</dd>
-						<button type="button" id="closeDetails" aria-label="Close Details"
+						<button type="button" id="closeDetails" aria-label="Close biography"
 							onclick="closeDetails()">CLOSE</button>
 					</dl>
 				</div>
 
-			</div>
-
+			</ul>
 		</section>
-
-		<button class="goUp hidden" aria-label="Back to Top" onclick="goTop()"><span>&UpArrow;</span>Back to
-			top</button>
 
 	</main>
 
 	<footer id="footer">
 
-		<img loading="lazy" src="../images/ZCLogo.png" id="ZCLogo" alt="Logo Zero Carbon">
+		<img aria-hidden="true" loading="lazy" src="../images/ZCLogo.png" id="ZCLogo" alt="Logo Zero Carbon">
 		<div id="footerZcWrapper">
 			<section id="zcCorporate">
 				<dl>
@@ -251,15 +268,15 @@
 						Legal Head Office
 					</dt>
 					<dd>
-						100 Light <abbr title="Street">St</abbr>, Baltimore, <abbr title="Maryland">MD</abbr> 21202,
+						100 Light Street, Baltimore, <abbr title="Maryland">MD</abbr> 21202,
 						<abbr title="United States">U.S.</abbr>
 					</dd>
 					<dt>
 						Company Branch
 					</dt>
 					<dd>
-						121 <abbr title="Southwest">SW</abbr> Salmon <abbr title="Street">St</abbr>, Portland, <abbr
-							title="Oregon">OR</abbr> 97204, <abbr title="United States">U.S.</abbr>
+						121 Southwest Salmon Street, Portland, <abbr title="Oregon">OR</abbr> 97204, <abbr
+							title="United States">U.S.</abbr>
 					</dd>
 					<dt>
 						Corporate Capital
@@ -280,8 +297,8 @@
 				<h4>
 					Zero Carbon on social media
 				</h4>
-				<nav id="socialNav">
-					<ul id="socialIcons" aria-label="Social Area">
+				<nav id="socialNav" aria-label="Social Media Area">
+					<ul id="socialIcons">
 						<li><a href="https://twitter.com/" title="X" target="_blank"><img loading="lazy"
 									src="../images/socialIcon/xtwitter.png" alt="X (old Twitter) icon"></a></li>
 						<li><a href="https://instagram.com/" title="Instagram" target="_blank"><img loading="lazy"
@@ -311,16 +328,19 @@
 					<ul class="linkList">
 						<li><a href="../html/pishing.html" title="Pishing" target="_blank">Pishing</a></li>
 						<li><a href="../html/contacts.html">Contacts</a></li>
-						<li><a id="adminArea" href="../php/login.php"><span class="material-symbols-outlined"
-									id="loginIcon">Login</span>Admin Area</a></li>
+						<li><a id="adminArea" href="../php/login.php"><span aria-hidden="true"
+									class="material-symbols-outlined" id="loginIcon">Login</span>Admin Area</a></li>
 					</ul>
 				</nav>
 			</section>
 		</div>
-		<div id="copyright" aria-label="Copyright">
+		<div id="copyright">
 			<p>Copyright &copy; 2024 Zero Carbon &minus; All rights reserved</p>
 			<p>Website developed by: QuadraCoders</p>
 		</div>
+
+		<button class="goUp hidden" aria-label="Back to Top" onclick="goTop()"><span>&UpArrow;</span>Back to
+			top</button>
 
 	</footer>
 </body>

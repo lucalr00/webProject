@@ -5,7 +5,6 @@
 
 <head>
 	<meta charset="UTF-8">
-	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 	<title>ZERO CARBON &minus; PROJECTS</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="keywords"
@@ -22,8 +21,6 @@
 		href="../css/devices/headerFooterDev.css">
 	<link rel="stylesheet" type="text/css" media="screen and (min-width: 300px)" href="../css/devices/projectsDev.css">
 
-	<!--<link rel="stylesheet" media="screen and (min-width: 1024px)" href="../css/root.css"> -->
-
 	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="icon" type="image/x-icon" href="../images/ZCLogoIcon.png">
@@ -33,91 +30,85 @@
 	<header id="header">
 		<div id="topNavBar">
 			<h1>
-				<a href="../php/index.php" title="Home" id="textLogo"><span class="logoFirstHalf">Zero</span>Carbon</a>
+				<a href="../index.php" title="Home" id="textLogo"><span class="logoFirstHalf">Zero</span>Carbon</a>
 			</h1>
-			<button id="menuLink" class="menuLink" onclick="responsiveNav()"><span class="material-symbols-outlined"
-					id="closeMenu">close</span><span class="material-symbols-outlined"
-					id="openMenu">menu</span>MENU</button>
+			<button id="menuLink" class="menuLink" onclick="responsiveNav()"><span aria-hidden="true"
+					class="material-symbols-outlined hidden" id="closeMenu">close</span><span aria-hidden="true"
+					class="material-symbols-outlined visible" id="openMenu">menu</span>MENU</button>
 		</div>
 		<nav id="navBar" class="headerNav" aria-label="Navigation Bar">
 			<ul>
-				<li><a href="../php/index.php">Home</a></li>
-				<li><a href="../html/projects.html">Projects</a></li>
-				<li><a href="../html/investments.html">Investments</a></li>
-				<li><a href="../html/aboutUs.html">About Us</a></li>
-				<li><a href="../html/contacts.html">Contacts</a></li>
+				<li><a href="../index.php">Home</a></li>
+				<li>Projects</li>
+				<li><a href="investments.html">Investments</a></li>
+				<li><a href="aboutUs.html">About Us</a></li>
+				<li><a href="contacts.html">Contacts</a></li>
 			</ul>
 		</nav>
 
-		<nav id="breadcrumb" aria-label="Path"> <!-- NASCOSTO IN DESKTOP -->
-			<p>You are here: <a href="../php/index.php">Home</a> &#47; Projects</p>
+		<nav id="breadcrumb" aria-label="breadcrumbs">
+			<p>You are here: <a href="../index.php">Home</a> &#47; Projects</p>
 		</nav>
 	</header>
 
 	<main>
-		<!--Page title-->
 		<h2 id="explore">Explore our Projects</h1>
 
-			<!--Slideshow of ZeroCarbon's projects-->
 			<div id="slideshow">
 
 				<div class="slide_content">
 					<img loading="lazy" class="slideimg" id="blue_horizon" src="../images/ocean-3.webp"
 						alt="Clean-up system of Blue Horizon project">
-					<a href="../html/projects/blue_horizon.html" title="Read more..."
-					class="caption" aria-label="Goes to Blue Horizon's page"><strong>Blue Horizon</strong></a>
+					<a href="../html/projects/blue_horizon.html" class="caption"
+						aria-label="Goes to Blue Horizon's page"><strong>Blue Horizon</strong></a>
 				</div>
 
 				<div class="slide_content">
 					<img loading="lazy" class="slideimg" id="accessible_greenhouse" src="../images/Garden.webp"
 						alt="A Greenhouse that can be fitted in a medium space appartment">
-					<a href="../html/projects/accessible_greenhouse.html" title="Read more..."
-					class="caption" aria-label="Goes to Accessible Greenhouse's page"><strong>Accessible Greenhouse</strong></a>
+					<a href="../html/projects/accessible_greenhouse.html" class="caption"
+						aria-label="Goes to Accessible Greenhouse's page"><strong>Accessible Greenhouse</strong></a>
 				</div>
 
 				<div class="slide_content">
 					<img loading="lazy" class="slideimg" id="forest_rise" src="../images/ForestRise.webp"
 						alt="A person plants a sappling">
-					<a href="../html/projects/forest_rise.html" title="Read more..."
-					class="caption" aria-label="Goes to Forest Rise's page"><strong>ForestRise</strong></a>
+					<a href="../html/projects/forest_rise.html" class="caption"
+						aria-label="Goes to Forest Rise's page"><strong>ForestRise</strong></a>
 				</div>
 
 				<div class="slide_content">
 					<img loading="lazy" class="slideimg" id="green_future" src="../images/GreenFuture.webp"
 						alt="A solar field and with a nuclear plant in background">
-					<a href="../html/projects/green_future.html" title="Read more..." 
-					class="caption" aria-label="Goes to Green Future's page"><strong>Green Future</strong></a>
+					<a href="../html/projects/green_future.html" class="caption"
+						aria-label="Goes to Green Future's page"><strong>Green Future</strong></a>
 				</div>
 
 				<div class="slide_content">
 					<img loading="lazy" class="slideimg" id="FoRestore" src="../images/FoRestore.webp"
 						alt="A bird made of forest leftovers">
-					<a href="../html/projects/FoRestore.html" title="Read more..." 
-					class="caption" aria-label="Goes to FoRestore's page"><strong>FoRestore</strong></a>
+					<a href="../html/projects/FoRestore.html" class="caption"
+						aria-label="Goes to FoRestore's page"><strong>FoRestore</strong></a>
 				</div>
 			</div>
 
 			<!--Projects' navigation bar, made of arrow for moving 1 slide at time or points to get a direct access to the project-->
 			<div id="slidenav">
-				<button class="prev" aria-label="Slide precedente" onclick="plusSlides(-1)"
+				<button class="prev" aria-label="Previous slide" onclick="plusSlides(-1)"
 					title="Previous">&#10094;</button>
 				<button class="dot" aria-label="Slide 1" onclick="currentSlide(1)"></button>
 				<button class="dot" aria-label="Slide 2" onclick="currentSlide(2)"></button>
 				<button class="dot" aria-label="Slide 3" onclick="currentSlide(3)"></button>
 				<button class="dot" aria-label="Slide 4" onclick="currentSlide(4)"></button>
 				<button class="dot" aria-label="Slide 5" onclick="currentSlide(5)"></button>
-				<button class="next" aria-label="Slide successiva" onclick="plusSlides(1)"
-					title="Next">&#10095;</button>
+				<button class="next" aria-label="Next slide" onclick="plusSlides(1)" title="Next">&#10095;</button>
 			</div>
-
-			<button class="goUp hidden" aria-label="Back to Top" onclick="goTop()"><span>&UpArrow;</span>Back to
-				top</button>
 
 	</main>
 
 	<footer id="footer">
 
-		<img loading="lazy" src="../images/ZCLogo.png" id="ZCLogo" alt="Logo Zero Carbon">
+		<img aria-hidden="true" loading="lazy" src="../images/ZCLogo.png" id="ZCLogo" alt="Logo Zero Carbon">
 		<div id="footerZcWrapper">
 			<section id="zcCorporate">
 				<dl>
@@ -125,15 +116,15 @@
 						Legal Head Office
 					</dt>
 					<dd>
-						100 Light <abbr title="Street">St</abbr>, Baltimore, <abbr title="Maryland">MD</abbr> 21202,
+						100 Light Street, Baltimore, <abbr title="Maryland">MD</abbr> 21202,
 						<abbr title="United States">U.S.</abbr>
 					</dd>
 					<dt>
 						Company Branch
 					</dt>
 					<dd>
-						121 <abbr title="Southwest">SW</abbr> Salmon <abbr title="Street">St</abbr>, Portland, <abbr
-							title="Oregon">OR</abbr> 97204, <abbr title="United States">U.S.</abbr>
+						121 Southwest Salmon Street, Portland, <abbr title="Oregon">OR</abbr> 97204, <abbr
+							title="United States">U.S.</abbr>
 					</dd>
 					<dt>
 						Corporate Capital
@@ -154,8 +145,8 @@
 				<h4>
 					Zero Carbon on social media
 				</h4>
-				<nav id="socialNav">
-					<ul id="socialIcons" aria-label="Social Area">
+				<nav id="socialNav" aria-label="Social Media Area">
+					<ul id="socialIcons">
 						<li><a href="https://twitter.com/" title="X" target="_blank"><img loading="lazy"
 									src="../images/socialIcon/xtwitter.png" alt="X (old Twitter) icon"></a></li>
 						<li><a href="https://instagram.com/" title="Instagram" target="_blank"><img loading="lazy"
@@ -185,16 +176,19 @@
 					<ul class="linkList">
 						<li><a href="../html/pishing.html" title="Pishing" target="_blank">Pishing</a></li>
 						<li><a href="../html/contacts.html">Contacts</a></li>
-						<li><a id="adminArea" href="../php/login.php"><span class="material-symbols-outlined"
-									id="loginIcon">Login</span>Admin Area</a></li>
+						<li><a id="adminArea" href="../php/login.php"><span aria-hidden="true"
+									class="material-symbols-outlined" id="loginIcon">Login</span>Admin Area</a></li>
 					</ul>
 				</nav>
 			</section>
 		</div>
-		<div id="copyright" aria-label="Copyright">
+		<div id="copyright">
 			<p>Copyright &copy; 2024 Zero Carbon &minus; All rights reserved</p>
 			<p>Website developed by: QuadraCoders</p>
 		</div>
+
+		<button class="goUp hidden" aria-label="Back to Top" onclick="goTop()"><span>&UpArrow;</span>Back to
+			top</button>
 
 	</footer>
 

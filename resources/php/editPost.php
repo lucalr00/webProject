@@ -5,10 +5,8 @@ require_once "inputCheck.php";
 
 if ($_SESSION['connected'] != true) {
     header('location:login.php');
-    exit();
+    exit;
 }
-
-// $paginaHTML = file_get_contents(".." . DIRECTORY_SEPARATOR . "html" . DIRECTORY_SEPARATOR . "adminArea" . DIRECTORY_SEPARATOR . "socialRoom.html");
 
 $id = "";
 $date = "";
@@ -56,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
             $_SESSION['respStatus'] = $mes;
             header('location:redirect.php');
-            exit();
+            exit;
         } else {
             $querable = true;
             $mes .= '<ul id="wrongInput">';

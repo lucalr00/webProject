@@ -1,18 +1,8 @@
 
 window.addEventListener('load', () => {
 	console.log("DOM ready: root.js");
-	navHighlight();
-
 })
 
-function navHighlight() {
-		$('.navLink').each(function() {
-		if ($(this).prop('href') == window.location.href) {
-			$(this).addClass('active');
-		}
-	});
-	console.log("nav link highlighted: root.js");
-};
 
 function responsiveNav() {
 	var x = document.getElementById("navBar");
@@ -22,13 +12,13 @@ function responsiveNav() {
 	if (x.className === "headerNav") {
 		x.className += "Responsive";
 		y.className += "Opened";
-		closeIcon.style.display = "block";
-		openIcon.style.display = "none";
+		closeIcon.className = "material-symbols-outlined";
+		openIcon.className = "material-symbols-outlined hidden";
 	} else {
 		x.className = "headerNav";
 		y.className = "menuLink";
-		closeIcon.style.display = "none";
-		openIcon.style.display = "block";
+		closeIcon.className = "material-symbols-outlined hidden";
+		openIcon.className = "material-symbols-outlined";
 	}
 }
 
@@ -36,10 +26,12 @@ window.addEventListener('resize', run => {
 	var x = document.getElementById("navBar");
 	var y = document.getElementById("menuLink");
 	let closeIcon = document.getElementById("closeMenu");
+	let openIcon = document.getElementById("openMenu");
 	if (window.matchMedia(`(min-width: 600px)`).matches) {
 		x.className = "headerNav";
 		y.className = "menuLink";
-		closeIcon.style.display = "none";
+		closeIcon.className = "material-symbols-outlined hidden";
+		openIcon.className = "material-symbols-outlined";
 	}
 });
 
