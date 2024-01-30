@@ -1,4 +1,4 @@
-#topNavBar{
+#topNavBar {
 	display: block;
 }
 
@@ -7,8 +7,13 @@ nav ul li {
 	padding: .5em;
 }
 
+nav ul li a:visited {
+	color: var(--visitedLinkColor);
+}
+
 nav ul li a {
 	padding: 1em .5em;
+	color: var(--linkColor);
 }
 
 nav ul {
@@ -17,10 +22,6 @@ nav ul {
 	padding: 1em;
 	background-color: var(--headerBgColor);
 	text-align: center;
-}
-
-nav ul li a:visited {
-	color: var(--visitedLinkColor);
 }
 
 @media only screen and (min-width: 1024px) {
