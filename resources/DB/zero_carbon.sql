@@ -28,9 +28,9 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `icons` (
-  `Icon` enum('facebook','instagram','xtwitter','noicon') CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Icon` enum('facebook','instagram','xtwitter','noicon') CHARACTER SET utf8mb4 NOT NULL,
   `altText` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dump dei dati per la tabella `icons`
@@ -51,12 +51,12 @@ INSERT INTO `icons` (`Icon`, `altText`) VALUES
 CREATE TABLE `socialNews` (
   `Id` int NOT NULL,
   `Date` datetime NOT NULL,
-  `Title` varchar(75) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Description` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Icon` enum('facebook','instagram','xtwitter','noicon') CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Link` varchar(2083) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Title` varchar(75) CHARACTER SET utf8mb4  NOT NULL,
+  `Description` varchar(500) CHARACTER SET utf8mb4  NOT NULL,
+  `Icon` enum('facebook','instagram','xtwitter','noicon') CHARACTER SET utf8mb4  NOT NULL,
+  `Link` varchar(2083) CHARACTER SET utf8mb4  NOT NULL,
   `Author` varchar(15) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dump dei dati per la tabella `socialNews`
@@ -81,10 +81,10 @@ INSERT INTO `socialNews` (`Id`, `Date`, `Title`, `Description`, `Icon`, `Link`, 
 CREATE TABLE `users` (
   `userCount` int NOT NULL,
   `userID` char(5) NOT NULL,
-  `Username` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Username` varchar(15) CHARACTER SET utf8mb4  NOT NULL,
   `Password` char(5) NOT NULL,
-  `Role` enum('Social Media Manager','Projects Manager','Tester','Not assigned') CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `Role` enum('Social Media Manager','Projects Manager','Tester','Not assigned') CHARACTER SET utf8mb4  NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dump dei dati per la tabella `users`
