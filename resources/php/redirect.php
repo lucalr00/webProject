@@ -3,7 +3,7 @@ require_once "session.php";
 
 if ($_SESSION['connected'] != true) {
     header('location:login.php');
-    exit();
+    exit;
 }
 
 $response = $_SESSION['respStatus'];
