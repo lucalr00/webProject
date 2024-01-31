@@ -1,0 +1,16 @@
+main{
+	width: 90%;
+	margin: auto;
+	margin-top: 1em;
+}
+
+#wrongInput{
+	margin: .5em 0;
+}
+
+.error{
+	padding: 1em;
+	list-style: square;
+	list-style-position: inside;
+	color: var(--errorColor);
+}

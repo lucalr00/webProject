@@ -1,6 +1,7 @@
 #loginForm {
     width: auto;
     margin: 10% 10%;
+    margin-bottom: 3%;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -13,11 +14,29 @@
     margin-bottom: 5px;
 }
 
+#loginError{
+	border: solid 1px var(--errorColor);
+	border-left: none;
+	border-right: none;
+	margin-bottom: .5em;
+}
+
+.error{
+	padding: 1em;
+	list-style: square;
+	list-style-position: inside;
+	color: var(--errorColor);
+}
+
 #username, #password{
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+}
+
+#mistake{
+	padding: 0 1em;
 }
 
 #username{

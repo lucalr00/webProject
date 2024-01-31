@@ -4,6 +4,22 @@
 	padding-bottom: 1em;
 }
 
+
+#textLogo {
+	display: flex;
+	flex-wrap: wrap;
+	padding-left: .5em;
+	row-gap: 5px;
+	width: fit-content;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+#textLogo .logoFirstHalf {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
 #topNavBar {
 	padding: 1em 0;
 	text-align: center;
@@ -14,12 +30,7 @@
 	margin-top: 1em;
 }
 
-main{
-	margin-top: 2em;
-	text-align: center;
-}
-
-main p{
+main {
 	margin-top: 2em;
 }
 
@@ -44,4 +55,21 @@ footer #copyright::before {
 	margin-bottom: .5em;
 	width: 100%;
 	border: dashed 2px white;
+}
+
+@media screen and (min-width: 768px) {
+	main {
+		width: 70%;
+
+	}
+
+	#breadcrumb {
+		text-align: center;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	main {
+		width: 50%;
+	}
 }

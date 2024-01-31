@@ -227,8 +227,10 @@ footer .linkList li a:before {
 
 @media only screen and (max-width: 250px) {
 	#topNavBar {
+		padding-top: .5em;
 		flex-direction: column;
-		justify-content: center;
+		align-items: center;
+		gap: 1em;
 	}
 
 	#menuLink {

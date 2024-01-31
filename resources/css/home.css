@@ -47,6 +47,7 @@
 	bottom: 0;
 	width: 100%;
 	padding: 1em 0;
+	border-radius: 0 0 1em 1em;
 }
 
 #welcomeText>* {

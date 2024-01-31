@@ -26,6 +26,7 @@
 	--font-body-family: "Roboto Condensed", sans-serif;
 	--mobileLineDivider: rgba(60, 60, 60, .4);
 	--newsHdColor: rgb(0, 105, 130);
+	--errorColor: rgb(160, 25, 25); 
 }
 
 html {

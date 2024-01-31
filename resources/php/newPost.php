@@ -17,7 +17,7 @@ if (isset($_POST['submitNew'])) {
     $icon = $_POST['icon'];
     $link = filter_var($_POST['socialLink'], FILTER_SANITIZE_URL);
     $author = $_SESSION['author'];
-    $news = new news($_POST['date'], $title, $description, $icon, $link);
+    $news = new news($_POST['date'], $title, $description, $icon, $link, $author);
 
     $querable = true;
 

@@ -38,6 +38,10 @@
 
 @media only screen and (min-width: 1440px) {
 
+	#zcSocial h4{
+		margin-top: 0;
+	}
+	
 	#navBar,
 	#header,
 	#footer {

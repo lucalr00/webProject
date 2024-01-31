@@ -7,6 +7,14 @@ nav ul li {
 	padding: .5em;
 }
 
+h2{
+	margin-bottom: 1em;
+}
+
+h2, p{
+	padding-left: 1em;
+}
+
 nav ul li a:visited {
 	color: var(--visitedLinkColor);
 }
@@ -24,16 +32,10 @@ nav ul {
 	text-align: center;
 }
 
-@media only screen and (min-width: 1024px) {
-	main {
-		width: 70%;
-	}
-
+#userName{
+	text-transform: capitalize;
 }
 
-@media only screen and (min-width: 1440px) {
-	main {
-		max-width: 50%;
-	}
-
+#userRole{
+	font-weight: bold;
 }
