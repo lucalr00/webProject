@@ -193,6 +193,10 @@
 	color: white;
 }
 
+.refLink:visited{
+	color: var(--visitedLinkColor);
+}
+
 .refLinkBlank {
 	visibility: hidden;
 }
