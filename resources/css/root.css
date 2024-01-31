@@ -26,7 +26,8 @@
 	--font-body-family: "Roboto Condensed", sans-serif;
 	--mobileLineDivider: rgba(60, 60, 60, .4);
 	--newsHdColor: rgb(0, 105, 130);
-	--errorColor: rgb(160, 25, 25); 
+	--errorColor: rgb(160, 25, 25);
+	--successColor: rgb(15, 100, 0);
 }
 
 html {
@@ -69,11 +70,11 @@ main {
 	box-shadow: 0 0 30px 1px rgb(30, 30, 30);
 }
 
-.hidden{
+.hidden {
 	display: none;
 }
 
-.visible{
+.visible {
 	display: block;
 }
 

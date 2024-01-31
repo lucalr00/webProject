@@ -9,8 +9,13 @@ main{
 }
 
 .error{
-	padding: 1em;
+	padding: 1em 0;
 	list-style: square;
 	list-style-position: inside;
 	color: var(--errorColor);
+}
+
+.success{
+	padding: 1em 0;
+	color: var(--successColor);
 }
