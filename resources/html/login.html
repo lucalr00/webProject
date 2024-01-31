@@ -11,11 +11,12 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-	<script src="../javascript/goTop.js"></script>
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 	<link rel="stylesheet" type="text/css" href="../css/root.css">
 	<link rel="stylesheet" type="text/css" href="../css/logInOut.css">
 	<link rel="stylesheet" type="text/css" href="../css/login.css">
+	<script src="../javascript/validate.js"></script>
 	<link rel="icon" type="image/x-icon" href="../images/ZCLogoIcon.png">
 </head>
 
@@ -35,9 +36,13 @@
 		<div id="loginDiv">
 			<form id="loginForm" aria-label="login" action="../php/login.php" method="post">
 				<label for="username">User <abbr title="Identification">ID</abbr></label>
-				<input type="text" id="username" name="userID" required aria-required="true">
+				<input type="text" id="username" name="userID" pattern="[a-z]{5}" title="userId 5 characters" placeholder="5 characters"
+					aria-placeholder="5 characters" aria-autocomplete="none" autocomplete="off" required
+					aria-required="true">
 				<label for="password">Password</label>
-				<input type="password" id="password" name="userPW" required aria-required="true">
+				<input type="password" id="password" name="userPW" pattern="[a-z]{5}" title="password 5 characters" placeholder="5 characters"
+					aria-placeholder="5 characters" aria-autocomplete="none" autocomplete="off" required
+					aria-required="true">
 				<button type="submit" id="loginBt">Login</button>
 			</form>
 			<mes />

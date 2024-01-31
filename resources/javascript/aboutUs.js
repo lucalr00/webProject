@@ -1,10 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
 	console.log("DOM ready: aboutUs.js");
-	startScript(1);
+	startScript();
 });
 
 let slideIndex = 1; //global
 let details = 0;
+let firstLoad = true;
 
 document.addEventListener('keydown', function(event) {
 	if (event.keyCode == 37) {
@@ -15,29 +16,8 @@ document.addEventListener('keydown', function(event) {
 	}
 });
 
-function startScript(n) {
-	let i;
-	let slides = document.getElementsByClassName("card");
-	let dots = document.getElementsByClassName("dot");
-	if (n > slides.length) { slideIndex = 1 }
-	if (n < 1) { slideIndex = slides.length }
-	for (i = 0; i < slides.length; i++) {
-		slides[i].className = "card hidden";
-	}
-	for (i = 0; i < dots.length; i++) {
-		dots[i].className = "dot -active";
-		dots[i].setAttribute('aria-selected', 'false');
-	}
-
-	dots[slideIndex - 1].className = "dot active";
-	slides[slideIndex - 1].className = "card visible";
-	dots[slideIndex - 1].setAttribute('aria-selected', 'true');
-
-	let details = document.getElementsByClassName("cardDetails");
-	for (i = 0; i < details.length; i++) {
-		details[i].className = "cardDetails hidden";
-	}
-	console.log("details closed: aboutUs.js");
+function startScript() {
+	showSlides(slideIndex);
 };
 
 function plusSlides(n) {
@@ -67,8 +47,10 @@ function showSlides(n) {
 	dots[slideIndex - 1].setAttribute('aria-selected', 'true');
 	slides[slideIndex - 1].className = "card visible";
 	slides[slideIndex - 1].tabIndex = -1;
-	slides[slideIndex - 1].focus();
-	if (details == true) { showDetails(); }
+	if (!firstLoad) {
+		slides[slideIndex - 1].focus();
+
+	} if (details == true) { showDetails(); }
 	else { closeDetails(); }
 }
 
@@ -94,7 +76,12 @@ function closeDetails() {
 		slides[i].tabIndex = 0;
 	}
 	card[0].tabIndex = -1;
-	card[0].focus();
+	if (!firstLoad) {
+		card[0].focus();
+	}
+	else {
+		firstLoad = false;
+	}
 	console.log("details closed: aboutUs.js");
 }
 
