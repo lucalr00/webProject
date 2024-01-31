@@ -1,5 +1,6 @@
-* {
-	box-sizing: border-box;
+#mainInfo p, .sections{
+	width: 90%;
+	margin: auto;
 }
 
 #mainInfo {
@@ -24,11 +25,11 @@
 }
 
 #signature {
-	right: 0;
+	margin-left: 5%;
 	border: solid 1px var(--headerBgColor);
 	border-radius: 50%;
 	width: fit-content;
-	padding-top: 4em;
+	padding-top: 3em;
 	font-weight: bold;
 	background-image: url(../images/ZCLogo.png);
 	background-size: contain;
@@ -39,6 +40,13 @@
 
 	#mainInfo {
 		word-break: break-all;
+	}
+
+}
+
+@media only screen and (min-width: 1440px) {
+	main {
+		max-width: 50%;
 	}
 
 }

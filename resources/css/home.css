@@ -35,10 +35,11 @@
 
 #welcomeText h2 {
 	margin-top: 1em;
-	font-size: 200%;
+	font-size: 175%;
 	line-height: 1.5em;
 	backdrop-filter: blur(2px);
-	padding: .5em 0;
+	padding: 5px;
+	color: rgb(0, 30, 0);
 }
 
 #welcomeText h3 {
@@ -221,6 +222,7 @@
 	
 	#welcomeText h2{
 		margin-top: 0;
+		color: white;
 	}
 	
 	#welcomeText h2, #welcomeText h3{

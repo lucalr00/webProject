@@ -194,7 +194,7 @@ footer #copyright::before {
 
 footer #socialIcons {
 	list-style: none;
-	padding: 1em;
+	padding-top: 1em;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, 5em);
 	column-gap: 2em;

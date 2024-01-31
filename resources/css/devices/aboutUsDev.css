@@ -1,6 +1,5 @@
-#howStarted h2, #founders h3{
-	font-size: 200%;
-	color: rgb(30, 30, 30);
+#howStarted h2, #founders h2{
+	font-size: 175%;
 }
 
 .card img {

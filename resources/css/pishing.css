@@ -1,4 +1,3 @@
-
 ol li {
 	font-weight: bold;
 	list-style-position: inside;
@@ -12,6 +11,7 @@ ol li p {
 .sections figure {
 	border: solid var(--headerBgColor) 2px;
 	padding: .5em;
+	width: 90%;
 }
 
 .sections figure img {
@@ -27,3 +27,18 @@ ol li p {
 	text-align: center;
 }
 
+@media only screen and (min-width: 600px) {
+	.sections figure {
+		width: 30em;
+		margin: auto;
+	}
+
+}
+
+@media only screen and (min-width: 1440px) {
+	.sections figure {
+		width: 50%;
+		margin: auto;
+	}
+
+}
