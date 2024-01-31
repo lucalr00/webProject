@@ -40,7 +40,7 @@ INSERT INTO `icons` (`Icon`, `altText`) VALUES
 ('facebook', 'Facebook icon'),
 ('instagram', 'Instagram icon'),
 ('xtwitter', 'X (old Twitter) icon'),
-('noicon', 'No icon to be associated with the news');
+('noicon', 'No icon');
 
 -- --------------------------------------------------------
 
