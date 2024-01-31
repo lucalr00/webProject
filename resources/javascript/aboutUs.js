@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-	console.log("DOM ready: aboutUs.js");
 	startScript();
 });
 
@@ -50,23 +49,38 @@ function showSlides(n) {
 	if (!firstLoad) {
 		slides[slideIndex - 1].focus();
 
-	} if (details == true) { showDetails(); }
-	else { closeDetails(); }
+	}
+	showDetails(0);
 }
 
-function showDetails() {
-	details = 1;
+function showDetails(n) {
+	if (details == 1) {
+		details = 0
+	} else {
+		details = n;
+	}
 	let i;
 	var slides = document.getElementsByClassName("cardDetails");
+	var card = document.getElementsByClassName("card visible");
 	for (i = 0; i < slides.length; i++) {
 		slides[i].className = "cardDetails hidden";
 	}
-	slides[slideIndex - 1].className = "cardDetails visible";
-	slides[slideIndex - 1].tabIndex = -1;
-	slides[slideIndex - 1].focus();
-	console.log("details opened: aboutUs.js");
+	if (details == 1) {
+		slides[slideIndex - 1].className = "cardDetails visible";
+		slides[slideIndex - 1].tabIndex = -1;
+		slides[slideIndex - 1].focus();
+	} else {
+		card[0].tabIndex = -1;
+		if (!firstLoad) {
+			card[0].focus();
+		}
+		else {
+			firstLoad = false;
+		}
+	}
 }
 
+/*
 function closeDetails() {
 	details = 0;
 	var slides = document.getElementsByClassName("cardDetails");
@@ -84,4 +98,4 @@ function closeDetails() {
 	}
 	console.log("details closed: aboutUs.js");
 }
-
+*/

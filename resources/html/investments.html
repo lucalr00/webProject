@@ -12,7 +12,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
 	<link rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script src="../javascript/root.js"></script>
 	<script src="../javascript/goTop.js"></script>
@@ -55,7 +55,7 @@
 	<main>
 		<h2>Our annual investments</h2>
 		<div id="investments_detail">
-			<section id="investments_section">
+			<div id="investments_section">
 				<div id="container_years">
 					<p id="year-label">Years Goals</p>
 					<select id="list_years" aria-labelledby="year-label">
@@ -129,7 +129,7 @@
 						world.
 					</p>
 				</div>
-			</section>
+			</div>
 
 			<section id="graph_section">
 				<h3>Investment progress</h3>
@@ -137,7 +137,7 @@
 				<div id="graph" role="img" aria-label="Investment progress graph"></div>
 			</section>
 
-			<section id="table_section">
+			<div id="table_section">
 				<table id="table_2023" class="tbl" aria-describedby="description_tbl">
 					<caption>Investments over time (in millions of dollars)</caption>
 					<thead>
@@ -376,7 +376,7 @@
 				</table>
 				<span id="description_tbl">The table contains the amount of money invested for every month of the
 					year</span>
-			</section>
+			</div>
 		</div>
 
 
@@ -385,7 +385,7 @@
 
 		<img aria-hidden="true" loading="lazy" src="../images/ZCLogo.png" id="ZCLogo" alt="Logo Zero Carbon">
 		<div id="footerZcWrapper">
-			<section id="zcCorporate">
+			<div id="zcCorporate">
 				<dl>
 					<dt>
 						Legal Head Office
@@ -414,10 +414,10 @@
 						000874293
 					</dd>
 				</dl>
-			</section>
+			</div>
 
-			<section id="zcSocial">
-				<h4>
+			<div id="zcSocial">
+				<h4 class="ftSecHd">
 					Zero Carbon on social media
 				</h4>
 				<nav id="socialNav" aria-label="Social Media Area">
@@ -430,10 +430,10 @@
 									src="../images/socialIcon/facebook.png" alt="Facebook icon"></a></li>
 					</ul>
 				</nav>
-			</section>
+			</div>
 
-			<section id="zcPolicies">
-				<h4>
+			<div id="zcPolicies">
+				<h4 class="ftSecHd">
 					Policies
 				</h4>
 				<nav aria-label="Policy Area">
@@ -442,9 +442,9 @@
 								policy</a></li>
 					</ul>
 				</nav>
-			</section>
-			<section id="zcLinks">
-				<h4>
+			</div>
+			<div id="zcLinks">
+				<h4 class="ftSecHd">
 					Others links
 				</h4>
 				<nav aria-label="Links to Phishing, Contacts and Admin Area pages">
@@ -455,7 +455,7 @@
 									class="material-symbols-outlined" id="loginIcon">Login</span>Admin Area</a></li>
 					</ul>
 				</nav>
-			</section>
+			</div>
 		</div>
 		<div id="copyright">
 			<p>Copyright &copy; 2024 Zero Carbon &minus; All rights reserved</p>

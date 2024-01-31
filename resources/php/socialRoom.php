@@ -4,18 +4,16 @@ require_once "session.php";
 
 if ($_SESSION['connected'] != true) {
     header('location:login.php');
-    exit;
+    exit();
 }
 
-
-if ($_SESSION['userRole'] != "Social Media Manager"){
+if ($_SESSION['userRole'] != "Social Media Manager") {
     $roleError = 'Does not have the role of social manager.';
     $_SESSION['respStatus'] = $roleError;
     $_SESSION['notGranted'] = true;
     header('location:redirect.php');
-    exit;
+    exit();
 }
-
 
 $conn = new connection();
 $fileHTML = file_get_contents(".." . DIRECTORY_SEPARATOR . "html" . DIRECTORY_SEPARATOR . "adminArea" . DIRECTORY_SEPARATOR . "socialRoom.html");
@@ -31,28 +29,28 @@ if ($conn->isConnected()) {
 					<div class="newsInDb">
                         <p>News Id number: ' . $news['Id'] . '<p>
                         <input type="hidden" name="Id" value="' . $news['Id'] . '"/>
-                        <p>Author: '. $news['Author'].'<p>
+                        <p>Author: ' . $news['Author'] . '<p>
                     </div>
-                    <section class=news-d-t-d>
+                    <div class=news-d-t-d>
                         <div class="newsDate">
                             <label>Date:
-                            <input type="datetime-local" class="publicationDate" name="Date" min="2000-01-01T00:00" max="2025-01-01T00:00" aria-required="true" aria-label="edit the publication date" value="' . $news['Date'] . '" required />
+                            <input type="datetime-local" class="publicationDate" name="Date" min="2000-01-01T00:00" max="2025-01-01T00:00" aria-required="true" aria-label="edit the publication date" value="' . $news['Date'] . '" required >
 					        </label>
                         </div>
                         <div class="titleArea">
 					       <label>Title:
-					       <input type="text" name="Title" class="title" aria-required="true" minlength="5" maxlength="75" placeholder="min 5 and max 75 characters" value="' . $news['Title'] . '" aria-label="edit the title" title="Enter the title" required />
+					       <input type="text" name="Title" class="title" aria-required="true" minlength="5" maxlength="75" placeholder="min 5 and max 75 characters" value="' . $news['Title'] . '" aria-label="edit the title" title="Enter the title" required >
                            </label>
                         </div>
-					    <div class="descriptionArea" class="campo_chk">
+					    <div class="descriptionArea">
 					       <label>Description:
 					           <textarea name="Description" class="description" minlength="5" maxlength="500" rows="5" placeholder="min 5 and max 500 characters" aria-required="true" aria-label="edit the description" title="Enter the description" required>' . $news['Description'] . '</textarea>
                            </label>
                         </div>
-                   </section>
-                <section class="socialReference">
+                   </div>
+                <div class="socialReference">
                     <div class="social-icon">
-					<label for="socialIcon">Current icon:</label>
+					<label>Current icon:</label>
 					<img class="socialIcon" src="../images/socialIcon/' . $news['Icon'] . '.png" title="' . $news['Icon'] . '" alt=" ' . $news['aText'] . '">
                     </div>
                     <div class="socialIconEd">
@@ -69,11 +67,11 @@ if ($conn->isConnected()) {
                     
                     <div class="socialLinkArea">
                         <label>Link:
-					    <input type="url" name="Link" class="socialLink" aria-required="false" placeholder="http:// https:// or left blank" value="' . $news['Link'] . '" aria-label="edit or remove the social link of the current news"/>
+					    <input type="url" name="Link" class="socialLink" aria-required="false" placeholder="http:// https:// or left blank" value="' . $news['Link'] . '" aria-label="edit or remove the social link of the current news">
                         </label>
                     </div>
                     
-                </section>
+                </div>
 					
                 <div class="submitControl">
                     <button type="submit" class="submitEdt" name="submitEdt" title="Edit the news" aria-label="edit the news">Edit<span class="material-symbols-outlined">edit</span></button>

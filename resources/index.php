@@ -17,10 +17,10 @@ if ($conn->isConnected()) {
                 $news['Author'] = "&minus; author not found! &minus;";
             }
 
-            $divNews .= '<article class="content" role="contentinfo" aria-label="article">
+            $divNews .= '<article class="content" aria-label="article">
 					<header>
 						<div class="socialInfo">
-							<time datetime="' . $news['Date'] . '" pubdate="pubdate"><span aria-hidden="true" class="material-symbols-outlined socialSpan">calendar_today</span>' . $news['Date'] . '</time>
+							<time datetime="' . $news['Date'] . '"><span aria-hidden="true" class="material-symbols-outlined socialSpan">calendar_today</span>' . $news['Date'] . '</time>
 							<img aria-hidden="true" class="socialIcon" src="images/socialIcon/' . $news['Icon'] . '.png" title="' . $news['Icon'] . '" alt=" ' . $news['aText'] . '">
 						</div>
                         <h3>' . $news['Title'] . '</h3>

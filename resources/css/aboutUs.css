@@ -80,12 +80,11 @@
 }
 
 #cardsManager {
+	margin-top: .5em;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	column-gap: 1em;
-
-	/*text-align: center;*/
 }
 
 .dot {
@@ -97,6 +96,7 @@
 	border: none;
 	border-radius: 50%;
 	transition: background-color;
+	color: white;
 }
 
 .dot:hover,
@@ -168,7 +168,7 @@
 	white-space: pre;
 }
 
-#closeDetails {
+.closeDetails {
 	margin-top: 1.5em;
 	background-color: white;
 	color: black;
@@ -180,7 +180,7 @@
 	user-select: none;
 }
 
-#closeDetails:hover {
+.closeDetails:hover {
 	background-color: whitesmoke;
 	text-decoration: underline;
 }

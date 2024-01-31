@@ -15,7 +15,6 @@
 	gap: 2em;
 	align-items: center;
 	justify-content: flex-end;
-	/* flex-wrap: wrap; CHECK!! */
 }
 
 #textLogo {
@@ -32,23 +31,11 @@
 	text-transform: uppercase;
 	font-weight: bold;
 }
-/*
-#navBar ul li {
-	display: inline;
-	list-style: none;
-	padding: .3em;
-	/*border: solid red 1px;
-	/debug*
-}
-*/
-
 
 #navBar ul li a{
-	/*display: inline-block;
-	border: solid 1px white;
-	/*debug*/
+	display: inline-block;
 	padding: .5em;
-	transition: transform 400ms ease;
+	transition: transform 250ms ease;
 
 }
 
@@ -66,7 +53,6 @@
 	border: none;
 	padding: .5em .6em;
 	cursor: pointer;
-	transition: transform 400ms ease;
 }
 
 
@@ -150,27 +136,18 @@ footer dl dd {
 	margin-bottom: 1.5em;
 }
 
-section h4 {
+footer .ftSecHd {
 	text-transform: uppercase;
 	margin-top: 3em;
 }
 
-section nav {
+footer div nav {
 	text-align: left;
 }
 
 #socialIcons a img {
 	width: 100%;
 	border-radius: 10px;
-}
-
-#socialIcons a {
-	transition: 400ms ease;
-}
-
-#socialIcons a:hover {
-	transform: scale(1.1);
-	/*	transform: translateY(-7px);*/
 }
 
 footer #copyright {

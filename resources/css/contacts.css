@@ -32,13 +32,10 @@ p {
 }
 
 .contact-method a {
-	color: #0088cc;
-	text-decoration: none;
 	display: block;
 }
 
 .contact-method a:hover {
-	text-decoration: underline;
 }
 
 .contact-method address {

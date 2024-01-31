@@ -7,7 +7,7 @@
 	margin: 4em 0;
 }
 
-#mainInfo h1 {
+#mainInfo h2 {
 	background-color: var(--headerBgColor);
 	color: white;
 	padding: 1em;
@@ -15,7 +15,7 @@
 	border-radius: 0 10px 40px 0;
 }
 
-#mainInfo h1,
+#mainInfo h2,
 .sections h2 {
 	margin-bottom: .5em;
 }

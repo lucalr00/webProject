@@ -12,7 +12,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
 	<link rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 	<link rel="stylesheet" type="text/css" href="../css/root.css">
 	<link rel="stylesheet" type="text/css" href="../css/logInOut.css">
 	<link rel="stylesheet" type="text/css" href="../css/socialRoom.css">
@@ -57,20 +57,19 @@
 				<form class="book" action="newPost.php" method="post" aria-label="Post registration form">
 					<fieldset>
 						<legend>Record a new news</legend>
-						<section class=news-d-t-d>
+						<div class=news-d-t-d>
 							<div class="newsDate">
 								<label> Date:
 									<input type="datetime-local" class="publicationDate" name="date"
 										min="2000-01-01T00:00" max="2025-01-01T00:00" aria-required="true"
-										aria-label="Enter the publication date" required />
+										aria-label="Enter the publication date" required>
 								</label>
 							</div>
 							<div class="titleArea">
 								<label>Title:
 									<input type="text" name="title" class="title" minlength="5" maxlength="75"
 										placeholder="min 5 and max 75 characters" aria-required="true"
-										aria-label="Add the title" title="Enter the title"
-										placeholder="Enter the title of the news" required />
+										aria-label="Add the title" title="Enter the title" required>
 								</label>
 							</div>
 							<div class="descriptionArea">
@@ -78,11 +77,11 @@
 									<textarea name="description" class="description" minlength="5" maxlength="500"
 										rows="5" placeholder="min 5 and max 500 characters" aria-required="true"
 										aria-label="Add the description" title="Enter the description"
-										placeholder="Enter the description of the news" required></textarea>
+										required></textarea>
 								</label>
 							</div>
-						</section>
-						<section class="socialReference">
+						</div>
+						<div class="socialReference">
 							<div class="socialIconNew">
 								<label>Social icon:
 									<select name="icon" class="selSocialIcon" aria-required="true"
@@ -98,10 +97,10 @@
 								<label>News link:
 									<input type="url" name="socialLink" class="socialLink" aria-required="false"
 										aria-label="Add the social link of the current news"
-										placeholder="http:// https:// or left blank" />
+										placeholder="http:// https:// or left blank">
 								</label>
 							</div>
-						</section>
+						</div>
 						<div class="submitControl">
 							<button type="reset" id="resetFields" title="Reset all fields"
 								aria-label="Reset fields">Reset<span
@@ -118,7 +117,6 @@
 					Management of present news
 				</h2>
 				<div>
-					<!--			<inputMsg />-->
 				</div>
 				<socialRoomNews />
 			</section>
