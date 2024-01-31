@@ -91,8 +91,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`userCount`, `userID`, `Username`, `Password`, `Role`) VALUES
-(1, 'admin', 'ombretta', 'admin', 'Social Media Manager'),
-(2, 'luca', 'luca', 'luca', 'Tester');
+(1, 'admin', 'ombretta', 'admin', 'Social Media Manager');
 
 --
 -- Indici per le tabelle scaricate
