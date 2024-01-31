@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-	console.log("DOM ready: projects.js");
 	startScript();
 });
 

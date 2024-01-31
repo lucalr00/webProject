@@ -1,6 +1,5 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-	console.log("DOM ready: goTop.js");
 	backToTop();
 });
 
@@ -26,7 +25,6 @@ function goTop() {
 	document.body.scrollIntoView({
 		behavior: "smooth",
 	});
-	console.log("goTop Executed: goTop.js");
 };
 
 

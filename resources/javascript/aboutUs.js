@@ -80,22 +80,3 @@ function showDetails(n) {
 	}
 }
 
-/*
-function closeDetails() {
-	details = 0;
-	var slides = document.getElementsByClassName("cardDetails");
-	var card = document.getElementsByClassName("card visible");
-	for (i = 0; i < slides.length; i++) {
-		slides[i].className = "cardDetails hidden";
-		slides[i].tabIndex = 0;
-	}
-	card[0].tabIndex = -1;
-	if (!firstLoad) {
-		card[0].focus();
-	}
-	else {
-		firstLoad = false;
-	}
-	console.log("details closed: aboutUs.js");
-}
-*/
